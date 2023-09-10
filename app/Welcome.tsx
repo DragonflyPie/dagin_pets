@@ -6,32 +6,49 @@ import { DottedLine, Paw } from "./vectors";
 
 const Welcome = () => {
   return (
-    <div className="min-h-screen flex">
-      <div className="absolute left-16">
-        <Image src={logo} alt="DaginPets Logo" width={120} />
+    <div className="flex min-h-screen w-full">
+      <div className="absolute left-4 -z-10 w-16 md:left-8 md:w-24 lg:left-16 lg:w-[120px]">
+        <Image src={logo} alt="DaginPets Logo" />
       </div>
-      <div className="flex pt-24 items-center ">
-        <div className="flex flex-col gap-10 ">
-          <h1 className="font-lato text-5xl md:text-6xl lg:text-[80px] whitespace-pre-wrap leading-[1.1] tracking-[0.8px]">
-            {`Приветствуем вас,\nдорогие любители\nживотных!`}
-          </h1>
-          <p className="text-2xl">
+      <div className="flex w-full flex-col p-4 pt-16 md:flex-row md:justify-between md:pb-12 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24">
+        <div className="flex h-full flex-col justify-between gap-10 pt-3 md:pt-12 lg:pt-24">
+          <pre>
+            <h1 className="inline-block font-lato text-4xl leading-[1.1]  tracking-[0.8px] lg:text-5xl  xl:text-[80px] ">
+              {`Приветствуем вас,\nдорогие любители\nживотных!`}
+            </h1>
+          </pre>
+          <p className="w-min min-w-full text-xl lg:text-2xl">
             Вам нужно перевезти своего питомца в ОАЭ или из ОАЭ? Компания Dagin
             Pets Relocation рада предложить вам свою помощь: услуги по
             транспортировке животных, а также пет такси на территории ОАЭ.
           </p>
-          <Button />
+          <div className="relative h-full w-full md:hidden">
+            <Image
+              src={pets_walking}
+              alt="Dog and cat walking"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="">
+            <Button />
+          </div>
         </div>
-        <div className="">
-          <Image src={pets_walking} alt="Dog and cat walking" />
+        <div className="relative hidden max-h-screen w-full md:block">
+          <Image
+            src={pets_walking}
+            alt="Dog and cat walking"
+            fill
+            className="object-contain object-right"
+          />
         </div>
-        <div className="absolute top-[2vh] left-[33vw]">
+        <div className="absolute left-[30vw] top-[10vh] w-[16vw] md:left-[20vw] md:top-[2vh]">
           <Paw />
         </div>
-        <div className="absolute bottom-[10vh] left-1/2 rotate-45">
+        <div className="absolute left-[50vw] top-[calc(15vh+16vw)] w-[16vw] rotate-45 md:left-[40vw] md:top-[calc(5vh+16vw)]">
           <Paw />
         </div>
-        <div className="absolute top-0 left-0 -z-10">
+        <div className="absolute left-0 top-0 -z-10 h-[95vh]">
           <DottedLine />
         </div>
       </div>

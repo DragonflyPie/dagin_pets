@@ -5,17 +5,17 @@ import dog_with_phone_img from "../public/dog_with_phone.png";
 
 const Footer = () => {
   return (
-    <div className="w-full flex relative text-white flex-col justify-between  md:p-12 m-auto md:pb-6 h-60 p-6 bg-dark-gray text-white rounded-tr-full  ">
+    <div className="relative m-auto flex h-60 w-full flex-col  justify-between rounded-tr-full bg-dark-gray p-6 text-white text-white md:p-12 md:pb-6  ">
       <div className="flex w-[calc(100%-350px)] justify-between">
-        <h3 className=" shrink-0 font-open whitespace-pre grow ">
+        <h3 className=" font-open shrink-0 grow whitespace-pre ">
           {`По всем вопросам \nобращайтесь`}
         </h3>
-        <div className="flex flex-col lg:flex-row font-inter text-2xl grow font-light  justify-between ">
-          <Contact info="@AnastasiaBelykh" icon={<Telegram />} />
-          <Contact info="+971585441452" icon={<WhatsApp />} />
+        <div className="flex grow flex-col justify-between font-inter text-2xl font-light  lg:flex-row ">
+          <Contact info="@AtesttestBtestest" icon={<Telegram />} />
+          <Contact info="+9876543210" icon={<WhatsApp />} />
         </div>
       </div>
-      <div className="flex justify-between text-sm font-extralight font-inter">
+      <div className="flex justify-between font-inter text-sm font-extralight">
         <p>Dagin Pets Relocation ©</p>
         <p>2023</p>
       </div>

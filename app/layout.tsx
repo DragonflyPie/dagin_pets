@@ -18,7 +18,7 @@ export default function RootLayout({
       // className={`${jakarta.variable} ${lato.variable} ${inter.variable}`}
       className={`${osans.variable} ${inter.variable} ${lato.variable}`}
     >
-      <body className="text-blackish bg-white">{children}</body>
+      <body className="bg-white text-blackish">{children}</body>
     </html>
   );
 }

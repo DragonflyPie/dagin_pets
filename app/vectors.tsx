@@ -20,8 +20,8 @@ export const Paw = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="294"
-      height="275"
+      width="100%"
+      height="100%"
       fill="none"
       viewBox="0 0 294 275"
     >
@@ -38,8 +38,8 @@ export const DottedLine = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="850"
-      height="808"
+      width="100%"
+      height="100%"
       fill="none"
       viewBox="0 0 850 808"
     >

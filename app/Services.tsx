@@ -12,7 +12,7 @@ const Services = () => {
         <br />
         предлагает широкий спектр услуг, включая:
       </h2>
-      <ul className="grid md:grid-cols-2 rounded-3xl shadow-[0px_0px_15px_0px_rgba(59,59,59,0.09)]">
+      <ul className="grid rounded-3xl shadow-[0px_0px_15px_0px_rgba(59,59,59,0.09)] md:grid-cols-2">
         <ServiceCard
           icon={puppy_img}
           heading="Полное сопровождение"

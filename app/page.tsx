@@ -6,11 +6,12 @@ import Welcome from "./Welcome";
 
 export default function Home() {
   return (
-    <main className="font-osans w-full flex items-center flex-col">
+    <main className="flex w-full flex-col items-center font-osans">
       <Welcome />
       <About />
       <Services />
       <Safety />
+
       <Footer />
     </main>
   );

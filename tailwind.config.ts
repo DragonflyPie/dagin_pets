@@ -9,7 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "light-blue": "#00BEFC",
+        "light-blue": {
+          default: "#00BEFC",
+          darken: "#00abe2",
+        },
+
         blackish: "#393939",
         "dark-gray": "#343434",
       },
