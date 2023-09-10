@@ -10,7 +10,7 @@ const Welcome = () => {
       <div className="absolute left-4 -z-10 w-16 md:left-8 md:w-24 lg:left-16 lg:w-[120px]">
         <Image src={logo} alt="DaginPets Logo" />
       </div>
-      <div className="flex w-full flex-col p-4 pt-16 md:flex-row md:justify-between md:pb-12 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24">
+      <div className="flex w-full flex-col p-4 pt-16 md:flex-row md:justify-between md:pb-12 md:pl-8 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24">
         <div className="flex h-full flex-col justify-between gap-10 pt-3 md:pt-12 lg:pt-24">
           <pre>
             <h1 className="inline-block font-lato text-4xl leading-[1.1]  tracking-[0.8px] lg:text-5xl  xl:text-[80px] ">
