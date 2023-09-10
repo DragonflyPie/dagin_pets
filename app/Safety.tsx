@@ -13,14 +13,12 @@ const Safety = () => {
         />
       </div>
       <article className="min-w-[70%] flex-1">
-        <h3 className="text-lg/[150%] sm:text-xl/[150%] md:text-2xl/[150%] lg:text-4xl/[180%]">
-          <pre className="font-osans">
-            Мы <span className="font-bold">ценим здоровье</span>
-          </pre>
-          <pre className="font-osans">
-            и<span className="font-bold"> благополучие ваших питомцев</span>
-          </pre>
-        </h3>
+        <pre className="font-osans text-lg/[150%] sm:text-xl/[150%] md:text-2xl/[150%] lg:text-4xl/[180%]">
+          Мы <span className="font-bold">ценим здоровье</span>
+        </pre>
+        <pre className="font-osans text-lg/[150%] sm:text-xl/[150%] md:text-2xl/[150%] lg:text-4xl/[180%]">
+          и<span className="font-bold"> благополучие ваших питомцев</span>
+        </pre>
         <p className="font-inter text-lg/[120%] sm:text-xl/[150%] lg:text-2xl/[180%]">
           и наша миссия - обеспечить максимально комфортную и безопасную
           перевозку для них. Не стесняйтесь связаться с нами сегодня, чтобы

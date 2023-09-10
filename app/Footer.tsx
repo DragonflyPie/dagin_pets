@@ -5,12 +5,12 @@ import dog_with_phone_img from "../public/dog_with_phone.png";
 
 const Footer = () => {
   return (
-    <div className="relative m-auto flex h-60 w-full flex-col  justify-between rounded-tr-full bg-dark-gray p-6 text-white text-white md:p-12 md:pb-6  ">
-      <div className="flex w-[calc(100%-350px)] justify-between">
-        <h3 className=" font-open shrink-0 grow whitespace-pre ">
+    <div className="relative m-auto flex h-48 w-full flex-col justify-between  rounded-tr-full bg-dark-gray p-4 text-white text-white md:p-12 md:pb-6 lg:h-60  ">
+      <div className="flex items-start justify-between md:items-center">
+        <h3 className=" whitespace-pre font-osans text-lg sm:text-xl/[120%] md:text-2xl/[150%] lg:text-3xl/[150%] xl:text-4xl/[150%]">
           {`По всем вопросам \nобращайтесь`}
         </h3>
-        <div className="flex grow flex-col justify-between font-inter text-2xl font-light  lg:flex-row ">
+        <div className="flex grow flex-col items-center justify-around pr-10 font-inter font-light sm:text-lg md:flex-row md:text-xl lg:pr-[300px] xl:text-2xl ">
           <Contact info="@AtesttestBtestest" icon={<Telegram />} />
           <Contact info="+9876543210" icon={<WhatsApp />} />
         </div>
@@ -19,7 +19,7 @@ const Footer = () => {
         <p>Dagin Pets Relocation ©</p>
         <p>2023</p>
       </div>
-      <div className="absolute bottom-0 right-16 w-[330px]">
+      <div className="absolute bottom-0 hidden w-[331px] lg:right-10 lg:block xl:right-32">
         <Image src={dog_with_phone_img} alt={"Dog with a phone"} />
       </div>
     </div>
