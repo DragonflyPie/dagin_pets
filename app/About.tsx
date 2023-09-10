@@ -10,7 +10,7 @@ const About = () => {
           src={maltipoo}
           alt={"Maltipoo image"}
           fill
-          className="w-full object-contain"
+          className="object-contain"
         />
       </div>
 
