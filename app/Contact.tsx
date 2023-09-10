@@ -6,7 +6,7 @@ interface ContactProps {
 }
 const Contact = ({ icon, info }: ContactProps) => {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center gap-2  md:gap-4">
       <div className="">{icon}</div>
       <div className="">{info}</div>
     </div>

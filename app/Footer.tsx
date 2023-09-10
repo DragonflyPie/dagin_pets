@@ -5,9 +5,9 @@ import dog_with_phone_img from "../public/dog_with_phone.png";
 
 const Footer = () => {
   return (
-    <div className="relative m-auto flex h-48 w-full flex-col justify-between  rounded-tr-full bg-dark-gray p-4 text-white text-white md:p-12 md:pb-6 lg:h-60  ">
-      <div className="flex items-start justify-between md:items-center">
-        <h3 className=" whitespace-pre font-osans text-lg sm:text-xl/[120%] md:text-2xl/[150%] lg:text-3xl/[150%] xl:text-4xl/[150%]">
+    <div className="relative m-auto flex h-48 w-full flex-col justify-between  rounded-tr-full bg-dark-gray p-4 text-white text-white md:pb-6 lg:h-60 lg:p-8 xl:p-12  ">
+      <div className="flex justify-between lg:items-center">
+        <h3 className=" whitespace-pre font-osans text-lg text-xl/[4rem] sm:text-2xl/[3rem] lg:text-3xl/[3rem] xl:text-4xl/[150%]">
           {`По всем вопросам \nобращайтесь`}
         </h3>
         <div className="flex grow flex-col items-center justify-around pr-10 font-inter font-light sm:text-lg md:flex-row md:text-xl lg:pr-[300px] xl:text-2xl ">
