@@ -2,11 +2,12 @@ import Image from "next/image";
 import pets_walking from "../public/dog_and_cat.png";
 import logo from "../public/logo_with_text.png";
 import Button from "./Button";
+import plane from "../public/plane_test2.png";
 import { DottedLine, Paw } from "./vectors";
 
 const Welcome = () => {
   return (
-    <div className="flex min-h-screen w-full">
+    <div className="relative flex min-h-screen w-full">
       <div className="absolute left-4 -z-10 w-16 md:left-8 md:w-24 lg:left-16 lg:w-[120px]">
         <Image src={logo} alt="DaginPets Logo" />
       </div>
@@ -48,10 +49,13 @@ const Welcome = () => {
         <div className="absolute left-[50vw] top-[calc(15vh+16vw)] w-[16vw] rotate-45 md:left-[40vw] md:top-[calc(5vh+16vw)]">
           <Paw />
         </div>
-        <div className="absolute left-0 top-0 -z-10 h-[95vh]">
-          <DottedLine />
-        </div>
       </div>
+      {/* <Image
+        src={plane}
+        fill
+        className="object-cover"
+        alt="Plane flying with your pets"
+      /> */}
     </div>
   );
 };
