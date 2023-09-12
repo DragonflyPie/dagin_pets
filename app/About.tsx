@@ -1,15 +1,15 @@
 import Image from "next/image";
-import maltipoo from "../public/maltipoooo.png";
+import maltipoo from "../public/maltipoooo3.png";
 import { BlueShape } from "./vectors";
 
 const About = () => {
   return (
-    <div className="relative flex items-center p-4 md:pb-12 md:pl-8 lg:pb-24 lg:pl-20 lg:pr-8">
-      <div className="relative aspect-[3/4] h-full max-h-[419px] w-full max-w-[317px]">
+    <div className="relative flex items-center md:pb-12  lg:pb-24">
+      <div className="w-full ">
         <Image
           src={maltipoo}
           alt={"Maltipoo image"}
-          fill
+          height={436}
           className="object-contain"
         />
       </div>
@@ -21,9 +21,6 @@ const About = () => {
         <span className="font-semibold">наилучшего маршрута</span> и способа
         транспортировки вашего любимца.
       </p>
-      <div className="absolute right-0  top-[60%] w-36">
-        <BlueShape />
-      </div>
     </div>
   );
 };
