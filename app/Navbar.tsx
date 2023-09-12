@@ -3,6 +3,7 @@ import logo from "../public/logo_with_text_small.png";
 import Messengers from "./Messangers";
 import Button from "./Button";
 import LanguageSelector from "./LanguageSelector";
+import NavMenu from "./NavMenu";
 
 const Navbar = () => {
   return (
@@ -11,20 +12,7 @@ const Navbar = () => {
         <Image src={logo} alt="DaginPets Logo" fill />
       </div>
       <nav className="">
-        <ul className="flex gap-12">
-          <li className="cursor-pointer underline-offset-2 hover:underline">
-            Главная
-          </li>
-          <li className="cursor-pointer underline-offset-2 hover:underline">
-            Услуги
-          </li>
-          <li className="cursor-pointer underline-offset-2 hover:underline">
-            О компании
-          </li>
-          <li className="cursor-pointer underline-offset-2 hover:underline">
-            Часто задаваемые вопросы
-          </li>
-        </ul>
+        <NavMenu />
       </nav>
       <Messengers />
       <Button text="Написать" size="small" />

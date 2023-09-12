@@ -3,13 +3,14 @@ import { ReactNode } from "react";
 interface ContactProps {
   icon: ReactNode;
   info: string;
+  link: string;
 }
-const Contact = ({ icon, info }: ContactProps) => {
+const Contact = ({ icon, info, link }: ContactProps) => {
   return (
-    <div className="flex flex-col items-center gap-2  md:gap-4">
+    <a href={link} className="flex w-fit items-center gap-2  lg:gap-4">
       <div className="">{icon}</div>
       <div className="">{info}</div>
-    </div>
+    </a>
   );
 };
 
