@@ -24,14 +24,10 @@ export const WhatsApp = () => {
       fill="none"
       viewBox="0 0 24 24"
     >
-      <g clipPath="url(#clip0_201_15)">
+      <g clipPath="url(#clip0_233_2)">
         <path
-          fill="url(#paint0_linear_201_15)"
+          fill="url(#paint0_linear_233_2)"
           d="M.508 11.856c0 2.017.527 3.986 1.529 5.721l-1.624 5.93 6.068-1.591a11.44 11.44 0 005.47 1.392h.005c6.308 0 11.443-5.133 11.446-11.443a11.372 11.372 0 00-3.35-8.095A11.374 11.374 0 0011.955.414C5.645.414.511 5.547.509 11.856"
-        ></path>
-        <path
-          fill="url(#paint1_linear_201_15)"
-          d="M.1 11.853c-.001 2.089.545 4.128 1.582 5.926L0 23.92l6.286-1.648a11.852 11.852 0 005.666 1.442h.005c6.534 0 11.854-5.317 11.857-11.853a11.782 11.782 0 00-3.47-8.386A11.783 11.783 0 0011.957 0C5.42 0 .102 5.317.1 11.853zm3.743 5.616l-.235-.373a9.826 9.826 0 01-1.507-5.243c.003-5.432 4.423-9.851 9.86-9.851a9.792 9.792 0 016.967 2.89 9.793 9.793 0 012.884 6.97c-.002 5.432-4.423 9.851-9.855 9.851h-.004a9.844 9.844 0 01-5.016-1.373l-.36-.213-3.73.978.996-3.636z"
         ></path>
         <path
           fill="#fff"
@@ -40,7 +36,7 @@ export const WhatsApp = () => {
       </g>
       <defs>
         <linearGradient
-          id="paint0_linear_201_15"
+          id="paint0_linear_233_2"
           x1="1149.87"
           x2="1149.87"
           y1="2309.67"
@@ -50,18 +46,7 @@ export const WhatsApp = () => {
           <stop stopColor="#1FAF38"></stop>
           <stop offset="1" stopColor="#60D669"></stop>
         </linearGradient>
-        <linearGradient
-          id="paint1_linear_201_15"
-          x1="1190.7"
-          x2="1190.7"
-          y1="2392.07"
-          y2="0"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#F9F9F9"></stop>
-          <stop offset="1" stopColor="#fff"></stop>
-        </linearGradient>
-        <clipPath id="clip0_201_15">
+        <clipPath id="clip0_233_2">
           <path fill="#fff" d="M0 0H23.814V24H0z"></path>
         </clipPath>
       </defs>

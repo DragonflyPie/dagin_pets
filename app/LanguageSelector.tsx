@@ -7,7 +7,7 @@ type LanguageOptions = "RU" | "EN";
 
 const LanguageSelector = () => {
   const [lang, setLang] = useState<LanguageOptions>("RU");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -30,7 +30,7 @@ const LanguageSelector = () => {
   return (
     <div className="gap relative flex h-6 w-8 " ref={languageRef}>
       {isOpen ? (
-        <div className="bg-light-blue absolute -top-4 flex gap-[6px] rounded-[6px] p-3">
+        <div className="absolute -top-4 flex gap-[6px] rounded-[6px] bg-light-blue p-3">
           <ul className="flex flex-col gap-2">
             {languages.map((language) => (
               <li
