@@ -12,6 +12,10 @@ export const lato = localFont({
 //   display: "swap",
 //   variable: "--font-jakarta",
 // });
+export const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin", "cyrillic-ext"],
+  variable: "--font-jakarta",
+});
 
 export const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -20,6 +24,7 @@ export const inter = Inter({
 
 export const osans = Open_Sans({
   subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-osans",
 });
 

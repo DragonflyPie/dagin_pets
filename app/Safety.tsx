@@ -3,7 +3,7 @@ import fluffy_pets from "../public/fluffy_cat_and_dog.png";
 
 const Safety = () => {
   return (
-    <div className="flex justify-between gap-6 py-24">
+    <div className="flex justify-between gap-6 pb-24">
       <div className="relative aspect-[1.4] w-[100px] lg:w-[300px]  xl:w-[540px]">
         <Image
           src={fluffy_pets}

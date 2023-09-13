@@ -6,12 +6,12 @@ import maltipoo_img from "../public/maltipoo_icon.png";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center font-inter">
+    <div className="flex flex-col items-center pb-24 font-inter">
       <h2 className="text:xl flex flex-col gap-6 whitespace-pre-wrap pb-6 text-center md:pb-6 md:text-2xl lg:pb-10">
         <span className="font-bold">Dagin Pets Relocation</span>
         <span>предлагает широкий спектр услуг, включая:</span>
       </h2>
-      <ul className="relative grid gap-8 lg:grid-cols-2 lg:grid-rows-2 ">
+      <ul className="relative grid gap-16 lg:grid-cols-2 lg:grid-rows-2 ">
         <ServiceCard
           icon={puppy_img}
           heading="Полное сопровождение"
@@ -32,8 +32,8 @@ const Services = () => {
           heading="Пет такси с любовью и заботой:"
           text="вкусняшки на усмотрение владельца, при необходимости - пеленочки для кошек и специальные пакеты для собак, облагородивших пальмы."
         />
-        <div className="bg-gray-light absolute left-[calc(50%-0.5px)] top-[3%] hidden h-[94%] w-px bg-black lg:block"></div>
-        <div className="bg-gray-light absolute top-[calc(50%-0.5px)] hidden h-px w-full lg:block"></div>
+        <div className="absolute left-[calc(50%-0.5px)] top-[3%] hidden h-[94%] w-px bg-black bg-gray-light lg:block"></div>
+        <div className="absolute top-[calc(50%-0.5px)] hidden h-px w-full bg-gray-light lg:block"></div>
       </ul>
     </div>
   );
