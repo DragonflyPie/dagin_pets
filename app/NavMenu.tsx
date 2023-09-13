@@ -1,6 +1,6 @@
 const NavMenu = () => {
   return (
-    <ul className="flex justify-end gap-6  lg:gap-12">
+    <ul className="flex justify-end gap-4  xl:gap-12">
       <li className="cursor-pointer underline-offset-2 hover:underline">
         Главная
       </li>

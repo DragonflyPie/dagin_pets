@@ -1,4 +1,4 @@
-import { Plus_Jakarta_Sans, Inter, Open_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Open_Sans, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
 export const lato = localFont({
@@ -21,4 +21,10 @@ export const inter = Inter({
 export const osans = Open_Sans({
   subsets: ["latin", "cyrillic"],
   variable: "--font-osans",
+});
+
+export const roboto = Roboto({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700", "900"],
+  variable: "--font-roboto",
 });

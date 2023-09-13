@@ -1,25 +1,27 @@
 import Image from "next/image";
-import dog_and_cat_2_img from "../public/dog_and_cat_2.png";
+import fluffy_pets from "../public/fluffy_cat_and_dog.png";
 
 const Safety = () => {
   return (
-    <div className="flex items-center gap-4 pb-12 pr-4 pt-4 md:gap-8 md:py-12 md:pr-8 lg:gap-14 lg:py-24  lg:pr-20">
-      <div className="relative mt-auto aspect-[0.94/1] h-full max-h-[554px] w-full max-w-[524px] flex-1 ">
+    <div className="flex justify-between gap-6 py-24">
+      <div className="relative aspect-[1.4] w-[100px] lg:w-[300px]  xl:w-[540px]">
         <Image
-          src={dog_and_cat_2_img}
+          src={fluffy_pets}
           alt="Dog and cat staring"
           fill
-          className=" object-contain"
+          className="object-contain"
         />
       </div>
-      <article className="min-w-[70%] flex-1">
+      {/* </div> */}
+      {/* <div className="h-20 min-w-[20px] flex-1 bg-green-200"></div> */}
+      <article className="flex-1">
         <pre className="font-osans text-lg/[150%] sm:text-xl/[150%] md:text-2xl/[150%] lg:text-4xl/[180%]">
           Мы <span className="font-bold">ценим здоровье</span>
         </pre>
         <pre className="font-osans text-lg/[150%] sm:text-xl/[150%] md:text-2xl/[150%] lg:text-4xl/[180%]">
           и<span className="font-bold"> благополучие ваших питомцев</span>
         </pre>
-        <p className="font-inter text-lg/[120%] sm:text-xl/[150%] lg:text-2xl/[180%]">
+        <p className=" font-inter text-lg/[120%] sm:text-xl/[150%] lg:text-2xl/[180%]">
           и наша миссия - обеспечить максимально комфортную и безопасную
           перевозку для них. Не стесняйтесь связаться с нами сегодня, чтобы
           узнать больше о наших услугах, получить бесплатную консультацию по

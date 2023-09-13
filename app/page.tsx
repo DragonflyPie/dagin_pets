@@ -7,9 +7,9 @@ import Welcome from "./Welcome";
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col items-center font-osans">
+    <main className="flex w-full flex-col items-center font-roboto">
+      <Navbar />
       <div className="flex max-w-[1440px] flex-col px-20">
-        <Navbar />
         <Welcome />
         <About />
         <Services />

@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { osans, inter, lato } from "./fonts";
+import { osans, inter, lato, roboto } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html
       lang="en"
       // className={`${jakarta.variable} ${lato.variable} ${inter.variable}`}
-      className={`${osans.variable} ${inter.variable} ${lato.variable}`}
+      className={`${osans.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
     >
       <body className="bg-white text-blackish">{children}</body>
     </html>
