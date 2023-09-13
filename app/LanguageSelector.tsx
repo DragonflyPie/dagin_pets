@@ -13,6 +13,10 @@ const LanguageSelector = () => {
     setIsOpen(false);
   };
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const openMenu = () => {
     setIsOpen(true);
   };
@@ -29,8 +33,13 @@ const LanguageSelector = () => {
   useClickOutside(languageRef, closeMenu);
   return (
     <div className="gap relative flex h-6 w-8 " ref={languageRef}>
-      {isOpen ? (
-        <div className="absolute -top-4 flex gap-[6px] rounded-[6px] bg-light-blue p-3">
+      <div
+        onClick={toggleMenu}
+        className={`absolute -top-4 flex gap-[6px] rounded-[6px] p-3 transition-colors duration-500 ${
+          isOpen ? "bg-light-blue" : "bg-inherit"
+        }`}
+      >
+        {isOpen ? (
           <ul className="flex flex-col gap-2">
             {languages.map((language) => (
               <li
@@ -42,24 +51,17 @@ const LanguageSelector = () => {
               </li>
             ))}
           </ul>
-          <div
-            className="mb-auto rotate-180 cursor-pointer"
-            onClick={closeMenu}
-          >
-            <Down />
-          </div>
-        </div>
-      ) : (
+        ) : (
+          <div className="cursor-pointer">{lang}</div>
+        )}
         <div
-          className="absolute -top-4 flex cursor-pointer gap-[6px] p-3"
-          onClick={openMenu}
+          className={`mb-auto ${
+            isOpen ? "rotate-180" : ""
+          } cursor-pointer transition-all duration-200`}
         >
-          <div className="">{lang}</div>
-          <div className="">
-            <Down />
-          </div>
+          <Down />
         </div>
-      )}
+      </div>
     </div>
   );
 };
