@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { osans, inter, lato, roboto, jakarta } from "./fonts";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Paw } from "./vectors";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",
