@@ -40,6 +40,7 @@ const Welcome = () => {
             fill
             className="object-contain "
           />
+          <div className="absolute bottom-2 -z-10 h-10 w-full rounded-[50%] bg-black opacity-20 blur-xl "></div>
         </div>
       </div>
       <div className="absolute left-[30vw] top-[10vh] w-[16vw] md:left-[20vw] md:top-[2vh]">

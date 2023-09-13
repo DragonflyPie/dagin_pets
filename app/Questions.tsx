@@ -21,7 +21,7 @@ const Questions = () => {
             src={avatar_group}
             alt="Helpful people"
             width={120}
-            height={56}
+            className="h-auto"
           />
         </div>
         <div className="flex flex-col items-center gap-2 ">

@@ -33,7 +33,7 @@ const Accordeon = () => {
     <ul className="flex w-[768px] flex-col gap-6">
       {FAQ.map((item, index) => {
         return (
-          <div className="flex flex-col gap-8" key={item.answer}>
+          <div className="flex flex-col gap-8" key={item.question}>
             <AccordeonItem content={item} />
             {index !== FAQ.length - 1 && <hr />}
           </div>
