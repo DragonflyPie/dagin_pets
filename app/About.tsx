@@ -1,10 +1,12 @@
 import Image from "next/image";
 import maltipoo from "../public/maltipoooo.png";
-import { BlueShape } from "./vectors";
 
 const About = () => {
   return (
-    <div className=" flex items-center md:pb-12  lg:pb-24">
+    <div
+      className=" flex scroll-m-10 items-center  md:pb-12 lg:pb-24"
+      id="about"
+    >
       <div className="relative h-[436px] w-[355px]">
         <Image
           src={maltipoo}

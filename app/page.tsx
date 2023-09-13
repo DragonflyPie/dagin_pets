@@ -9,7 +9,7 @@ import Welcome from "./Welcome";
 export default function Home() {
   return (
     <main className="flex w-full flex-col items-center font-osans">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex max-w-[1440px] flex-col px-20">
         <Welcome />
         <About />
@@ -17,7 +17,7 @@ export default function Home() {
         <Safety />
         <Questions />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

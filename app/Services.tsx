@@ -6,7 +6,10 @@ import maltipoo_img from "../public/maltipoo_icon.png";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center pb-24 font-inter">
+    <div
+      className="flex scroll-m-10 flex-col items-center pb-24 font-inter"
+      id="services"
+    >
       <h2 className="text:xl flex flex-col gap-6 whitespace-pre-wrap pb-6 text-center md:pb-6 md:text-2xl lg:pb-10">
         <span className="font-bold">Dagin Pets Relocation</span>
         <span>предлагает широкий спектр услуг, включая:</span>

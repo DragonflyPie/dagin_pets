@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { osans, inter, lato, roboto, jakarta } from "./fonts";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",
@@ -17,9 +19,13 @@ export default function RootLayout({
     <html
       lang="en"
       // className={`${jakarta.variable} ${lato.variable} ${inter.variable}`}
-      className={`${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
+      className={`${osans.variable} ${jakarta.variable} scroll-smooth ${inter.variable} ${lato.variable} ${roboto.variable}`}
     >
-      <body className="bg-white text-blackish">{children}</body>
+      <body className="flex w-full flex-col items-center bg-white font-osans text-blackish">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

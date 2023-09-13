@@ -5,7 +5,10 @@ import Image from "next/image";
 
 const Questions = () => {
   return (
-    <div className="flex w-full flex-col items-center gap-16 pb-24">
+    <div
+      className="flex w-full scroll-m-10 flex-col items-center gap-16 pb-24"
+      id="faq"
+    >
       <div className="flex flex-col items-center gap-5">
         <h3 className="font-inter text-4xl font-semibold tracking-tight">
           Часто задаваемые вопросы.

@@ -8,7 +8,10 @@ import Navbar from "./Navbar";
 const Welcome = () => {
   return (
     // {/* <div className="flex w-full flex-col p-4  md:flex-row md:justify-between md:pb-12 md:pl-8 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24"> */}
-    <div className=" flex min-h-[calc(100vh-113px)] flex-col pb-4 md:flex-row md:justify-between md:pb-12 lg:pb-24">
+    <div
+      className="flex min-h-[calc(100vh-113px)] scroll-m-28 flex-col pb-4 md:flex-row md:justify-between md:pb-12 lg:pb-24"
+      id="welcome"
+    >
       <div className="flex flex-col justify-between gap-10 pt-3 md:pt-12 lg:pt-24">
         <pre>
           <h1 className="inline-block font-lato text-4xl leading-[1.1]  tracking-[0.8px] lg:text-5xl  xl:text-[80px] ">

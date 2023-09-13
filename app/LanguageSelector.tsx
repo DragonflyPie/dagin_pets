@@ -17,10 +17,6 @@ const LanguageSelector = () => {
     setIsOpen(!isOpen);
   };
 
-  const openMenu = () => {
-    setIsOpen(true);
-  };
-
   const chooseLanguage = (language: LanguageOptions) => {
     setLang(language);
     setIsOpen(false);
