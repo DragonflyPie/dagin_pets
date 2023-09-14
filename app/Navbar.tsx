@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "../public/logo_with_text_small.png";
-import Messengers from "./Messangers";
+import MessengersMenu from "./MessengersMenu";
 import Button from "./Button";
 import LanguageSelector from "./LanguageSelector";
 import NavMenu from "./NavMenu";
@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav className="">
         <NavMenu />
       </nav>
-      <Messengers />
+      <MessengersMenu />
       <Button text="Написать" size="small" />
       <LanguageSelector />
     </div>

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 export const lato = localFont({
   src: "../fonts/Lato-Heavy.woff2",
   display: "swap",
+  weight: "600",
   variable: "--font-lato",
 });
 

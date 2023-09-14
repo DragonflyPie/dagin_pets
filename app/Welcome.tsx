@@ -1,9 +1,7 @@
 import Image from "next/image";
 import fat_cat from "../public/fat_cat.png";
 import Button from "./Button";
-import plane from "../public/plane_test2.png";
-import { DottedLine, Paw } from "./vectors";
-import Navbar from "./Navbar";
+import { Paw } from "./vectors";
 import { Plane } from "./icons";
 
 const Welcome = () => {

@@ -1,5 +1,5 @@
 import { WhatsApp, Telegram, Phone } from "./icons";
-const Messengers = () => {
+const MessengersMenu = () => {
   return (
     <ul className="flex gap-6">
       <li className="cursor-pointer transition-transform duration-300 hover:scale-110">
@@ -21,4 +21,4 @@ const Messengers = () => {
   );
 };
 
-export default Messengers;
+export default MessengersMenu;
