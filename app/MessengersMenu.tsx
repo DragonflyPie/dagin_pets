@@ -1,7 +1,7 @@
 import { WhatsApp, Telegram, Phone } from "./icons";
 const MessengersMenu = () => {
   return (
-    <ul className="flex gap-6">
+    <ul className="flex gap-3">
       <li className="cursor-pointer transition-transform duration-300 hover:scale-110">
         <a href="tel:+971585441452">
           <Phone />

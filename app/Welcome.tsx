@@ -8,12 +8,12 @@ const Welcome = () => {
   return (
     // {/* <div className="flex w-full flex-col p-4  md:flex-row md:justify-between md:pb-12 md:pl-8 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24"> */}
     <div
-      className="relative flex min-h-[calc(100vh-113px)] scroll-m-28 flex-col pb-4 md:flex-row md:justify-between md:pb-12 lg:pb-24"
+      className="relative flex min-h-[calc(100vh-113px)] scroll-m-28  flex-col  pb-4 md:flex-row md:justify-between md:pb-12 lg:pb-24"
       id="welcome"
     >
-      <div className="z-10 flex flex-col justify-between gap-10 pt-3 md:pt-12 lg:pt-24">
+      <div className="z-10 flex flex-col justify-between gap-10 pt-3  md:pt-12 lg:pt-24">
         <pre>
-          <h1 className="inline-block font-lato text-4xl leading-[1.1]  tracking-[0.8px] lg:text-5xl  xl:text-[80px] ">
+          <h1 className="inline-block font-lato text-4xl font-extrabold leading-[1.1]  tracking-[0.8px] lg:text-5xl  xl:text-[80px] ">
             {`Приветствуем вас,\nдорогие любители\nживотных!`}
           </h1>
         </pre>
@@ -22,25 +22,27 @@ const Welcome = () => {
           Pets Relocation рада предложить вам свою помощь: услуги по
           транспортировке животных, а также пет такси на территории ОАЭ.
         </p>
+
         <div className="relative h-full w-full md:hidden">
           <Image
             src={fat_cat}
-            alt="Dog and cat walking"
+            alt="Fat fluffy cat"
             fill
-            className="object-contain"
+            className=" object-contain"
           />
         </div>
+
         <div className="">
           <Button text="Хочу перевезти" />
         </div>
       </div>
       <div className="relative hidden md:block">
-        <div className="-right absolute -right-48 -top-10  h-[762px] w-[762px] ">
+        <div className="-right clip absolute -right-48 -top-10 h-[762px] w-[762px]   ">
           <Image
             src={fat_cat}
-            alt="Dog and cat walking"
+            alt="Fat fluffy cat"
             fill
-            className="object-contain "
+            className=" object-contain "
           />
           <div className="absolute bottom-2 -z-10 h-10 w-full rounded-[50%] bg-black opacity-20 blur-xl "></div>
         </div>

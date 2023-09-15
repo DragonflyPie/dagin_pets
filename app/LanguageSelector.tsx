@@ -28,10 +28,10 @@ const LanguageSelector = () => {
 
   useClickOutside(languageRef, closeMenu);
   return (
-    <div className="gap relative flex h-6 w-8 " ref={languageRef}>
+    <div className="relative flex h-8 w-16 items-center  " ref={languageRef}>
       <div
         onClick={toggleMenu}
-        className={`absolute -top-4 flex gap-[6px] rounded-[6px] p-3 transition-colors duration-500 ${
+        className={`absolute -left-1.5 -top-1.5 flex gap-[6px] rounded-[6px] p-3 transition-colors duration-500 ${
           isOpen ? "bg-light-blue" : "bg-inherit"
         }`}
       >

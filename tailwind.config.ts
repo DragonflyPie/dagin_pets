@@ -17,6 +17,8 @@ const config: Config = {
         blackish: "#393939",
         "gray-dark": "#18171C",
         "gray-light": "#E4E4E7",
+        "gray-form": "#828282",
+        "gray-form-heading": "#667085",
         "white-dirty": "#F9FAFB",
       },
       fontFamily: {

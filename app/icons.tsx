@@ -333,3 +333,23 @@ export const Plane = () => {
     </svg>
   );
 };
+
+export const CloseIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7 7l10 10M7 17L17 7"
+      ></path>
+    </svg>
+  );
+};
