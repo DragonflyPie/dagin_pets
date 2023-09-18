@@ -1,10 +1,13 @@
 "use client";
 import { useState } from "react";
 import Button from "./Button";
+import Checkbox from "./CheckBox";
+import useModalStore from "./store";
 
 type Steps = 0 | 1;
 
 const ContactForm = () => {
+  const closeModal = useModalStore((state) => state.closeModal);
   const [step, setStep] = useState<Steps>(0);
 
   const nextStep = () => {
@@ -15,13 +18,30 @@ const ContactForm = () => {
     setStep(0);
   };
 
+  const submitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+    closeModal();
+  };
+
   return (
     <form
       action=""
-      className="flex h-[500px] w-full flex-col gap-6 overflow-y-auto px-16"
+      onSubmit={submitForm}
+      className="flex h-full w-full flex-col gap-6 px-14"
     >
       {step === 0 ? (
         <>
+          <hgroup className="flex flex-col items-center pb-16 font-lato">
+            <p className="pb-3 text-base font-semibold text-blue-button-default">
+              Связаться с нами
+            </p>
+            <h5 className="pb-5 text-4xl/[44px] font-semibold">
+              Контактная форма
+            </h5>
+            <p className="text-xl/[30px] text-gray-form-heading">
+              Заполните данные и мы Вам ответим
+            </p>
+          </hgroup>
           <div className="flex flex-col gap-1.5">
             <label htmlFor="name">Имя</label>
             <input
@@ -42,10 +62,9 @@ const ContactForm = () => {
             <select
               id="contactMethod"
               className="inline-flex h-12 appearance-none items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
+              defaultValue={"any"}
             >
-              <option selected value="any">
-                Любой
-              </option>
+              <option value="any">Любой</option>
               <option value="phone">Телефон</option>
               <option value="whatsApp">Whats App</option>
               <option value="telegram">Telegram</option>
@@ -65,6 +84,7 @@ const ContactForm = () => {
         </>
       ) : (
         <>
+          <div className="pt-6"></div>
           <div className="flex w-full  gap-5">
             <div className="flex flex-1 flex-col gap-1.5">
               <label htmlFor="from">Откуда везти</label>
@@ -99,13 +119,14 @@ const ContactForm = () => {
               className="inline-flex h-20 items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
             ></textarea>
           </div>
-          <div className="flex">
+          <Checkbox />
+          {/* <div className="flex">
             <input type="checkbox" />
             <label>
               Вы соглашаетесь с нашей дружественной политикой
               конфиденциальности.
             </label>
-          </div>
+          </div> */}
           <div className="mt-auto flex w-full justify-between gap-5">
             <div className="flex-1">
               <Button

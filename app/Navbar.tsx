@@ -4,6 +4,7 @@ import MessengersMenu from "./MessengersMenu";
 import Button from "./Button";
 import LanguageSelector from "./LanguageSelector";
 import NavMenu from "./NavMenu";
+import useModalStore from "./store";
 
 const Navbar = () => {
   return (

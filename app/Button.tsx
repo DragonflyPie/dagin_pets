@@ -1,3 +1,7 @@
+"use client";
+
+import useModalStore from "./store";
+
 interface ButtonProps {
   text: string;
   size?: "small" | "large";
@@ -14,6 +18,8 @@ const Button = ({
   onClick,
   width = "content",
 }: ButtonProps) => {
+  const openModal = useModalStore((state) => state.openModal);
+
   return (
     <button
       className={`h-min cursor-pointer whitespace-nowrap bg-blue-button-default font-lato text-white transition-colors hover:bg-blue-button-darken hover:text-gray-50 
@@ -22,7 +28,7 @@ const Button = ({
       ${width === "full" ? "w-full" : "w-fit"}
       `}
       type={type}
-      onClick={onClick}
+      onClick={onClick ? onClick : openModal}
     >
       {text}
     </button>

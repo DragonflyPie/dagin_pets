@@ -353,3 +353,23 @@ export const CloseIcon = () => {
     </svg>
   );
 };
+
+export const CheckIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.5"
+        d="M16.666 5.833l-8.333 8.334L4.166 10"
+      ></path>
+    </svg>
+  );
+};
