@@ -45,6 +45,7 @@ const ContactForm = () => {
           <div className="flex flex-col gap-1.5">
             <label htmlFor="name">Имя</label>
             <input
+              placeholder="Введите Имя"
               id="name"
               className="inline-flex h-12 items-center justify-start rounded-lg border border-gray-300  px-4 py-3 shadow"
             ></input>
@@ -52,6 +53,7 @@ const ContactForm = () => {
           <div className="flex flex-col gap-1.5">
             <label htmlFor="phone">Телефон</label>
             <input
+              placeholder="+7 (900) 000-0000"
               type="tel"
               id="phone"
               className="inline-flex h-12 items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
@@ -60,11 +62,13 @@ const ContactForm = () => {
           <div className="flex flex-col gap-1.5">
             <label htmlFor="contactMethod">Способ связи</label>
             <select
+              placeholder="Любой"
               id="contactMethod"
               className="inline-flex h-12 appearance-none items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
-              defaultValue={"any"}
             >
-              <option value="any">Любой</option>
+              <option value="any" hidden>
+                Любой
+              </option>
               <option value="phone">Телефон</option>
               <option value="whatsApp">Whats App</option>
               <option value="telegram">Telegram</option>
@@ -89,6 +93,7 @@ const ContactForm = () => {
             <div className="flex flex-1 flex-col gap-1.5">
               <label htmlFor="from">Откуда везти</label>
               <input
+                placeholder="Выберите"
                 id="from"
                 className="inline-flex h-12 items-center justify-start rounded-lg border border-gray-300  px-4 py-3 shadow"
               ></input>
@@ -96,6 +101,7 @@ const ContactForm = () => {
             <div className="flex flex-1 flex-col gap-1.5">
               <label htmlFor="to">Куда везти</label>
               <input
+                placeholder="Выберите"
                 id="to"
                 className="inline-flex h-12 items-center justify-start rounded-lg border border-gray-300  px-4 py-3 shadow"
               ></input>
@@ -105,8 +111,12 @@ const ContactForm = () => {
             <label>Кого везти</label>
             <select
               id="animal"
-              className="inline-flex h-12 items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
+              className="aria-disabled::text-gray-300 inline-flex h-12 items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow "
+              defaultValue={""}
             >
+              <option disabled hidden value="">
+                Выберите
+              </option>
               <option value="cat">Кошка</option>
               <option value="dog">Собака</option>
               <option value="other">Другое животное</option>
@@ -115,9 +125,15 @@ const ContactForm = () => {
           <div className="flex flex-col gap-1.5">
             <label htmlFor="phone">Сообщение</label>
             <textarea
+              maxLength={250}
+              rows={4}
               id="message"
-              className="inline-flex h-20 items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
+              placeholder="Введите сообщение"
+              className="inline-flex items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
             ></textarea>
+            <p className="ml-auto font-lato text-[0.6rem]/[12px] font-light">
+              Максимум 250 символов
+            </p>
           </div>
           <Checkbox />
           {/* <div className="flex">

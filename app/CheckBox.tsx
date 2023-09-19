@@ -13,7 +13,7 @@ const Checkbox = () => {
         id="checkbox"
         checked={isChecked}
         onChange={toggleCheck}
-        className="peer h-5 w-5 shrink-0 appearance-none rounded-md border checked:bg-blue-button-default focus:ring-2  focus:ring-gray-form "
+        className="peer h-5 w-5 shrink-0 appearance-none rounded-md border border-[#d0d5dd] checked:bg-blue-button-default focus:ring-2  focus:ring-gray-form "
       />
       <div className="pointer-events-none absolute h-5 w-5">
         <CheckIcon />
