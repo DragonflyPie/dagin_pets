@@ -20,6 +20,7 @@ const config: Config = {
         "gray-form": "#828282",
         "gray-form-heading": "#667085",
         "white-dirty": "#F9FAFB",
+        "red-error": "#ff3333",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],

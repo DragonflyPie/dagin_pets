@@ -33,7 +33,7 @@ const Welcome = () => {
         </div>
 
         <div className="">
-          <Button text="Хочу перевезти" />
+          <Button text="Хочу перевезти" modal />
         </div>
       </div>
       <div className="relative hidden md:block">

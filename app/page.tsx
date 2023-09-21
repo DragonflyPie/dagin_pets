@@ -4,12 +4,8 @@ import Questions from "./Questions";
 import Safety from "./Safety";
 import Services from "./Services";
 import Welcome from "./Welcome";
-import useModalStore from "./store";
 
 export default function Home() {
-  // const showModal = useModalStore.getState().isOpen;
-  // console.log(showModal);
-
   return (
     <main className="flex w-full flex-col items-center">
       {/* <Navbar /> */}

@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import ContactForm from "./ContactForm";
+import FormContainer from "./FormContainer";
 import sweet_pets from "../public/sweet_pets.png";
 import { CloseIcon } from "./icons";
-import useModalStore from "./store";
+import useStore from "./store";
 import { useEffect, useRef } from "react";
 import useClickOutside from "./hooks/useClickOutside";
 
 const ContactModal = () => {
-  const modalStore = useModalStore();
+  const modalStore = useStore();
   const handleClose = modalStore.closeModal;
   const showModal = modalStore.isOpen;
   const contactRef = useRef<HTMLDivElement>(null);
@@ -34,14 +34,14 @@ const ContactModal = () => {
         ref={contactRef}
         className="relative z-50  flex h-[95vh] w-[644px] flex-col rounded-3xl bg-white p-2 pt-12"
       >
-        <div className="scrollbar scrollbar-thumb-gray-form scrollbar-thin scrollbar-track-gray-100 pt flex h-full flex-col items-center overflow-auto rounded-3xl bg-white  font-jakarta">
+        <div className="pt flex h-full flex-col items-center overflow-auto rounded-3xl bg-white font-jakarta scrollbar scrollbar-thin scrollbar-track-gray-100  scrollbar-thumb-gray-form">
           <div
             className="absolute right-10 top-10 cursor-pointer"
             onClick={handleClose}
           >
             <CloseIcon />
           </div>
-          <ContactForm />
+          <FormContainer />
           <div className="ml-auto">
             <Image
               src={sweet_pets}

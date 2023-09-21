@@ -4,7 +4,7 @@ import MessengersMenu from "./MessengersMenu";
 import Button from "./Button";
 import LanguageSelector from "./LanguageSelector";
 import NavMenu from "./NavMenu";
-import useModalStore from "./store";
+import useStore from "./store";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         <NavMenu />
       </nav>
       <MessengersMenu />
-      <Button text="Написать" size="small" />
+      <Button text="Написать" size="small" modal />
       <LanguageSelector />
     </div>
   );
