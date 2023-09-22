@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { osans, inter, lato, roboto, jakarta } from "./fonts";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { BlueShape } from "./components/vectors";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",
@@ -22,10 +23,13 @@ export default function RootLayout({
       className={` scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
       style={{ scrollbarGutter: "stable" }}
     >
-      <body className="flex w-full flex-col items-center overflow-x-hidden  bg-white font-jakarta text-blackish">
+      <body className="flex w-full flex-col items-center overflow-x-clip  bg-white font-jakarta text-blackish">
         <Navbar />
         {children}
         <Footer />
+        <div className="absolute  left-0 top-[450px] -z-10 md:top-[95vh]">
+          <BlueShape />
+        </div>
       </body>
     </html>
   );

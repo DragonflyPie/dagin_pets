@@ -1,12 +1,17 @@
 import Messanger from "./Messanger";
-import { Telegram, Instagram, PhoneWhite, WhatsAppWhite } from "./icons";
+import {
+  Telegram,
+  Instagram,
+  PhoneWhite,
+  WhatsAppWhite,
+} from "./components/icons";
 import NavMenu from "./NavMenu";
 
 const Footer = () => {
   return (
     <footer className="flex w-full justify-center bg-gray-dark">
       <div className="flex h-[370px] w-full max-w-[1440px] flex-col justify-between p-4  font-inter text-white text-white lg:px-20 lg:py-16 ">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center justify-between md:flex-row">
           <h4 className=" whitespace-pre font-osans text-lg text-xl/[3rem] sm:text-2xl/[3rem] lg:text-3xl/[3rem] xl:text-4xl/[150%]">
             {`По всем вопросам \nобращайтесь`}
           </h4>
@@ -31,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex w-full flex-col justify-between gap-4 text-xs font-medium sm:text-sm lg:flex-row">
-          <NavMenu />
+          <NavMenu top={false} />
           <p className="ml-auto font-extralight">
             Dagin Pets Relocation © Copyright 2023. All Rights Reserved
           </p>

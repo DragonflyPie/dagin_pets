@@ -3,7 +3,7 @@
 import Image from "next/image";
 import FormContainer from "./FormContainer";
 import sweet_pets from "../public/sweet_pets.png";
-import { CloseIcon } from "./icons";
+import { CloseIcon } from "./components/icons";
 import useStore from "./store";
 import { useEffect, useRef } from "react";
 import useClickOutside from "./hooks/useClickOutside";

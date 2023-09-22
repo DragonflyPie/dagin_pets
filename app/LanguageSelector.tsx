@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { Down } from "./icons";
+import { Down } from "./components/icons";
 import useClickOutside from "./hooks/useClickOutside";
 
 type LanguageOptions = "RU" | "EN";

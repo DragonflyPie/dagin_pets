@@ -1,4 +1,4 @@
-import { WhatsApp, Telegram, Phone } from "./icons";
+import { WhatsApp, Telegram, Phone } from "./components/icons";
 const MessengersMenu = () => {
   return (
     <ul className="flex gap-3">

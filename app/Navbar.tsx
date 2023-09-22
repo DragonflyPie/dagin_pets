@@ -8,16 +8,18 @@ import useStore from "./store";
 
 const Navbar = () => {
   return (
-    <div className="z-30 flex w-full max-w-[1440px] items-center justify-end gap-3 px-20 font-inter font-medium xl:gap-12">
-      <div className="relative mr-auto h-[113px] w-[88px]">
-        <Image src={logo} alt="DaginPets Logo" fill />
+    <div className="z-30 flex w-full items-center justify-center bg-white shadow-[0px_3px_34px_0px_#10101010]">
+      <div className="flex w-full max-w-[1440px] items-center justify-end gap-3 px-20 font-inter font-medium xl:gap-12">
+        <div className="relative mr-auto h-[62px] w-[88px] md:h-[87px] xl:h-[113px]">
+          <Image src={logo} alt="DaginPets Logo" fill />
+        </div>
+        <nav className="">
+          <NavMenu top />
+        </nav>
+        <MessengersMenu />
+        <Button text="Написать" size="small" modal />
+        <LanguageSelector />
       </div>
-      <nav className="">
-        <NavMenu />
-      </nav>
-      <MessengersMenu />
-      <Button text="Написать" size="small" modal />
-      <LanguageSelector />
     </div>
   );
 };

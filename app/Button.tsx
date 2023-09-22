@@ -28,7 +28,11 @@ const Button = ({
     <button
       disabled={disabled}
       className={`h-min whitespace-nowrap font-lato text-white transition-colors  hover:text-gray-50 
-      ${size === "small" ? "px-12 py-3 text-base" : "px-16 py-6 text-2xl"}
+      ${
+        size === "small"
+          ? "px-12 py-3 text-base"
+          : "px-6 py-3 text-base md:px-16 md:py-6 md:text-xl xl:text-2xl"
+      }
       ${radius === "small" ? "rounded-lg" : "rounded-[40px]"}
       ${width === "full" ? "w-full" : "w-fit"}
       ${

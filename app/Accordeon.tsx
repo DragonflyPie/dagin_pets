@@ -30,7 +30,7 @@ const FAQ = [
 
 const Accordeon = () => {
   return (
-    <ul className="flex w-[768px] flex-col gap-6">
+    <ul className="flex flex-col gap-6 lg:w-[768px]">
       {FAQ.map((item, index) => {
         return (
           <div className="flex flex-col gap-8" key={item.question}>

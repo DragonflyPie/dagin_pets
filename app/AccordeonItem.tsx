@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Menus, Plus } from "./icons";
+import { Menus, Plus } from "./components/icons";
 
 interface AccordeonItemProps {
   content: {

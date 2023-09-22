@@ -1,4 +1,4 @@
-import { CheckIcon } from "./icons";
+import { CheckIcon } from "./components/icons";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 interface CheckBoxProps {
