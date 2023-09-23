@@ -1,4 +1,4 @@
-import Messanger from "./Messanger";
+import Messenger from "./Messenger";
 import {
   Telegram,
   Instagram,
@@ -10,24 +10,24 @@ import NavMenu from "./NavMenu";
 const Footer = () => {
   return (
     <footer className="flex w-full justify-center bg-gray-dark">
-      <div className="flex h-[370px] w-full max-w-[1440px] flex-col justify-between p-4  font-inter text-white text-white lg:px-20 lg:py-16 ">
-        <div className="flex flex-col items-center justify-between md:flex-row">
-          <h4 className=" whitespace-pre font-osans text-lg text-xl/[3rem] sm:text-2xl/[3rem] lg:text-3xl/[3rem] xl:text-4xl/[150%]">
-            {`По всем вопросам \nобращайтесь`}
+      <div className="flex w-full max-w-[1440px] flex-col justify-between p-4 px-4 pb-6 pt-12 font-inter text-white text-white md:pb-12 xl:px-20 xl:py-16 ">
+        <div className="flex flex-col justify-between pb-12 md:flex-row md:items-center md:pb-14 xl:pb-28">
+          <h4 className="w-[21rem] shrink-0 pb-6 font-osans text-xl/[150%] md:pb-0 md:text-4xl/[150%]">
+            {`По всем вопросам обращайтесь`}
           </h4>
-          <ul className="grid grid-cols-1 justify-between  gap-x-10 gap-x-[15vw] gap-y-4 md:grid-cols-[min-content_1fr] md:gap-y-10">
-            <Messanger
+          <ul className=" grid grid-cols-1 gap-y-6 md:grid-cols-2 md:justify-between md:gap-x-10 md:gap-y-10 xl:gap-x-36">
+            <Messenger
               link="https://t.me/AnastasiaBelykh"
               info="@AnastasiaBelykh"
               icon={<Telegram />}
             />
-            <Messanger
+            <Messenger
               link="https://wa.me/send?phone=971585441452"
               info="+971585441452"
               icon={<WhatsAppWhite />}
             />
-            <Messanger link="" info="+971585441452" icon={<Instagram />} />
-            <Messanger
+            <Messenger link="" info="+971585441452" icon={<Instagram />} />
+            <Messenger
               blank={false}
               link="tel:+971585441452"
               info="+971585441452"
@@ -35,9 +35,9 @@ const Footer = () => {
             />
           </ul>
         </div>
-        <div className="flex w-full flex-col justify-between gap-4 text-xs font-medium sm:text-sm lg:flex-row">
+        <div className="flex w-full flex-col justify-between gap-[1.875rem] text-sm font-medium md:flex-row md:items-end">
           <NavMenu top={false} />
-          <p className="ml-auto font-extralight">
+          <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
             Dagin Pets Relocation © Copyright 2023. All Rights Reserved
           </p>
         </div>
