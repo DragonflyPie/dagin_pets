@@ -30,14 +30,9 @@ const FAQ = [
 
 const Accordeon = () => {
   return (
-    <ul className="flex flex-col gap-6 lg:w-[768px]">
-      {FAQ.map((item, index) => {
-        return (
-          <div className="flex flex-col gap-8" key={item.question}>
-            <AccordeonItem content={item} />
-            {index !== FAQ.length - 1 && <hr />}
-          </div>
-        );
+    <ul className="flex w-full flex-col gap-6 divide-y pb-12 md:w-[768px] md:pb-16">
+      {FAQ.map((item) => {
+        return <AccordeonItem content={item} key={item.question} />;
       })}
     </ul>
   );

@@ -19,10 +19,10 @@ const AccordeonItem = ({ content }: AccordeonItemProps) => {
   return (
     <li className="">
       <div
-        className="flex w-full cursor-pointer justify-between"
+        className="flex w-full cursor-pointer justify-between gap-2 pt-6 md:gap-6"
         onClick={toggleOpenAnswer}
       >
-        <p className="text-xl font-medium">{content.question}</p>
+        <p className="text-lg font-medium md:text-xl">{content.question}</p>
         <div className="">{isOpen ? <Menus /> : <Plus />}</div>
       </div>
       <p

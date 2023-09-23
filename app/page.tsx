@@ -13,8 +13,8 @@ export default function Home() {
         <Welcome />
         <About />
         <Services />
-        {/* <Safety /> */}
-        {/* <Questions /> */}
+        <Safety />
+        <Questions />
         {/* <ContactModal /> */}
       </div>
       {/* <Footer /> */}

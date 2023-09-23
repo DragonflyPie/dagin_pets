@@ -23,7 +23,7 @@ export default function RootLayout({
       className={` scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
       style={{ scrollbarGutter: "stable" }}
     >
-      <body className="flex w-full flex-col items-center overflow-x-clip  bg-white font-jakarta text-blackish">
+      <body className="flex w-full flex-col items-center overflow-x-clip  bg-white font-osans text-blackish">
         <Navbar />
         {children}
         <Footer />
