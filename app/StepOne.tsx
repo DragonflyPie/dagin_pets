@@ -91,7 +91,6 @@ const StepOne = () => {
 
       <div className="mt-auto"></div>
       <Button
-        radius="small"
         size="small"
         type="submit"
         text={"Далее"}

@@ -25,7 +25,7 @@ const NavMenu = () => {
       </div>
 
       <ul
-        className={`absolute flex-col justify-end gap-4 bg-white font-inter text-sm lg:static lg:flex lg:flex-row lg:text-xs xl:gap-12 xl:text-sm
+        className={`absolute flex-col justify-end gap-8 bg-white font-inter text-sm lg:static lg:flex lg:flex-row lg:text-xs xl:gap-12 xl:text-sm
         ${navOpen ? "flex" : "hidden"}
         `}
       >

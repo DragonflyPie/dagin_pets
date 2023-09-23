@@ -64,7 +64,7 @@ const StepTwo = () => {
           className="inline-flex h-12 items-center justify-start rounded-lg border border-gray-300  px-4 py-3 shadow"
         />
         {errors?.phone && (
-          <p className="text-red-error absolute -bottom-5 right-0 text-xs">
+          <p className="absolute -bottom-5 right-0 text-xs text-red-error">
             {errors.phone.message}
           </p>
         )}
@@ -96,7 +96,6 @@ const StepTwo = () => {
       <div className="mt-auto flex w-full justify-between gap-5">
         <div className="flex-1">
           <Button
-            radius="small"
             size="small"
             onClick={previousStep}
             text={"Назад"}
@@ -105,7 +104,6 @@ const StepTwo = () => {
         </div>
         <div className="flex-1">
           <Button
-            radius="small"
             size="small"
             type="submit"
             text={"Отправить"}
