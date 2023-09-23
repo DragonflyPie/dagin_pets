@@ -1,47 +1,37 @@
-import Link from "next/link";
+"use client";
+import { useRef, useState } from "react";
+import NavItems from "./NavItems";
+import { Down } from "./components/icons";
+import useClickOutside from "./hooks/useClickOutside";
 
-const NavMenu = ({ top }: { top: boolean }) => {
+const NavMenu = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const toggleNavOpen = (e: React.MouseEvent) => {
+    setNavOpen(!navOpen);
+  };
+
+  const closeNav = () => {
+    setNavOpen(false);
+  };
+
+  useClickOutside(navRef, closeNav);
   return (
-    <ul
-      className={`gap-4  xl:gap-12
-    ${!top ? " grid grid-flow-col grid-rows-3   xl:flex" : "flex justify-end"}
-    
-    `}
-    >
-      {!top && (
-        <li className="cursor-pointer  underline-offset-2 hover:underline">
-          <Link href={"#welcome"} className="whitespace-nowrap">
-            Главная
-          </Link>
-        </li>
-      )}
-      <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#services"} className="whitespace-nowrap">
-          Услуги
-        </Link>
-      </li>
-      <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#about"} className="whitespace-nowrap">
-          О компании
-        </Link>
-      </li>
-      <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#faq"} className="whitespace-nowrap">
-          Отзывы
-        </Link>
-      </li>
-      <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#faq"} className="whitespace-nowrap">
-          Часто задаваемые вопросы
-        </Link>
-      </li>
+    <div className="" ref={navRef}>
+      <div className="cursor-pointer lg:hidden" onClick={toggleNavOpen}>
+        <Down />
+      </div>
 
-      <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#faq"} className="whitespace-nowrap">
-          Контакты
-        </Link>
-      </li>
-    </ul>
+      <ul
+        className={`absolute flex-col justify-end gap-4 bg-white font-inter text-sm lg:static lg:flex lg:flex-row lg:text-xs xl:gap-12 xl:text-sm
+        ${navOpen ? "flex" : "hidden"}
+        `}
+      >
+        <NavItems top />
+      </ul>
+    </div>
   );
 };
 

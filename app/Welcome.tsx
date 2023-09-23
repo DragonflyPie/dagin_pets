@@ -2,6 +2,8 @@ import Image from "next/image";
 import cat_shining from "../public/cat_shining.png";
 import Button from "./Button";
 import { Paw } from "./components/vectors";
+import plane from "../public/plane.png";
+import line from "../public/line.png";
 
 const Welcome = () => {
   return (
@@ -27,13 +29,16 @@ const Welcome = () => {
       </div>
       {/* <div className="relative hidden md:block"> */}
       <div className="absolute right-0 -z-10 flex  h-full max-h-[780px] w-3/5 flex-col items-end justify-center overflow-x-clip xl:w-1/2 xl:overflow-x-visible">
-        <div className="relative left-[25%] aspect-square w-full xl:-top-10 xl:left-20 ">
+        <div className="relative left-[25%] aspect-square w-full xl:-top-20 xl:left-20">
           <Image
             src={cat_shining}
             alt="Cat tearing through the page"
             fill
             className=" object-contain object-right  "
           />
+          {/* <div className="absolute bottom-0 right-32 w-[200px]">
+            <Image src={plane} alt={""}></Image>
+          </div> */}
         </div>
       </div>
       {/* </div> */}
@@ -43,9 +48,12 @@ const Welcome = () => {
       <div className="absolute left-[35%] top-[35%] -z-10 w-[16vw] rotate-45">
         <Paw />
       </div>
-      {/* <div className="absolute  -left-20  -top-[113px]">
-        <Plane />
-      </div> */}
+
+      {/* <Image
+        src={line}
+        alt={""}
+        className="absolute  left-20 h-[80vh] object-contain object-left"
+      ></Image> */}
     </div>
   );
 };

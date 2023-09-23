@@ -8,16 +8,14 @@ import Welcome from "./Welcome";
 export default function Home() {
   return (
     <main className="flex w-full flex-col items-center">
-      {/* <Navbar /> */}
       <div className="flex max-w-[1440px] flex-col ">
         <Welcome />
         <About />
         <Services />
         <Safety />
         <Questions />
-        {/* <ContactModal /> */}
+        <ContactModal />
       </div>
-      {/* <Footer /> */}
     </main>
   );
 }

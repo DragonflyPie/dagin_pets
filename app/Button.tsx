@@ -4,8 +4,7 @@ import useStore from "./store";
 
 interface ButtonProps {
   text: string;
-  size?: "small" | "large";
-  radius?: "small" | "large";
+  size?: "small" | "medium" | "large";
   type?: "submit" | "button";
   onClick?: () => void;
   width?: "content" | "full";
@@ -15,7 +14,6 @@ interface ButtonProps {
 const Button = ({
   text,
   size = "large",
-  radius = "large",
   type = "button",
   onClick,
   width = "content",
@@ -27,13 +25,14 @@ const Button = ({
   return (
     <button
       disabled={disabled}
-      className={`h-min whitespace-nowrap font-lato text-white transition-colors  hover:text-gray-50 
+      className={`h-min whitespace-nowrap  rounded-[40px] font-lato text-white transition-colors  hover:text-gray-50 
       ${
         size === "small"
-          ? "px-12 py-3 text-base"
-          : "px-6 py-3 text-base md:px-16 md:py-6 md:text-xl xl:text-2xl"
+          ? "px-[1.125rem] py-2.5 text-base"
+          : size === "medium"
+          ? "px-6 py-1.5 text-xs/[1.125rem] md:px-12 md:py-3 md:text-base/[1.125rem]"
+          : "px-6 py-3 text-base/[1.125rem] md:px-16 md:py-6 md:text-xl/[1.125rem] xl:text-2xl/[1.125rem]"
       }
-      ${radius === "small" ? "rounded-lg" : "rounded-[40px]"}
       ${width === "full" ? "w-full" : "w-fit"}
       ${
         disabled

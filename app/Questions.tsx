@@ -35,7 +35,7 @@ const Questions = () => {
             Jorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <Button text={"Написать"} size="small" radius="small" />
+        <Button text={"Написать"} size="small" />
       </div>
     </div>
   );
