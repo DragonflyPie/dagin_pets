@@ -4,7 +4,7 @@ import fluffy_pets from "../public/fluffy_cat_and_dog.png";
 const Safety = () => {
   return (
     <div
-      className="flex h-full scroll-m-10 flex-col items-center justify-between px-4 pb-24 md:flex-row xl:px-20 "
+      className="flex h-full scroll-m-10 flex-col items-center justify-between px-4 pb-5 md:flex-row md:pb-16 xl:px-20 xl:pb-24 "
       id="safety"
     >
       <div className="relative flex  w-[80%] grow items-center md:max-w-[40%]">

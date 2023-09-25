@@ -26,3 +26,12 @@ interface StepTwo {
   message?: string;
   terms?: boolean;
 }
+
+interface ReviewData {
+  date: string;
+  rating: 0 | 1 | 2 | 3 | 4 | 5;
+  message: string;
+  name: string;
+  pet: string;
+  image: StaticImageData;
+}

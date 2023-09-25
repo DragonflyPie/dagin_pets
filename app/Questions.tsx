@@ -10,9 +10,9 @@ const Questions = () => {
       id="faq"
     >
       <div className="flex flex-col items-center gap-5 pb-6 md:pb-10">
-        <h3 className="font-lato text-[2rem]/[2.375rem] font-semibold tracking-tight md:text-4xl/[2.75rem]">
+        <h2 className="font-lato text-[2rem]/[2.375rem] font-semibold tracking-tight md:text-4xl/[2.75rem]">
           Часто задаваемые вопросы.
-        </h3>
+        </h2>
         <p className="text-lg/[1.75rem] md:text-xl/[150%]">
           Corem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
