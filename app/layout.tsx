@@ -20,14 +20,14 @@ export default function RootLayout({
     <html
       lang="en"
       // className={`${jakarta.variable} ${lato.variable} ${inter.variable}`}
-      className={` scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
+      className={` overflow-x-hidden scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
       style={{ scrollbarGutter: "stable" }}
     >
       <body className="flex w-full flex-col items-center overflow-x-clip  bg-white font-osans text-blackish">
         <Navbar />
         {children}
         <Footer />
-        <div className="absolute  left-0 top-[450px] -z-10 md:top-[95vh]">
+        <div className="absolute -left-[20px] top-[9rem] -z-10 origin-left scale-[40%] md:-left-[34px] md:top-[40rem]  md:scale-100  lg:top-[95vh]">
           <BlueShape />
         </div>
       </body>

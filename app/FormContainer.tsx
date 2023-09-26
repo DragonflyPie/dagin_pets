@@ -19,12 +19,14 @@ const FormContainer = () => {
 
   return step === 1 ? (
     <>
-      <hgroup className="flex flex-col items-center pb-16 font-lato">
+      <hgroup className="flex  flex-col items-center pb-16 font-lato">
         <p className="pb-3 text-base font-semibold text-blue-button-default">
           Связаться с нами
         </p>
-        <h5 className="pb-5 text-4xl/[44px] font-semibold">Контактная форма</h5>
-        <p className="text-xl/[30px] text-gray-form-heading">
+        <h5 className="pb-5 text-2xl/[2.75rem] font-semibold tracking-tight md:text-4xl/[44px]">
+          Контактная форма
+        </h5>
+        <p className="text-[0.815rem] text-gray-form-heading md:text-xl/[30px]">
           Заполните данные и мы Вам ответим
         </p>
       </hgroup>

@@ -29,12 +29,13 @@ const ContactModal = () => {
   if (!showModal) return null;
 
   return (
-    <div className="fixed inset-0 z-30 flex items-center justify-center bg-black  bg-opacity-40 py-20">
+    <div className=" fixed inset-0 z-30 flex items-center justify-center bg-black  bg-opacity-40 py-20">
+      {/* <RemoveScrollBar /> */}
       <div
         ref={contactRef}
-        className="relative z-50  flex h-[95vh] w-[644px] flex-col rounded-3xl bg-white p-2 pt-12"
+        className="relative z-50  flex flex-col rounded-3xl bg-white p-2 pt-12 "
       >
-        <div className="pt flex h-full flex-col items-center overflow-auto rounded-3xl bg-white font-jakarta scrollbar scrollbar-thin scrollbar-track-gray-100  scrollbar-thumb-gray-form">
+        <div className=" flex h-full flex-col items-center overflow-auto rounded-3xl bg-white font-jakarta scrollbar scrollbar-thin scrollbar-track-gray-100  scrollbar-thumb-gray-form">
           <div
             className="absolute right-10 top-10 cursor-pointer"
             onClick={handleClose}

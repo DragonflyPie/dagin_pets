@@ -17,7 +17,7 @@ const Navbar = () => {
         </nav>
         <div className="mr-auto md:hidden"></div>
         <MessengersMenu />
-        <Button text="Н" size="small" modal />
+        <Button text="Написать" size="medium" modal />
         <LanguageSelector />
       </div>
     </div>

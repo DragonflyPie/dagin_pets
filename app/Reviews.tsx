@@ -19,12 +19,12 @@ const Reviews = () => {
     variableWidth: true,
   };
   return (
-    <div className="pb-16 md:pb-24">
-      <hgroup className="flex w-full flex-col items-center gap-5 pb-6">
+    <div className="w-full pb-16 md:pb-24">
+      <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6">
         <h2 className="font-lato text-xl font-bold tracking-tight md:text-4xl/[2.75rem] md:font-semibold">
           Отзывы
         </h2>
-        <p className="text-xs/[150%] md:text-xl">
+        <p className="w-min min-w-[12rem] text-center text-xs/[150%] font-medium md:w-full md:text-xl">
           Наша история: Восторженные отзывы о перевозке питомцев
         </p>
       </hgroup>

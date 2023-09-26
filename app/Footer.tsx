@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex w-full flex-col justify-between gap-[1.875rem] text-sm font-medium md:flex-row md:items-end">
-          <ul className=" grid grid-flow-col grid-rows-3   xl:flex">
+          <ul className=" grid  grid-flow-col grid-rows-3 gap-6 md:gap-x-8 xl:flex xl:gap-6 2xl:gap-12">
             <NavItems top={false} />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
