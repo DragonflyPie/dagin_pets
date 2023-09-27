@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
 import Button from "./Button";
 import FormInput from "./Input";
 
-import { object, string, number, date, InferType } from "yup";
-import { useForm, Controller } from "react-hook-form";
+import { object, string } from "yup";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import useStore from "./store";
 import SelectInput from "./SelectInput";
 
@@ -51,7 +49,7 @@ const StepOne = () => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-6 px-14 font-osans"
+      className="flex h-full w-full flex-col gap-4 font-osans md:gap-6 md:px-14"
     >
       <FormInput
         id={"name"}
@@ -60,7 +58,7 @@ const StepOne = () => {
         error={errors?.name}
         register={{ ...register("name") }}
       />
-      <div className="flex w-full gap-5">
+      <div className="flex w-full gap-3 md:gap-5">
         <div className="flex-1">
           <FormInput
             id={"from"}
@@ -83,20 +81,20 @@ const StepOne = () => {
       <SelectInput
         id={"animal"}
         label={"Кого везти"}
-        placeholder={"Выберите животное"}
         error={errors?.animal}
         register={{ ...register("animal") }}
         options={animalOptions}
       />
 
-      <div className="mt-auto"></div>
-      <Button
-        size="small"
-        type="submit"
-        text={"Далее"}
-        width="full"
-        disabled={!isValid}
-      />
+      <div className="mt-auto pb-1">
+        <Button
+          size="small"
+          type="submit"
+          text={"Далее"}
+          width="full"
+          disabled={!isValid}
+        />
+      </div>
     </form>
   );
 };

@@ -4,6 +4,7 @@ import { osans, inter, lato, roboto, jakarta } from "./fonts";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { BlueShape } from "./components/vectors";
+import ContactModal from "./ContactModal";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",
@@ -20,16 +21,17 @@ export default function RootLayout({
     <html
       lang="en"
       // className={`${jakarta.variable} ${lato.variable} ${inter.variable}`}
-      className={` overflow-x-hidden scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
-      style={{ scrollbarGutter: "stable" }}
+      className={`scroll-smooth ${osans.variable} ${jakarta.variable} ${inter.variable} ${lato.variable} ${roboto.variable}`}
+      // style={{ scrollbarGutter: "stable" }}
     >
-      <body className="flex w-full flex-col items-center overflow-x-clip  bg-white font-osans text-blackish">
+      <body className="flex w-full flex-col items-center overflow-x-hidden  bg-white font-osans text-blackish">
         <Navbar />
         {children}
         <Footer />
         <div className="absolute -left-[20px] top-[9rem] -z-10 origin-left scale-[40%] md:-left-[34px] md:top-[40rem]  md:scale-100  lg:top-[95vh]">
           <BlueShape />
         </div>
+        <ContactModal />
       </body>
     </html>
   );

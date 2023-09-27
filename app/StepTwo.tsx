@@ -1,7 +1,7 @@
 import Button from "./Button";
 
-import { object, string, number, date, InferType, bool, boolean } from "yup";
-import { useForm, Controller } from "react-hook-form";
+import { object, string, bool } from "yup";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import useStore from "./store";
@@ -54,7 +54,7 @@ const StepTwo = () => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-6 px-14 pt-6 font-osans"
+      className="flex h-full w-full flex-col gap-4 pt-4 font-osans md:gap-6 md:px-14 md:pt-6"
     >
       <div className="relative flex flex-col gap-1.5">
         <label htmlFor="phone">Номер телефона</label>
@@ -80,7 +80,7 @@ const StepTwo = () => {
         <label htmlFor="phone">Сообщение</label>
         <textarea
           maxLength={250}
-          rows={4}
+          rows={3}
           id="message"
           {...register("message")}
           placeholder="Введите сообщение"
@@ -91,25 +91,25 @@ const StepTwo = () => {
         </p>
       </div>
       <Checkbox register={{ ...register("terms") }} error={errors?.terms} />
-      <div className="mt-auto"></div>
-
-      <div className="mt-auto flex w-full justify-between gap-5">
-        <div className="flex-1">
-          <Button
-            size="small"
-            onClick={previousStep}
-            text={"Назад"}
-            width="full"
-          />
-        </div>
-        <div className="flex-1">
-          <Button
-            size="small"
-            type="submit"
-            text={"Отправить"}
-            width="full"
-            disabled={!isDirty || !isValid}
-          />
+      <div className="mt-auto pb-1">
+        <div className="mt-auto flex w-full justify-between gap-5">
+          <div className="flex-1">
+            <Button
+              size="small"
+              onClick={previousStep}
+              text={"Назад"}
+              width="full"
+            />
+          </div>
+          <div className="flex-1">
+            <Button
+              size="small"
+              type="submit"
+              text={"Отправить"}
+              width="full"
+              disabled={!isDirty || !isValid}
+            />
+          </div>
         </div>
       </div>
     </form>

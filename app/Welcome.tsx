@@ -9,7 +9,7 @@ const Welcome = () => {
   return (
     // {/* <div className="flex w-full flex-col p-4  md:flex-row md:justify-between md:pb-12 md:pl-8 md:pt-16 lg:pb-24 lg:pl-20 lg:pr-8 lg:pt-24"> */}
     <div
-      className="relative flex  w-full scroll-m-28 px-4 pb-16  lg:pb-24 xl:min-h-[calc(100vh-113px)] xl:px-20"
+      className="relative flex w-full  scroll-m-28 overflow-x-hidden px-4 pb-16 lg:pb-24  xl:min-h-[calc(100vh-113px)] xl:overflow-x-visible xl:px-20"
       id="welcome"
     >
       <div className="flex  w-full ">

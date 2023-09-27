@@ -16,7 +16,6 @@ export default function Home() {
         <Safety />
         <Reviews />
         <Questions />
-        <ContactModal />
       </div>
     </main>
   );

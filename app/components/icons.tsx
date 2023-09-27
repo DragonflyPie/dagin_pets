@@ -303,7 +303,7 @@ export const CloseIcon = () => {
       viewBox="0 0 24 24"
     >
       <path
-        stroke="#000"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
