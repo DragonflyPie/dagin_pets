@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       },
     });
 
-    await transporter.sendMail({
+    const mail = await transporter.sendMail({
       from: email,
       to: email,
       // subject: `Message from`,
@@ -47,6 +47,7 @@ export async function POST(request: Request) {
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
       <p>${data.message}</p>`,
     });
+    console.log(mail);
 
     return NextResponse.json(
       { message: "Email successfully sent" },
