@@ -33,9 +33,22 @@ export async function POST(request: Request) {
       },
     });
 
-    const mail = await transporter.sendMail({
+    await new Promise((resolve, reject) => {
+      // verify connection configuration
+      transporter.verify(function (error, success) {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log("Server is ready to take our messages");
+          resolve(success);
+        }
+      });
+    });
+
+    const mailData = {
       from: email,
-      to: email,
+      to: "canuczerealme@gmail.com",
       // subject: `Message from`,
       // text: "123",
       // html: `<h3>Sender: </h3><h3>Email:</h3><p></p>`,
@@ -47,8 +60,22 @@ export async function POST(request: Request) {
       <h3>Животное: ${data.animal}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
       <p>${data.message}</p>`,
+    };
+
+    await new Promise((resolve, reject) => {
+      // send mail
+      transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else {
+          console.log(info);
+          resolve(info);
+        }
+      });
     });
-    console.log(mail);
+
+    // const mail = await transporter.sendMail();
 
     return NextResponse.json(
       { message: "Email successfully sent" },
