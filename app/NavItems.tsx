@@ -21,7 +21,7 @@ const NavItems = ({ top }: { top: boolean }) => {
         </Link>
       </li>
       <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#faq"} className="whitespace-nowrap">
+        <Link href={"#reviews"} className="whitespace-nowrap">
           Отзывы
         </Link>
       </li>
@@ -32,7 +32,7 @@ const NavItems = ({ top }: { top: boolean }) => {
       </li>
 
       <li className="cursor-pointer underline-offset-2 hover:underline">
-        <Link href={"#faq"} className="whitespace-nowrap">
+        <Link href={"#footer"} className="whitespace-nowrap">
           Контакты
         </Link>
       </li>

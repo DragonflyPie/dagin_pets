@@ -10,6 +10,7 @@ interface ButtonProps {
   width?: "content" | "full";
   modal?: boolean;
   disabled?: boolean;
+  loading?: boolean;
 }
 const Button = ({
   text,
@@ -19,11 +20,11 @@ const Button = ({
   width = "content",
   modal = false,
   disabled,
+  loading,
 }: ButtonProps) => {
-  const openModal = useStore((state) => state.openModal);
-
   return (
     <button
+      onClick={onClick}
       disabled={disabled}
       className={`h-min whitespace-nowrap  rounded-[40px] font-lato text-white transition-colors  hover:text-gray-50 
       ${
@@ -41,9 +42,8 @@ const Button = ({
       }
       `}
       type={type}
-      onClick={modal ? openModal : onClick}
     >
-      {text}
+      {loading ? "Отправляем..." : text}
     </button>
   );
 };

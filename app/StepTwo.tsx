@@ -7,6 +7,8 @@ import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import useStore from "./store";
 import SelectInput from "./SelectInput";
 import Checkbox from "./CheckBox";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const contactOptions: Option[] = [
   { value: "any", label: "Любой" },
@@ -25,16 +27,22 @@ let stepTwoSchema = object({
   terms: bool().oneOf([true], "Accept Ts & Cs is required"),
 });
 
-const StepTwo = () => {
+interface StepTwoProps {
+  handleClose: () => void;
+}
+
+const StepTwo = ({ handleClose }: StepTwoProps) => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
   const data = useStore((state) => state.form.stepTwo);
-  const previousStep = useStore((state) => state.previousStep);
+  const stepOneData = useStore((state) => state.form.stepOne);
   const updateStepTwo = useStore((state) => state.updateStepTwo);
-  const completeForm = useStore((state) => state.form.stepOne);
 
   const {
     register,
     control,
     handleSubmit,
+    getValues,
     formState: { errors, isDirty, isValid },
   } = useForm<StepTwo>({
     defaultValues: data,
@@ -42,12 +50,39 @@ const StepTwo = () => {
     resolver: yupResolver(stepTwoSchema),
   });
 
-  const onSubmit = async (data: StepTwo) => {
+  const onBack = () => {
+    const data = getValues();
+    updateStepTwo(data);
+    router.push("?modal=true&step=1");
+  };
+
+  const onSubmit = async (stepTwoData: StepTwo) => {
     const completeData = {
-      ...completeForm,
-      ...data,
+      ...stepOneData,
+      ...stepTwoData,
     };
-    console.log(completeData);
+    try {
+      setLoading(true);
+      await fetch("/api/mail", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(completeData),
+      });
+      handleClose();
+      setTimeout(() => {
+        router.push("?success=true", { scroll: false });
+      }, 300);
+    } catch (error) {
+      console.log(error);
+      handleClose();
+      setTimeout(() => {
+        router.push("?success=false", { scroll: false });
+      }, 300);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -94,12 +129,7 @@ const StepTwo = () => {
       <div className="mt-auto pb-1">
         <div className="mt-auto flex w-full justify-between gap-5">
           <div className="flex-1">
-            <Button
-              size="small"
-              onClick={previousStep}
-              text={"Назад"}
-              width="full"
-            />
+            <Button size="small" text={"Назад"} width="full" onClick={onBack} />
           </div>
           <div className="flex-1">
             <Button
@@ -107,7 +137,8 @@ const StepTwo = () => {
               type="submit"
               text={"Отправить"}
               width="full"
-              disabled={!isDirty || !isValid}
+              disabled={!isValid || loading}
+              loading={loading}
             />
           </div>
         </div>

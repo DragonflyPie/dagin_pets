@@ -31,7 +31,6 @@ export default function RootLayout({
         <div className="absolute -left-[20px] top-[9rem] -z-10 origin-left scale-[40%] md:-left-[34px] md:top-[40rem]  md:scale-100  lg:top-[95vh]">
           <BlueShape />
         </div>
-        <ContactModal />
       </body>
     </html>
   );

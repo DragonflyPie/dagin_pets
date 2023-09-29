@@ -376,3 +376,62 @@ export const StarEmpty = () => {
     </svg>
   );
 };
+
+export const SuccessIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="57"
+      height="56"
+      fill="none"
+      viewBox="0 0 57 56"
+    >
+      <rect width="48" height="48" x="4.5" y="4" fill="#D1FADF" rx="24"></rect>
+      <path
+        stroke="#039855"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M38.5 27.08V28a10 10 0 11-5.93-9.14M38.5 20l-10 10.01-3-3"
+      ></path>
+      <rect
+        width="48"
+        height="48"
+        x="4.5"
+        y="4"
+        stroke="#ECFDF3"
+        strokeWidth="8"
+        rx="24"
+      ></rect>
+    </svg>
+  );
+};
+
+export const FailureIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 50 50"
+      xmlSpace="preserve"
+    >
+      <circle width={48} cx="25" cy="25" r="25" fill="#D75A4A"></circle>
+      <path
+        fill="none"
+        stroke="#FFF"
+        strokeLinecap="round"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+        d="M16 34L25 25 34 16"
+      ></path>
+      <path
+        fill="none"
+        stroke="#FFF"
+        strokeLinecap="round"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+        d="M16 16L25 25 34 34"
+      ></path>
+    </svg>
+  );
+};

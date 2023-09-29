@@ -4,6 +4,7 @@ import MessengersMenu from "./MessengersMenu";
 import Button from "./Button";
 import LanguageSelector from "./LanguageSelector";
 import NavMenu from "./NavMenu";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -17,7 +18,9 @@ const Navbar = () => {
         </nav>
         <div className="mr-auto md:hidden"></div>
         <MessengersMenu />
-        <Button text="Написать" size="medium" modal />
+        <Link href={"?modal=true&step=1"}>
+          <Button text="Написать" size="medium" />
+        </Link>
         <LanguageSelector />
       </div>
     </div>

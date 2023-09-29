@@ -4,7 +4,7 @@ import maltipoo from "../public/maltipoooo.png";
 const About = () => {
   return (
     <div
-      className="flex w-full scroll-m-10 items-center overflow-x-hidden px-4 pb-14 xl:px-24 xl:px-36 xl:pb-24"
+      className="flex w-full scroll-m-10 items-center overflow-x-hidden px-4 pb-14   lg:px-16 xl:px-24 xl:px-36 xl:pb-24"
       id="about"
     >
       <div className="relative aspect-[3/4] max-h-full w-[40vw] xs:w-1/3 md:w-1/4">

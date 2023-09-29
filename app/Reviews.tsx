@@ -19,7 +19,7 @@ const Reviews = () => {
     variableWidth: true,
   };
   return (
-    <div className="w-full pb-16 md:pb-24">
+    <div id="reviews" className="w-full scroll-m-10 pb-16 md:pb-24">
       <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6">
         <h2 className="font-lato text-xl font-bold tracking-tight md:text-4xl/[2.75rem] md:font-semibold">
           Отзывы
@@ -28,11 +28,11 @@ const Reviews = () => {
           Наша история: Восторженные отзывы о перевозке питомцев
         </p>
       </hgroup>
-      <div className="max-w-[100vw] px-4 xl:px-20">
+      <div className="max-w-[100vw] px-4 lg:px-16 xl:px-20">
         <Slider {...settings}>
           {REVIEWS_DATA.map((review) => {
             return (
-              <div className="px-2.5" key={review.image}>
+              <div className="pr-5" key={review.image}>
                 <Review
                   date={review.date}
                   rating={review.rating}

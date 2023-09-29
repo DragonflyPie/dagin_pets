@@ -1,23 +1,17 @@
 "use client";
-import { useState } from "react";
-import Button from "./Button";
-import Checkbox from "./CheckBox";
-import useStore from "./store";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
+import { useSearchParams } from "next/navigation";
 
-const FormContainer = () => {
-  // const closeModal = useModalStore((state) => state.closeModal);
-  // const [form, setForm] = useState
+interface FormContainerProps {
+  handleClose: () => void;
+}
 
-  const step = useStore((state) => state.step);
+const FormContainer = ({ handleClose }: FormContainerProps) => {
+  const searchParams = useSearchParams();
+  const step = searchParams.get("step") as "1" | "2";
 
-  // const submitForm = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   closeModal();
-  // };
-
-  return step === 1 ? (
+  return step === "1" ? (
     <>
       <hgroup className="flex w-full flex-col items-center pb-6 font-lato md:pb-8 2xl:pb-16">
         {/* <p className="pb-3 text-base font-semibold text-blue-button-default">
@@ -33,7 +27,7 @@ const FormContainer = () => {
       <StepOne />
     </>
   ) : (
-    <StepTwo />
+    <StepTwo handleClose={handleClose} />
   );
   // <form
   //   action=""

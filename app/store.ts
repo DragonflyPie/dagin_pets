@@ -1,23 +1,23 @@
 import { create } from "zustand";
 
 interface ModalState {
-  isOpen: boolean;
-  step: Step;
-  closeModal: () => void;
-  openModal: () => void;
-  nextStep: () => void;
-  previousStep: () => void;
+  // isOpen: boolean;
+  // step: Step;
+  // closeModal: () => void;
+  // openModal: () => void;
+  // nextStep: () => void;
+  // previousStep: () => void;
   updateStepOne: (data: StepOne) => void;
   updateStepTwo: (data: StepTwo) => void;
   form: Form;
 }
 
 const useStore = create<ModalState>()((set) => ({
-  isOpen: false,
-  closeModal: () => set((state) => ({ isOpen: false })),
-  openModal: () => set((state) => ({ isOpen: true })),
-  nextStep: () => set((state) => ({ step: 2 })),
-  previousStep: () => set((state) => ({ step: 1 })),
+  // isOpen: false,
+  // closeModal: () => set((state) => ({ isOpen: false })),
+  // openModal: () => set((state) => ({ isOpen: true })),
+  // nextStep: () => set((state) => ({ step: 2 })),
+  // previousStep: () => set((state) => ({ step: 1 })),
   updateStepOne: (data) =>
     set((state) => ({
       form: {
@@ -32,7 +32,7 @@ const useStore = create<ModalState>()((set) => ({
         stepTwo: data,
       },
     })),
-  step: 1,
+
   form: {
     stepOne: {
       name: "",

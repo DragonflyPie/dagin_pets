@@ -2,11 +2,12 @@ import Accordeon from "./Accordeon";
 import Button from "./Button";
 import avatar_group from "../public/avatar_group.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Questions = () => {
   return (
     <div
-      className="flex w-full scroll-m-10 flex-col items-center px-4 pb-24 md:px-20"
+      className="flex w-full scroll-m-10 flex-col items-center px-4 pb-24 lg:px-16 xl:px-20"
       id="faq"
     >
       <div className="flex flex-col items-center gap-5 pb-6 md:pb-10">
@@ -35,7 +36,9 @@ const Questions = () => {
             Jorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <Button text={"Написать"} size="small" />
+        <Link href={"?modal=true&step=1"} scroll={false}>
+          <Button text={"Написать"} size="small" />
+        </Link>
       </div>
     </div>
   );

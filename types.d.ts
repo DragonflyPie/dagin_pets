@@ -10,6 +10,8 @@ interface Form {
   stepTwo: StepTwo;
 }
 
+interface CompleteData extends StepOne, StepTwo {}
+
 interface StepOne {
   name: string;
   from: string;

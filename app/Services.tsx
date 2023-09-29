@@ -7,7 +7,7 @@ import maltipoo_img from "../public/maltipoo_icon.png";
 const Services = () => {
   return (
     <div
-      className="flex scroll-m-10 flex-col items-center px-4 md:px-0 md:pb-12 xl:px-20 xl:pb-20"
+      className="flex scroll-m-10 flex-col items-center px-4 md:pb-12 lg:px-16 xl:px-20 xl:pb-20"
       id="services"
     >
       <h2 className="flex flex-col gap-6 whitespace-pre-wrap  text-center md:pb-10">

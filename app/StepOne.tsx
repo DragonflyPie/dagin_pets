@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useStore from "./store";
 import SelectInput from "./SelectInput";
+import { useRouter } from "next/navigation";
 
 const animalOptions: Option[] = [
   { value: "cat", label: "Кошка" },
@@ -22,7 +23,8 @@ let stepOneSchema = object({
 
 const StepOne = () => {
   const data = useStore((state) => state.form.stepOne);
-  const nextStep = useStore((state) => state.nextStep);
+  const router = useRouter();
+
   const updateStepOne = useStore((state) => state.updateStepOne);
 
   const {
@@ -42,7 +44,7 @@ const StepOne = () => {
 
   const onSubmit = (data: StepOne) => {
     updateStepOne(data);
-    nextStep();
+    router.push(`?modal=true&step=2`);
   };
 
   return (

@@ -9,7 +9,7 @@ import NavItems from "./NavItems";
 
 const Footer = () => {
   return (
-    <footer className="flex w-full justify-center bg-gray-dark">
+    <footer id="footer" className="flex w-full justify-center bg-gray-dark">
       <div className="flex w-full max-w-[1440px] flex-col justify-between p-4 px-4 pb-6 pt-12 font-inter text-white text-white md:pb-12 xl:px-20 xl:py-16 ">
         <div className="flex flex-col justify-between pb-12 md:flex-row md:items-center md:pb-14 xl:pb-28">
           <h4 className="shrink-0 pb-6 font-osans text-xl/[150%] xs:w-[21rem] md:pb-0 md:text-4xl/[150%]">
