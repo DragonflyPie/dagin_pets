@@ -22,6 +22,7 @@ export async function POST(request: Request) {
     if (!data.phone || !data.contactMethod) {
       throw new Error("Missing data");
     }
+    console.log(123);
 
     let transporter = nodemailer.createTransport({
       port: 2525,
