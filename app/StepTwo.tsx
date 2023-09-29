@@ -63,13 +63,15 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     };
     try {
       setLoading(true);
-      await fetch("/api/mail", {
+      const res = await fetch("/api/mail", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
         },
         body: JSON.stringify(completeData),
       });
+      if (!res.ok) throw new Error("Server error");
+
       handleClose();
       setTimeout(() => {
         router.push("?success=true", { scroll: false });
