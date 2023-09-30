@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export const runtime = "edge"; // 'nodejs' is the default
-
-export const dynamic = "force-dynamic";
-
 const email = process.env.EMAIL!;
 const password = process.env.EMAIL_PASS!;
 
@@ -43,6 +39,7 @@ export async function POST(request: Request) {
       // verify connection configuration
       transporter.verify(function (error, success) {
         if (error) {
+          console.log("error on verify");
           console.log(error);
           reject(error);
         } else {
