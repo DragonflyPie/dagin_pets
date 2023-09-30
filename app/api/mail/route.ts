@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+export const runtime = "edge"; // 'nodejs' is the default
+
+export const dynamic = "force-dynamic";
+
 const email = process.env.EMAIL!;
 const password = process.env.EMAIL_PASS!;
 
@@ -31,6 +35,8 @@ export async function POST(request: Request) {
         user: email,
         pass: password,
       },
+      logger: true,
+      debug: true,
     });
 
     await new Promise((resolve, reject) => {
@@ -45,6 +51,8 @@ export async function POST(request: Request) {
         }
       });
     });
+
+    console.log("verified");
 
     const mailData = {
       from: email,
@@ -64,18 +72,22 @@ export async function POST(request: Request) {
 
     await new Promise((resolve, reject) => {
       // send mail
-      transporter.sendMail(mailData, (err, info) => {
+      transporter.sendMail(mailData, (err, response) => {
         if (err) {
+          console.log("error on sendmail");
           console.error(err);
           reject(err);
         } else {
-          console.log(info);
-          resolve(info);
+          console.log(response);
+          console.log("success");
+          resolve(response);
         }
       });
     });
 
     // const mail = await transporter.sendMail();
+
+    console.log("before end");
 
     return NextResponse.json(
       { message: "Email successfully sent" },
