@@ -25,12 +25,13 @@ export async function POST(request: Request) {
     console.log(123);
 
     let transporter = nodemailer.createTransport({
-      port: 2525,
+      port: 465,
       host: "smtp.timeweb.ru",
       auth: {
         user: email,
         pass: password,
       },
+      secure: true,
       logger: true,
       debug: true,
     });
