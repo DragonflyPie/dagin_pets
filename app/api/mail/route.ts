@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     let transporter = nodemailer.createTransport({
       name: "timeweb.SMTP",
-      port: 465,
+      port: 2525,
       host: "smtp.timeweb.ru",
       auth: {
         user: email,
@@ -62,8 +62,8 @@ export async function POST(request: Request) {
       text: generateString(data),
       html: `<h1>Отправитель: ${data.name}</h1>
       <h2>Телефон: ${data.phone}</h2>
-      <h3>Способ связи: ${data.contactMethod}</h3>
-      <h3>Животное: ${data.animal}</h3>
+      <h3>Способ связи: ${data.contactMethod.label}</h3>
+      <h3>Животное: ${data.animal.label}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
       <p>${data.message}</p>`,
     };

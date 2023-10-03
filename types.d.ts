@@ -1,6 +1,7 @@
 interface Option {
   value: string;
-  label: string;
+  label?: string;
+  labelEn?: string;
 }
 
 type Step = 1 | 2;
@@ -16,7 +17,7 @@ interface StepOne {
   name: string;
   from: string;
   to: string;
-  animal: string;
+  animal: Option;
   // name: string;
   // phone: string;
   // contactMethod: string;
@@ -24,7 +25,7 @@ interface StepOne {
 
 interface StepTwo {
   phone: string;
-  contactMethod: string;
+  contactMethod: Option;
   message?: string;
   terms?: boolean;
 }

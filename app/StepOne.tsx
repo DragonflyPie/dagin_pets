@@ -2,14 +2,14 @@ import Button from "./Button";
 import FormInput from "./Input";
 
 import { object, string } from "yup";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useStore from "./store";
-import SelectInput from "./SelectInput";
 import { useRouter } from "next/navigation";
+import SelectInput from "./SelectInput";
 
 const animalOptions: Option[] = [
-  { value: "cat", label: "Кошка" },
+  { value: "cat", label: "Кошка", labelEn: "Cat" },
   { value: "dog", label: "Собака" },
   { value: "other", label: "Другое животное" },
 ];
@@ -18,7 +18,11 @@ let stepOneSchema = object({
   name: string().required("This field is required"),
   from: string().required("This field is required"),
   to: string().required("This field is required"),
-  animal: string().required("This field is required"),
+  animal: object()
+    .shape({
+      value: string().required("This field is required"),
+    })
+    .required("This field is required"),
 });
 
 const StepOne = () => {
@@ -29,7 +33,7 @@ const StepOne = () => {
 
   const {
     register,
-
+    control,
     handleSubmit,
     formState: { errors, isDirty, isValid },
   } = useForm<StepOne>({
@@ -51,7 +55,7 @@ const StepOne = () => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-4 font-osans md:gap-6 md:px-14"
+      className="flex h-full w-full flex-col gap-3 font-osans md:gap-5 md:px-14"
     >
       <FormInput
         id={"name"}
@@ -80,13 +84,21 @@ const StepOne = () => {
           />
         </div>
       </div>
+
       <SelectInput
+        dropDownOptions={animalOptions}
+        name={"animal"}
+        placeholder={"Кого везти"}
+        control={control}
+        error={errors.animal?.value}
+      />
+      {/* <SelectInput
         id={"animal"}
         label={"Кого везти"}
         error={errors?.animal}
         register={{ ...register("animal") }}
         options={animalOptions}
-      />
+      /> */}
 
       <div className="mt-auto pb-1">
         <Button

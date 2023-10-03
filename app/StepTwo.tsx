@@ -5,10 +5,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import useStore from "./store";
-import SelectInput from "./SelectInput";
 import Checkbox from "./CheckBox";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import SelectInput from "./SelectInput";
 
 const contactOptions: Option[] = [
   { value: "any", label: "Любой" },
@@ -22,7 +22,11 @@ let stepTwoSchema = object({
     .required("This field is required")
     .min(10, "Invalid phone number")
     .max(18, "Invalid phone number"),
-  contactMethod: string().required("This field is required"),
+  contactMethod: object()
+    .shape({
+      value: string().required("This field is required"),
+    })
+    .required("This field is required"),
   message: string(),
   terms: bool().oneOf([true], "Accept Ts & Cs is required"),
 });
@@ -91,7 +95,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-4 pt-4 font-osans md:gap-6 md:px-14 md:pt-6"
+      className="flex h-full w-full flex-col gap-3 pt-4 font-osans md:gap-5 md:px-14 md:pt-6"
     >
       <div className="relative flex flex-col gap-1.5">
         <label htmlFor="phone">Номер телефона</label>
@@ -106,13 +110,22 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
           </p>
         )}
       </div>
+
       <SelectInput
+        control={control}
+        name="contactMethod"
+        dropDownOptions={contactOptions}
+        error={errors.contactMethod?.value}
+      />
+
+      {/* <SelectInput
         id={"contactMethod"}
         label={"Способ связи"}
         error={errors?.contactMethod}
         register={{ ...register("contactMethod") }}
         options={contactOptions}
-      />
+      /> */}
+
       <div className="flex flex-col gap-1.5">
         <label htmlFor="phone">Сообщение</label>
         <textarea

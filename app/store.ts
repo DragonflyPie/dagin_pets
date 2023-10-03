@@ -38,11 +38,15 @@ const useStore = create<ModalState>()((set) => ({
       name: "",
       from: "",
       to: "",
-      animal: "",
+      animal: { value: "" },
     },
     stepTwo: {
       phone: "",
-      contactMethod: "any",
+      contactMethod: {
+        value: "any",
+        label: "Любой",
+        labelEn: "Any",
+      },
       message: "",
     },
   },
