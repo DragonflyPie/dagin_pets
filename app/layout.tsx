@@ -1,12 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { osans, inter, lato, roboto, jakarta } from "./fonts";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import { BlueShape } from "./components/vectors";
-import line from "../public/line.png";
-import ContactModal from "./ContactModal";
-import Image from "next/image";
+import Footer from "./_components/footer/Footer";
+import Navbar from "./_components/navbar/Navbar";
+import { BlueShape } from "./_components/commons/vectors";
+import { inter, jakarta, lato, osans, roboto } from "./_utilities/fonts";
 
 export const metadata: Metadata = {
   title: "Dagin Pets",

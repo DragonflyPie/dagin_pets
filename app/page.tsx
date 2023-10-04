@@ -1,13 +1,11 @@
-import About from "./About";
-import Questions from "./Questions";
-import Reviews from "./Reviews";
-import Safety from "./Safety";
-import Services from "./Services";
-import Popup from "./Popup";
-import Welcome from "./Welcome";
-import ContactModal from "./ContactModal";
-import line from "../public/line.png";
-import Image from "next/image";
+import About from "./_components/about/About";
+import Questions from "./_components/faq/Questions";
+import Safety from "./_components/safety/Safety";
+import Popup from "./_components/popup/Popup";
+import Welcome from "./_components/welcome/Welcome";
+import ContactModal from "./_components/contactModal/ContactModal";
+import Services from "./_components/services/Services";
+import Reviews from "./_components/reviews/Reviews";
 
 export default function Home({
   searchParams,
