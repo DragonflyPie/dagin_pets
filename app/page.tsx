@@ -6,6 +6,8 @@ import Services from "./Services";
 import Popup from "./Popup";
 import Welcome from "./Welcome";
 import ContactModal from "./ContactModal";
+import line from "../public/line.png";
+import Image from "next/image";
 
 export default function Home({
   searchParams,
@@ -16,7 +18,7 @@ export default function Home({
   const modal = searchParams.modal;
   return (
     <main className="flex w-full flex-col items-center">
-      <div className="flex max-w-[1440px] flex-col ">
+      <div className="flex  max-w-[1440px] flex-col ">
         <Welcome />
         <About />
         <Services />

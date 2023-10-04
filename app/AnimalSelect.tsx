@@ -1,8 +1,13 @@
 import { Listbox } from "@headlessui/react";
-import { FieldError, useController, UseControllerProps } from "react-hook-form";
+import {
+  FieldError,
+  useController,
+  UseControllerProps,
+  FieldValue,
+} from "react-hook-form";
 import { Down } from "./components/icons";
 
-interface DropdownProps extends UseControllerProps<any> {
+interface DropdownProps extends UseControllerProps<StepOne, "animal"> {
   dropDownOptions: Option[];
   placeholder?: string;
   error?: FieldError | undefined;
@@ -10,27 +15,27 @@ interface DropdownProps extends UseControllerProps<any> {
 
 const SelectInput = (props: DropdownProps) => {
   const {
-    field: { value, onChange, onBlur, name },
+    field: { value, onChange, onBlur },
   } = useController(props);
 
-  const hasPlaceholder = !value && props.placeholder;
-
-  console.log(props.error);
+  const isPlaceholder = !value.label && props.placeholder;
 
   return (
-    <div>
+    <div className="flex flex-col gap-1.5">
+      <label htmlFor="#animal">Кого везти</label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>
             <div className="relative">
               <Listbox.Button
+                // onBlur={onBlur}
                 className={`relative inline-flex h-12 w-full appearance-none items-center justify-start border px-4 py-3 shadow
        ${props.error ? "border-red-error" : "border-gray-300"} 
        ${open ? "rounded-t-lg" : "rounded-lg"}
         `}
               >
-                <span className="">
-                  {hasPlaceholder ? props.placeholder : value.label}
+                <span className={`${isPlaceholder ? "text-gray-form" : ""}`}>
+                  {isPlaceholder ? props.placeholder : value?.label}
                 </span>
                 <span
                   className={`ml-auto transition-all duration-200 ${
@@ -47,11 +52,15 @@ const SelectInput = (props: DropdownProps) => {
                 }
               >
                 {props.dropDownOptions.map((option) => (
-                  <Listbox.Option key={option.value} value={option}>
+                  <Listbox.Option
+                    key={option.value}
+                    value={option}
+                    onChange={onChange}
+                  >
                     {({ active, selected }) => (
                       <li
                         className={` cursor-pointer px-4 py-2 
-                          ${active ? "bg-gray-100 " : ""}
+                          ${active ? "bg-blue-light " : ""}
                           `}
                       >
                         {option.label}

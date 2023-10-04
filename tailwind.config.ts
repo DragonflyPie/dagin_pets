@@ -18,7 +18,7 @@ const config: Config = {
           default: "#00BEFC",
           darken: "#00abe2",
         },
-        "light-blue": "#D4F4FF",
+        "blue-light": "#D4F4FF",
         blackish: "#393939",
         "gray-dark": "#18171C",
         "gray-light": "#E4E4E7",

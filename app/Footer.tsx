@@ -5,7 +5,8 @@ import {
   PhoneWhite,
   WhatsAppWhite,
 } from "./components/icons";
-import NavItems from "./NavItems";
+import NavMenu from "./NavItems";
+import FooterNavigation from "./FooterNavigation";
 
 const Footer = () => {
   return (
@@ -37,7 +38,7 @@ const Footer = () => {
         </div>
         <div className="flex w-full flex-col justify-between gap-[1.875rem] text-sm font-medium md:flex-row md:items-end">
           <ul className=" grid  grid-flow-col grid-rows-3 gap-6 md:gap-x-8 xl:flex xl:gap-6 2xl:gap-12">
-            <NavItems top={false} />
+            <FooterNavigation />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
             Dagin Pets Relocation © Copyright 2023. All Rights Reserved

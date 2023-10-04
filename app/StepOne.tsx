@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useStore from "./store";
 import { useRouter } from "next/navigation";
-import SelectInput from "./SelectInput";
+import SelectInput from "./AnimalSelect";
 
 const animalOptions: Option[] = [
   { value: "cat", label: "Кошка", labelEn: "Cat" },
@@ -38,13 +38,9 @@ const StepOne = () => {
     formState: { errors, isDirty, isValid },
   } = useForm<StepOne>({
     defaultValues: data,
-    mode: "onBlur",
+    mode: "onTouched",
     resolver: yupResolver(stepOneSchema),
   });
-
-  // useEffect(() => {
-  //   localStorage.setItem("FORM_DATA", JSON.stringify(formState));
-  // }, [FormData]);
 
   const onSubmit = (data: StepOne) => {
     updateStepOne(data);

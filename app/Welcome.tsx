@@ -2,14 +2,14 @@ import Image from "next/image";
 import cat_shining from "../public/cat_shining.png";
 import Button from "./Button";
 import { Paw } from "./components/vectors";
-import plane from "../public/plane.png";
+import plane from "../public/plane_rotated_2.png";
 import line from "../public/line.png";
 import Link from "next/link";
 
 const Welcome = () => {
   return (
     <div
-      className="relative flex w-full  scroll-m-28 overflow-x-hidden px-4 pb-16 lg:px-16  lg:pb-24 xl:min-h-[calc(100vh-113px)] xl:overflow-x-visible xl:px-20"
+      className="relative flex w-full  scroll-mt-20 overflow-x-hidden px-4 pb-16 lg:px-16  lg:pb-24 xl:min-h-[calc(100vh-113px)] xl:overflow-x-visible xl:px-20"
       id="welcome"
     >
       <div className="flex  w-full ">
@@ -34,11 +34,16 @@ const Welcome = () => {
             <Image
               src={cat_shining}
               alt="Cat tearing through the page"
-              className="-z-10  object-contain"
+              className="relative -z-10 object-contain"
             />
           </div>
         </div>
       </div>
+      <Image
+        src={plane}
+        alt="Plane"
+        className="absolute bottom-10 right-[3%] hidden w-28 object-contain md:block lg:bottom-20 lg:w-40 lg:rotate-[-5deg]  xl:right-5 xl:w-56"
+      />
 
       <div className="absolute left-[15%] top-2 -z-0 w-[16vw] ">
         <Paw />
@@ -46,6 +51,11 @@ const Welcome = () => {
       <div className="absolute left-[35%] top-[45%] -z-10 w-[16vw] rotate-45">
         <Paw />
       </div>
+      <Image
+        src={line}
+        alt=""
+        className="absolute left-0 top-0 hidden h-full object-contain object-left md:block"
+      />
 
       {/* <Image
         src={line}

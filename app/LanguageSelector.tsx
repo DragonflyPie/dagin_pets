@@ -34,8 +34,8 @@ const LanguageSelector = () => {
     >
       <div
         onClick={toggleMenu}
-        className={`absolute -top-0.5 flex gap-1.5 rounded-[6px] p-1 transition-colors duration-500 md:-top-1 md:p-2  ${
-          isOpen ? "bg-light-blue" : "bg-inherit"
+        className={`absolute -top-1 flex gap-1.5  rounded-[6px] p-2 transition-colors duration-500  ${
+          isOpen ? "bg-blue-light" : "bg-inherit"
         }`}
       >
         {isOpen ? (

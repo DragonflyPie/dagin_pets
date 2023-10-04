@@ -8,7 +8,7 @@ import useStore from "./store";
 import Checkbox from "./CheckBox";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import SelectInput from "./SelectInput";
+import SelectInput from "./ContactSelect";
 
 const contactOptions: Option[] = [
   { value: "any", label: "Любой" },
@@ -115,7 +115,6 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
         control={control}
         name="contactMethod"
         dropDownOptions={contactOptions}
-        error={errors.contactMethod?.value}
       />
 
       {/* <SelectInput

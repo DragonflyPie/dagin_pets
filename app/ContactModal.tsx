@@ -33,7 +33,7 @@ const ContactModal = () => {
   useEffect(() => {
     const handleEscapeKeyPress = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        closeModal();
+        setShowModal(false);
       }
     };
 
