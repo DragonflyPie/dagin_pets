@@ -1,12 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { CloseIcon, Down } from "../commons/icons";
+import { CloseIcon, Down, MenuIcon } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
 import fat_cat from "@/public/images/fat_cat.png";
 import Image from "next/image";
 import NavItems from "./NavItems";
-import { Locale } from "@/i18n.config";
 
 interface DropdownMenuProps {
   items: {
@@ -35,7 +34,7 @@ const DropdownMenu = ({ items }: DropdownMenuProps) => {
   return (
     <nav className="z-20 mr-auto flex xs:mr-0 lg:hidden" ref={navRef}>
       <div className="cursor-pointer lg:hidden" onClick={toggleNavOpen}>
-        <Down />
+        <MenuIcon />
       </div>
       <div
         className={`pointer-events-none fixed inset-0 bg-black transition-all duration-300 ${
