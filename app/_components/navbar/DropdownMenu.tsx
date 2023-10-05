@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { CloseIcon, Down, MenuIcon } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
-import fat_cat from "@/public/images/fat_cat.png";
+import cat_purr from "@/public/images/cat_purr.png";
 import Image from "next/image";
 import NavItems from "./NavItems";
 
@@ -42,7 +42,7 @@ const DropdownMenu = ({ items }: DropdownMenuProps) => {
         }`}
       ></div>
       <div
-        className={` fixed bottom-0 left-0 top-0 flex w-[300px] flex-col items-center justify-center bg-blue-light transition-all duration-500
+        className={` fixed bottom-0 left-0 top-0 flex w-full min-w-[16rem] flex-col items-center justify-center bg-white-dirty bg-opacity-80 backdrop-blur-md transition-all duration-500 xs:w-auto
         ${navOpen ? "" : "-translate-x-full"}
         `}
       >
@@ -52,11 +52,11 @@ const DropdownMenu = ({ items }: DropdownMenuProps) => {
         >
           <CloseIcon />
         </div>
-        <ul className=" flex h-full w-full flex-col justify-center pt-10 font-lato tracking-wider">
+        <ul className=" flex h-full w-full flex-col justify-center pt-10 font-lato tracking-widest">
           <NavItems handleClick={closeNav} items={items} />
         </ul>
         <div className="mt-auto pb-4">
-          <Image src={fat_cat} alt={""} width={200} />
+          <Image src={cat_purr} alt={"Purring cat"} width={120} />
         </div>
       </div>
     </nav>

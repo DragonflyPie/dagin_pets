@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PawSmallIcon } from "../commons/icons";
 
 interface NavItemsProps {
   top?: boolean;
@@ -17,20 +18,26 @@ const NavItems = ({ handleClick, top, items }: NavItemsProps) => {
   const typedItems = Object.keys(items) as Array<keyof typeof items>;
   return (
     <>
-      {typedItems.map((option) => {
+      {typedItems.map((option, index) => {
         if (top && option === "welcome") return;
         return (
           <li
             onClick={handleClick}
             key={option}
-            className="group flex w-full cursor-pointer justify-start py-6 pl-10 pr-4 transition-all duration-300 hover:bg-[#adeaff] lg:p-0 lg:hover:bg-inherit"
+            className="group relative flex cursor-pointer gap-6 py-6 pl-10 pr-6 transition-all  duration-300 hover:bg-blue-light lg:gap-0 lg:p-0 lg:hover:bg-inherit"
           >
+            <div className="flex items-center pb-0.5 text-gray-form lg:hidden">
+              <PawSmallIcon />
+            </div>
             <Link href={`#${option}`} className=" w-full whitespace-nowrap">
               <span className="relative">
                 {items[option]}
                 <span className="absolute -bottom-0.5 hidden h-px  w-full scale-0 bg-black transition-all duration-300  group-hover:scale-100 lg:block"></span>
               </span>
             </Link>
+            {index !== typedItems.length - 1 && (
+              <div className="absolute bottom-0 left-20 h-[0.5px] w-10 bg-gray-form opacity-50 lg:hidden"></div>
+            )}
           </li>
         );
       })}
