@@ -5,12 +5,14 @@ import FormContainer from "./FormContainer";
 import sweet_pets from "@/public/images/sweet_pets.png";
 import { useEffect, useRef, useState } from "react";
 import FocusTrap from "focus-trap-react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
 
 const ContactModal = () => {
   const [showModal, setShowModal] = useState(false);
+  const params = useParams();
+  const locale = params.lang;
 
   const contactRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -18,7 +20,7 @@ const ContactModal = () => {
   const closeModal = async () => {
     handleClose();
     setTimeout(() => {
-      router.push("/", { scroll: false });
+      router.push(`/${locale}`, { scroll: false });
     }, 500);
   };
 

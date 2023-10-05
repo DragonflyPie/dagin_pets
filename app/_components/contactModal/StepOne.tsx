@@ -16,13 +16,11 @@ const animalOptions: Option[] = [
 
 let stepOneSchema = object({
   name: string().required("This field is required"),
-  from: string().required("This field is required"),
-  to: string().required("This field is required"),
-  animal: object()
-    .shape({
-      value: string().required("This field is required"),
-    })
-    .required("This field is required"),
+  from: string(),
+  to: string(),
+  animal: object().shape({
+    value: string().required(),
+  }),
 });
 
 const StepOne = () => {
@@ -35,7 +33,7 @@ const StepOne = () => {
     register,
     control,
     handleSubmit,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, isValid },
   } = useForm<StepOne>({
     defaultValues: data,
     mode: "onTouched",
@@ -44,7 +42,7 @@ const StepOne = () => {
 
   const onSubmit = (data: StepOne) => {
     updateStepOne(data);
-    router.push(`?modal=true&step=2`);
+    router.push(`?modal=true&step=2`, { scroll: false });
   };
 
   return (
@@ -55,7 +53,7 @@ const StepOne = () => {
     >
       <FormInput
         id={"name"}
-        label={"Ваше имя"}
+        label={"Ваше имя*"}
         placeholder={"Введите Имя"}
         error={errors?.name}
         register={{ ...register("name") }}
@@ -86,7 +84,6 @@ const StepOne = () => {
         name={"animal"}
         placeholder={"Кого везти"}
         control={control}
-        error={errors.animal?.value}
       />
 
       <div className="mt-auto pb-1">

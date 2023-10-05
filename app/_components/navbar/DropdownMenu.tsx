@@ -1,14 +1,26 @@
 "use client";
+
 import { useRef, useState } from "react";
 import { CloseIcon, Down } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
 import fat_cat from "@/public/images/fat_cat.png";
 import Image from "next/image";
 import NavItems from "./NavItems";
+import { Locale } from "@/i18n.config";
 
-const DropdownMenu = () => {
+interface DropdownMenuProps {
+  items: {
+    welcome: string;
+    about: string;
+    services: string;
+    reviews: string;
+    faq: string;
+    contacts: string;
+  };
+}
+
+const DropdownMenu = ({ items }: DropdownMenuProps) => {
   const [navOpen, setNavOpen] = useState(false);
-
   const navRef = useRef<HTMLDivElement>(null);
 
   const toggleNavOpen = (e: React.MouseEvent) => {
@@ -42,7 +54,7 @@ const DropdownMenu = () => {
           <CloseIcon />
         </div>
         <ul className=" flex h-full w-full flex-col justify-center pt-10 font-lato tracking-wider">
-          <NavItems handleClick={closeNav} />
+          <NavItems handleClick={closeNav} items={items} />
         </ul>
         <div className="mt-auto pb-4">
           <Image src={fat_cat} alt={""} width={200} />

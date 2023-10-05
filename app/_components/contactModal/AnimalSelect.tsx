@@ -5,12 +5,12 @@ import { Down } from "../commons/icons";
 interface DropdownProps extends UseControllerProps<StepOne, "animal"> {
   dropDownOptions: Option[];
   placeholder?: string;
-  error?: FieldError | undefined;
 }
 
 const SelectInput = (props: DropdownProps) => {
   const {
     field: { value, onChange, onBlur },
+    fieldState: { error },
   } = useController(props);
 
   const isPlaceholder = !value.label && props.placeholder;
@@ -24,7 +24,7 @@ const SelectInput = (props: DropdownProps) => {
             <div className="relative">
               <Listbox.Button
                 className={`relative inline-flex h-12 w-full appearance-none items-center justify-start border px-4 py-3 shadow
-       ${props.error ? "border-red-error" : "border-gray-300"} 
+       ${error ? "border-red-error" : "border-gray-300"} 
        ${open ? "rounded-t-lg" : "rounded-lg"}
         `}
               >
@@ -63,9 +63,9 @@ const SelectInput = (props: DropdownProps) => {
                   </Listbox.Option>
                 ))}
               </Listbox.Options>
-              {props.error && (
+              {error && (
                 <p className="absolute -bottom-5 right-0 text-xs text-red-error">
-                  {props.error.message}
+                  {error.message}
                 </p>
               )}
             </div>

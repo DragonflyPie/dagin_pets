@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FailureIcon, SuccessIcon } from "../commons/icons";
 import Button from "../commons/Button";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 interface PopupProps {
   success: boolean;
@@ -12,9 +12,12 @@ interface PopupProps {
 
 const Popup = ({ success }: PopupProps) => {
   const router = useRouter();
+  const path = useParams();
+  const locale = path.lang;
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/", { scroll: false });
+      router.push(`/${locale}`, { scroll: false });
     }, 5000);
 
     return () => clearTimeout(timer);
@@ -34,7 +37,7 @@ const Popup = ({ success }: PopupProps) => {
             ? "Администратор свяжется с вами в ближайшее время."
             : "Пожалуйста, свяжитесь с нами другим способом."}
         </p>
-        <Link href={"/"} className="flex w-full" scroll={false}>
+        <Link href={`/${locale}`} className="flex w-full" scroll={false}>
           <Button
             width="full"
             size="small"

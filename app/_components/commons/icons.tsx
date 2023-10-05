@@ -407,27 +407,28 @@ export const FailureIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 50 50"
-      xmlSpace="preserve"
+      width="56"
+      height="56"
+      fill="none"
+      viewBox="0 0 56 56"
     >
-      <circle width={48} cx="25" cy="25" r="25" fill="#D75A4A"></circle>
+      <rect width="48" height="48" x="4" y="4" fill="#FAD1D1" rx="24"></rect>
       <path
-        fill="none"
-        stroke="#FFF"
+        stroke="#980303"
         strokeLinecap="round"
-        strokeMiterlimit="10"
+        strokeLinejoin="round"
         strokeWidth="2"
-        d="M16 34L25 25 34 16"
+        d="M24 23c3.057 3.056 5.967 5.92 9 9M38 27.086v.92a10 10 0 11-5.93-9.14m.93 4.118c-3.905 3.91-5.065 5.137-9 9.016"
       ></path>
-      <path
-        fill="none"
-        stroke="#FFF"
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="2"
-        d="M16 16L25 25 34 34"
-      ></path>
+      <rect
+        width="48"
+        height="48"
+        x="4"
+        y="4"
+        stroke="#FDECEC"
+        strokeWidth="8"
+        rx="24"
+      ></rect>
     </svg>
   );
 };

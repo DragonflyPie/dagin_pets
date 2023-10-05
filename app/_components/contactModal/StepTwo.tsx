@@ -27,7 +27,7 @@ let stepTwoSchema = object({
     })
     .required("This field is required"),
   message: string(),
-  terms: bool().oneOf([true], "Accept Ts & Cs is required"),
+  terms: bool().oneOf([true], "Accept is required"),
 });
 
 interface StepTwoProps {
@@ -46,7 +46,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     control,
     handleSubmit,
     getValues,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, isValid },
   } = useForm<StepTwo>({
     defaultValues: data,
     mode: "onBlur",
@@ -56,7 +56,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
   const onBack = () => {
     const data = getValues();
     updateStepTwo(data);
-    router.push("?modal=true&step=1");
+    router.push("?modal=true&step=1", { scroll: false });
   };
 
   const onSubmit = async (stepTwoData: StepTwo) => {
@@ -97,7 +97,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
       className="flex h-full w-full flex-col gap-3 pt-4 font-osans md:gap-5 md:px-14 md:pt-6"
     >
       <div className="relative flex flex-col gap-1.5">
-        <label htmlFor="phone">Номер телефона</label>
+        <label htmlFor="phone">Номер телефона*</label>
         <PhoneInput
           name="phone"
           control={control}

@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "welcome": "Home",
+    "about": "About",
+    "services": "Services",
+    "reviews": "Reviews",
+    "faq": "F.A.Q.",
+    "contacts": "Contacts"
+  }
+}

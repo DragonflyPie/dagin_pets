@@ -1,12 +1,17 @@
 "use client";
+
 import { useRef, useState } from "react";
 import { Down } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
-
-type LanguageOptions = "RU" | "EN";
+import { Locale, i18n } from "@/i18n.config";
+import { useParams, useRouter } from "next/navigation";
 
 const LanguageSelector = () => {
-  const [lang, setLang] = useState<LanguageOptions>("RU");
+  const params = useParams();
+  const router = useRouter();
+  const currentLocale = params.lang as Locale;
+  const locales = i18n.locales;
+  // const [lang, setLang] = useState<Locale>("ru");
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {
@@ -17,19 +22,17 @@ const LanguageSelector = () => {
     setIsOpen(!isOpen);
   };
 
-  const chooseLanguage = (language: LanguageOptions) => {
-    setLang(language);
+  const chooseLanguage = (locale: Locale) => {
     setIsOpen(false);
+    router.push(`/${locale}`);
   };
-
-  const languages = lang === "EN" ? ["EN", "RU"] : ["RU", "EN"];
 
   const languageRef = useRef<HTMLDivElement>(null);
 
   useClickOutside(languageRef, closeMenu);
   return (
     <div
-      className="relative flex h-8 w-16 shrink-0 items-center justify-center p-2  "
+      className="relative flex h-8 w-16 shrink-0 cursor-pointer items-center justify-center p-2  "
       ref={languageRef}
     >
       <div
@@ -40,18 +43,18 @@ const LanguageSelector = () => {
       >
         {isOpen ? (
           <ul className="flex flex-col gap-2">
-            {languages.map((language) => (
+            {locales.map((locale) => (
               <li
-                key={language}
-                onClick={() => chooseLanguage(language as LanguageOptions)}
+                key={locale}
+                onClick={() => chooseLanguage(locale as Locale)}
                 className="cursor-pointer underline-offset-2 hover:underline"
               >
-                {language}
+                {locale.toUpperCase()}
               </li>
             ))}
           </ul>
         ) : (
-          <div className="cursor-pointer">{lang}</div>
+          <div className="cursor-pointer">{currentLocale.toUpperCase()}</div>
         )}
         <div
           className={`mb-auto ${

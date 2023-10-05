@@ -15,12 +15,9 @@ interface CompleteData extends StepOne, StepTwo {}
 
 interface StepOne {
   name: string;
-  from: string;
-  to: string;
+  from?: string;
+  to?: string;
   animal: Option;
-  // name: string;
-  // phone: string;
-  // contactMethod: string;
 }
 
 interface StepTwo {
