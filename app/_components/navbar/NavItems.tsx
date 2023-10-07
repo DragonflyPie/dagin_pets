@@ -24,19 +24,23 @@ const NavItems = ({ handleClick, top, items }: NavItemsProps) => {
           <li
             onClick={handleClick}
             key={option}
-            className="group relative flex cursor-pointer gap-6 py-6 pl-10 pr-6 transition-all  duration-300 hover:bg-blue-light lg:gap-0 lg:p-0 lg:hover:bg-inherit"
+            className="group relative flex w-full cursor-pointer justify-center transition-all  duration-300 hover:bg-blue-light lg:gap-0 lg:p-0 lg:hover:bg-inherit"
           >
-            <div className="flex items-center pb-0.5 text-gray-form lg:hidden">
-              <PawSmallIcon />
-            </div>
-            <Link href={`#${option}`} className=" w-full whitespace-nowrap">
+            <Link
+              href={`#${option}`}
+              className="flex w-full gap-6 whitespace-nowrap py-6 pl-24 xs:pl-16
+              "
+            >
+              <div className="flex items-center pb-0.5 text-gray-form lg:hidden">
+                <PawSmallIcon />
+              </div>
               <span className="relative">
                 {items[option]}
                 <span className="absolute -bottom-0.5 hidden h-px  w-full scale-0 bg-black transition-all duration-300  group-hover:scale-100 lg:block"></span>
               </span>
             </Link>
             {index !== typedItems.length - 1 && (
-              <div className="absolute bottom-0 left-20 h-[0.5px] w-10 bg-gray-form opacity-50 lg:hidden"></div>
+              <div className="absolute bottom-0 h-[0.5px] w-1/2 bg-gray-form opacity-50 lg:hidden"></div>
             )}
           </li>
         );
