@@ -32,6 +32,7 @@ const Welcome = () => {
         <div className="relative flex max-h-full w-full flex-1 flex-col items-center justify-center ">
           <div className="absolute -z-10 aspect-[1.05] h-4/5 translate-x-10 translate-y-10 xs:h-full">
             <Image
+              priority
               src={cat_shining}
               alt="Cat tearing through the page"
               className="relative -z-10 object-contain"
