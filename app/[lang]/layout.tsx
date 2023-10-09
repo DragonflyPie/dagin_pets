@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Dagin Pets",
   description: "Перевозка питомцев в ОАЭ",
   manifest: "@/app/manifest.webmanifest",
+  robots: "@/app/robots.txt",
   themeColor: "#fff",
   colorScheme: "light",
 };
