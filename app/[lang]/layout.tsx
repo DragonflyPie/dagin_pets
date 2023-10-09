@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Dagin Pets",
   description: "Перевозка питомцев в ОАЭ",
   manifest: "@/app/manifest.webmanifest",
+  themeColor: "#fff",
+  colorScheme: "light",
 };
 
 export async function generateStaticParams() {
