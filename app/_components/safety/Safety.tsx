@@ -8,8 +8,6 @@ const Safety = () => {
       id="safety"
     >
       <div className="relative flex aspect-[1.42] max-h-[400px] w-64 items-center md:h-full  md:w-full md:flex-1">
-        {/* <div className="relative flex h-full w-[40%] grow items-center"> */}
-
         <Image
           src={fluffy_pets}
           alt="Dog and cat staring"

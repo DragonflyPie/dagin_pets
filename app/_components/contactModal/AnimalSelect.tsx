@@ -1,5 +1,5 @@
 import { Listbox } from "@headlessui/react";
-import { FieldError, useController, UseControllerProps } from "react-hook-form";
+import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
 interface DropdownProps extends UseControllerProps<StepOne, "animal"> {
@@ -29,7 +29,7 @@ const SelectInput = (props: DropdownProps) => {
         `}
               >
                 <span className={`${isPlaceholder ? "text-gray-form" : ""}`}>
-                  {isPlaceholder ? props.placeholder : value?.label}
+                  {isPlaceholder ? props.placeholder : value.label}
                 </span>
                 <span
                   className={`ml-auto transition-all duration-200 ${

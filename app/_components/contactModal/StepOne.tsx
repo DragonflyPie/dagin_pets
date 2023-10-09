@@ -1,6 +1,5 @@
 import Button from "../commons/Button";
 import FormInput from "./Input";
-
 import { object, string } from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -18,15 +17,16 @@ let stepOneSchema = object({
   name: string().required("This field is required"),
   from: string(),
   to: string(),
-  animal: object().shape({
-    value: string().required(),
-  }),
+  animal: object()
+    .shape({
+      value: string().default(""),
+    })
+    .default({ value: "" }),
 });
 
 const StepOne = () => {
   const data = useStore((state) => state.form.stepOne);
   const router = useRouter();
-
   const updateStepOne = useStore((state) => state.updateStepOne);
 
   const {

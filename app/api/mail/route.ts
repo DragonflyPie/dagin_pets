@@ -22,7 +22,6 @@ export async function POST(request: Request) {
     if (!data.phone || !data.contactMethod) {
       throw new Error("Missing data");
     }
-    console.log(123);
 
     let transporter = nodemailer.createTransport({
       name: "timeweb.SMTP",
@@ -37,7 +36,6 @@ export async function POST(request: Request) {
     });
 
     await new Promise((resolve, reject) => {
-      // verify connection configuration
       transporter.verify(function (error, success) {
         if (error) {
           console.log("error on verify");
@@ -50,26 +48,20 @@ export async function POST(request: Request) {
       });
     });
 
-    console.log("verified");
-
     const mailData = {
       from: email,
       to: "canuczerealme@gmail.com",
-      // subject: `Message from`,
-      // text: "123",
-      // html: `<h3>Sender: </h3><h3>Email:</h3><p></p>`,
       subject: `Dagin Pets: Message from ${data.name}`,
       text: generateString(data),
       html: `<h1>Отправитель: ${data.name}</h1>
       <h2>Телефон: ${data.phone}</h2>
       <h3>Способ связи: ${data.contactMethod.label}</h3>
-      <h3>Животное: ${data.animal.label}</h3>
+      <h3>Животное: ${data.animal?.label}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
       <p>${data.message}</p>`,
     };
 
     await new Promise((resolve, reject) => {
-      // send mail
       transporter.sendMail(mailData, (err, response) => {
         if (err) {
           console.log("error on sendmail");
@@ -82,10 +74,6 @@ export async function POST(request: Request) {
         }
       });
     });
-
-    // const mail = await transporter.sendMail();
-
-    console.log("before end");
 
     return NextResponse.json(
       { message: "Email successfully sent" },

@@ -116,14 +116,6 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
         dropDownOptions={contactOptions}
       />
 
-      {/* <SelectInput
-        id={"contactMethod"}
-        label={"Способ связи"}
-        error={errors?.contactMethod}
-        register={{ ...register("contactMethod") }}
-        options={contactOptions}
-      /> */}
-
       <div className="flex flex-col gap-1.5">
         <label htmlFor="phone">Сообщение</label>
         <textarea

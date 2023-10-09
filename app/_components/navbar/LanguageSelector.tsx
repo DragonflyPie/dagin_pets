@@ -11,7 +11,6 @@ const LanguageSelector = () => {
   const router = useRouter();
   const currentLocale = params.lang as Locale;
   const locales = i18n.locales;
-  // const [lang, setLang] = useState<Locale>("ru");
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {

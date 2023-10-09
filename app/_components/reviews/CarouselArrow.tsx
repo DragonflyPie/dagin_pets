@@ -19,7 +19,6 @@ function CarouselArrow({ onClick, direction }: ArrowProps) {
       `}
     >
       <Down />
-      {/* <div className={`${className} `} style={style} onClick={onClick} /> */}
     </div>
   );
 }
