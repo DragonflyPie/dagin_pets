@@ -31,7 +31,11 @@ const Footer = ({ lang }: FooterProps) => {
               info="+971585441452"
               icon={<WhatsAppWhite />}
             />
-            <Messenger link="" info="+971585441452" icon={<Instagram />} />
+            <Messenger
+              link="https://www.instagram.com/daginpets/"
+              info="@daginpets"
+              icon={<Instagram />}
+            />
             <Messenger
               blank={false}
               link="tel:+971585441452"
