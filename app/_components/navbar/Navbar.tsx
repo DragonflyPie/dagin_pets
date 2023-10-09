@@ -21,7 +21,12 @@ const Navbar = async ({ lang }: NavbarProps) => {
       <div className="flex w-full max-w-[1440px] items-center justify-end gap-3 pl-4 pr-2 font-inter font-medium xs:px-4 md:px-6 lg:gap-6 xl:px-16  2xl:gap-12">
         <DropdownMenu items={navigation} />
         <div className="relative mr-auto hidden aspect-square h-[41px] shrink-0 xs:block md:h-[65px] xl:h-[113px]">
-          <Image src={logo} fill alt="DaginPets Logo" />
+          <Image
+            src={logo}
+            fill
+            alt="DaginPets Logo"
+            sizes="(min-width: 768px) 20vw, 5vw"
+          />
         </div>
         <nav className="hidden lg:block">
           <ul className=" flex flex-col justify-end gap-6 font-inter text-sm font-medium lg:flex-row lg:text-xs xl:gap-12 xl:text-sm">

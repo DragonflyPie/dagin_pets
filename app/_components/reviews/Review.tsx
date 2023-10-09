@@ -53,6 +53,7 @@ const Review = ({ date, rating, message, name, pet, image }: ReviewData) => {
           alt="Pet photo"
           fill
           className="rounded-md object-cover"
+          sizes="(max-width: 768px) 90vw,(max-width: 1280px) 33vw, 25vw"
         />
       </div>
     </div>

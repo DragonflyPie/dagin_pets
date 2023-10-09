@@ -13,6 +13,7 @@ const About = () => {
           alt={"Maltipoo image"}
           fill
           className="absolute -ml-[20%] object-contain md:ml-0"
+          sizes="(max-width: 768px) 45vw, 25vw"
         />
         <div className=" absolute -bottom-2 left-2 h-10 w-full rounded-[50%] bg-black opacity-30 blur-xl "></div>
       </div>

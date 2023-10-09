@@ -14,7 +14,8 @@ const Safety = () => {
           src={fluffy_pets}
           alt="Dog and cat staring"
           fill
-          className=" object-contain "
+          className=" object-contain"
+          sizes="(max-width: 768px) 90vw, 50vw"
         />
       </div>
       <article className="flex-1">
