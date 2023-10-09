@@ -1,7 +1,8 @@
-import { Inter, Open_Sans, Roboto } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 export const lato = localFont({
+  preload: false,
   src: [
     {
       path: "../../public/fonts/Lato-Regular.woff2",
@@ -33,16 +34,6 @@ export const lato = localFont({
   variable: "--font-lato",
 });
 
-export const jakarta = localFont({
-  src: "../../public/fonts/PlusJakartaSans[wght].ttf",
-  display: "swap",
-  variable: "--font-jakarta",
-});
-// export const jakarta = Plus_Jakarta_Sans({
-//   subsets: ["latin", "cyrillic-ext"],
-//   variable: "--font-jakarta",
-// });
-
 export const inter = Inter({
   subsets: ["latin", "cyrillic"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -53,10 +44,4 @@ export const osans = Open_Sans({
   subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-osans",
-});
-
-export const roboto = Roboto({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "700", "900"],
-  variable: "--font-roboto",
 });

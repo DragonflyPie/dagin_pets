@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BlueShape } from "../_components/commons/vectors";
 import Footer from "../_components/footer/Footer";
 import Navbar from "../_components/navbar/Navbar";
-import { inter, lato, osans, roboto } from "../_utilities/fonts";
+import { inter, lato, osans } from "../_utilities/fonts";
 import { Locale, i18n } from "@/i18n.config";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang={params.lang}
-      className={`scroll-smooth ${osans.variable}  ${inter.variable} ${lato.variable} ${roboto.variable}`}
+      className={`scroll-smooth ${osans.variable} ${inter.variable} ${lato.variable}`}
     >
       <body className="flex w-full flex-col items-center overflow-x-hidden  bg-white font-osans text-blackish">
         <Navbar lang={params.lang} />

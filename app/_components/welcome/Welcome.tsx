@@ -37,7 +37,7 @@ const Welcome = () => {
               alt="Cat tearing through the page"
               className="-z-10 object-contain"
               fill
-              sizes="(max-width: 768px) 30vw,  60vw"
+              sizes="(max-width: 768px) 80vw, 60vw"
             />
           </div>
         </div>
@@ -56,7 +56,6 @@ const Welcome = () => {
       <Image
         src={line}
         alt=""
-        priority
         className="absolute left-0 top-0 hidden h-full w-auto object-contain object-left md:block"
       />
     </div>
