@@ -24,7 +24,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
           <Image src={logo} fill alt="DaginPets Logo" />
         </div>
         <nav className="hidden lg:block">
-          <ul className=" flex w-full flex-col justify-end gap-6 font-inter text-sm font-medium lg:flex-row lg:text-xs xl:gap-12 xl:text-sm">
+          <ul className=" flex flex-col justify-end gap-6 font-inter text-sm font-medium lg:flex-row lg:text-xs xl:gap-12 xl:text-sm">
             <NavItems top items={navigation} />
           </ul>
         </nav>

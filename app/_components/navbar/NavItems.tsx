@@ -28,8 +28,7 @@ const NavItems = ({ handleClick, top, items }: NavItemsProps) => {
           >
             <Link
               href={`#${option}`}
-              className="flex w-full gap-6 whitespace-nowrap py-6 pl-24 xs:pl-16
-              "
+              className="flex w-full gap-6 whitespace-nowrap py-6 pl-24 xs:pl-16 xl:p-0"
             >
               <div className="flex items-center pb-0.5 text-gray-form lg:hidden">
                 <PawSmallIcon />
