@@ -29,8 +29,8 @@ interface StepTwo {
 
 interface ReviewData {
   date: string;
-  rating: 0 | 1 | 2 | 3 | 4 | 5;
+  rating: number;
   message: string;
   name: string;
-  image: StaticImageData;
+  image: string;
 }

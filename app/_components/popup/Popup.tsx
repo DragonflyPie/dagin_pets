@@ -25,7 +25,7 @@ const Popup = ({ success }: PopupProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex h-full w-full items-center justify-center ">
-      <div className=" flex w-[95vw] flex-col items-center rounded-xl bg-white p-6 font-osans shadow-2xl md:mb-[20vh] md:w-[400px]">
+      <div className=" flex w-[95vw] flex-col items-center rounded-xl bg-white p-6 font-lato shadow-2xl md:mb-[20vh] md:w-[400px]">
         <div className="mb-5 h-12 w-12">
           {success ? <SuccessIcon /> : <FailureIcon />}
         </div>

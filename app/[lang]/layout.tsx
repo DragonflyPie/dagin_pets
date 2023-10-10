@@ -5,15 +5,35 @@ import Footer from "../_components/footer/Footer";
 import Navbar from "../_components/navbar/Navbar";
 import { inter, lato, osans } from "../_utilities/fonts";
 import { Locale, i18n } from "@/i18n.config";
+import { getDictionary } from "../_utilities/getDictionary";
 
-export const metadata: Metadata = {
-  title: "Dagin Pets",
-  description: "Перевозка питомцев в ОАЭ",
-  manifest: "@/app/manifest.webmanifest",
-  robots: "@/app/robots.txt",
-  themeColor: "#fff",
-  colorScheme: "light",
+type Props = {
+  params: { lang: Locale };
 };
+
+// export const metadata: Metadata = {
+//   title: "Dagin Pets",
+//   description: "Перевозка питомцев в ОАЭ",
+//   manifest: "@/app/manifest.webmanifest",
+//   robots: "@/app/robots.txt",
+//   themeColor: "#fff",
+//   colorScheme: "light",
+// };
+
+export async function generateMetadata({
+  params: { lang },
+}: Props): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+
+  return {
+    title: `${dictionary.meta.title}`,
+    description: `${dictionary.meta.description}`,
+    manifest: "@/app/manifest.webmanifest",
+    robots: "@/app/robots.txt",
+    themeColor: "#fff",
+    colorScheme: "light",
+  };
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));

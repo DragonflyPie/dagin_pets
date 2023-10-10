@@ -24,7 +24,7 @@ const Button = ({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`h-min whitespace-nowrap  rounded-[40px] font-lato text-white transition-colors  hover:text-gray-50 
+      className={`h-min whitespace-nowrap  rounded-[40px] font-lato text-white transition-colors hover:text-gray-50  active:scale-95 
       ${
         size === "small"
           ? "px-[1.125rem] py-2.5 text-base"

@@ -3,7 +3,14 @@ import fluffy_pets from "@/public/images/fluffy_cat_and_dog.png";
 import Link from "next/link";
 import Button from "../commons/Button";
 
-const Safety = () => {
+interface SafetyProps {
+  dictionary: {
+    value_title: string;
+    value_desciption: string;
+  };
+}
+
+const Safety = ({ dictionary }: SafetyProps) => {
   return (
     <div
       className="flex h-full scroll-m-10 flex-col items-center justify-between px-4  pb-16 md:flex-row lg:px-16 xl:px-20 xl:pb-24 "
@@ -20,18 +27,12 @@ const Safety = () => {
       </div>
       <div className="flex flex-1 flex-col items-center gap-4 md:gap-10 ">
         <article className="">
-          <pre className=" font-osans text-base/[150%] md:text-2xl/[150%] lg:text-[2rem]/[150%] xl:text-4xl/[180%]">
-            Мы <span className="font-bold">ценим здоровье</span>
-          </pre>
-          <pre className="font-osans text-base/[150%] md:pr-6 md:text-2xl/[150%]  lg:text-[2rem]/[150%] xl:text-4xl/[180%]">
-            и<span className="font-bold"> благополучие ваших питомцев</span>
-          </pre>
+          <h3
+            className=" font-lato text-base/[150%] md:text-2xl/[150%] lg:text-[2rem]/[150%] xl:text-4xl/[180%]"
+            dangerouslySetInnerHTML={{ __html: dictionary.value_title }}
+          ></h3>
           <p className=" font-inter text-xs/[180%] md:text-base/[180%] xl:text-2xl/[180%]">
-            и наша миссия - обеспечить максимально комфортную и безопасную
-            перевозку для них. Не стесняйтесь связаться с нами сегодня, чтобы
-            узнать больше о наших услугах, получить бесплатную консультацию по
-            транспортировке животных в ОАЭ и заказать пет такси для вашего
-            питомца.
+            {dictionary.value_desciption}
           </p>
         </article>
         <Link href={"?modal=true&step=1"} scroll={false}>

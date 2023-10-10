@@ -29,7 +29,7 @@ const Questions = () => {
           />
         </div>
         <div className="flex flex-col items-center gap-2">
-          <p className="font-inter text-xl/[1.875] font-medium md:font-osans">
+          <p className="font-inter text-xl/[1.875] font-medium md:font-lato">
             Остались вопросы?
           </p>
           <p className="text-center text-base md:text-lg">

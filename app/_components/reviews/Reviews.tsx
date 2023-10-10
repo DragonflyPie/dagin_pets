@@ -5,9 +5,18 @@ import "../../_utilities/slick-theme.css";
 import Slider from "react-slick";
 import Review from "./Review";
 import CarouselArrow from "./CarouselArrow";
-import { REVIEWS_DATA } from "@/app/_data/reviews_data";
 
-const Reviews = () => {
+interface ReviewsProps {
+  dictionary: {
+    reviews_title: string;
+    reviews_more: string;
+    reviews_less: string;
+    reviews_description: string;
+    reviews_data: ReviewData[];
+  };
+}
+
+const Reviews = ({ dictionary }: ReviewsProps) => {
   const settings = {
     className: "slider variable-width",
     infinite: true,
@@ -21,17 +30,17 @@ const Reviews = () => {
     <div id="reviews" className="w-full scroll-m-10 pb-16 md:pb-24">
       <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6">
         <h2 className="font-lato text-xl font-bold tracking-tight md:text-4xl/[2.75rem] md:font-semibold">
-          Отзывы
+          {dictionary.reviews_title}
         </h2>
         <p className="w-min min-w-[12rem] text-center text-xs/[150%] font-medium md:w-full md:text-xl">
-          Наша история: Восторженные отзывы о перевозке питомцев
+          {dictionary.reviews_description}
         </p>
       </hgroup>
       <div className="max-w-[100vw] px-4 lg:px-16 xl:px-20">
         <Slider {...settings}>
-          {REVIEWS_DATA.map((review) => {
+          {dictionary.reviews_data.map((review) => {
             return (
-              <div className="pr-5" key={review.image}>
+              <div className="pr-5" key={review.date}>
                 <Review
                   date={review.date}
                   rating={review.rating}

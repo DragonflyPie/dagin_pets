@@ -25,11 +25,11 @@ export default async function Home({
   return (
     <main className="flex w-full flex-col items-center">
       <div className="flex  max-w-[1440px] flex-col ">
-        <Welcome />
-        <About />
-        <Services />
-        <Safety />
-        <Reviews />
+        <Welcome dictionary={dictionary.header} />
+        <About dictionary={dictionary.about} />
+        <Services dictionary={dictionary.services} />
+        <Safety dictionary={dictionary.safety} />
+        <Reviews dictionary={dictionary.reviews} />
         <Questions />
         {modal === "true" && <ContactModal />}
         {success === "true" ? (

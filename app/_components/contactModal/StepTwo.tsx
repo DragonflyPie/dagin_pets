@@ -94,7 +94,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 pt-4 font-osans md:gap-5 md:px-14 md:pt-6"
+      className="flex h-full w-full flex-col gap-3 pt-4 font-lato md:gap-5 md:px-14 md:pt-6"
     >
       <div className="relative flex flex-col gap-1.5">
         <label htmlFor="phone">Номер телефона*</label>

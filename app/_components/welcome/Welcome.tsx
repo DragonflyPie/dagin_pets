@@ -6,7 +6,15 @@ import line from "@/public/images/line.png";
 import Link from "next/link";
 import { Paw } from "../commons/vectors";
 
-const Welcome = () => {
+interface WelcomeProps {
+  dictionary: {
+    header_title: string;
+    header_description: string;
+    header_button: string;
+  };
+}
+
+const Welcome = ({ dictionary }: WelcomeProps) => {
   return (
     <div
       className="relative flex w-full  scroll-mt-20 overflow-x-hidden px-4 pb-16 lg:px-16  lg:pb-24 xl:min-h-[calc(100vh-113px)] xl:overflow-x-visible xl:px-20"
@@ -15,18 +23,16 @@ const Welcome = () => {
       <div className="flex  w-full ">
         <div className="z-10 flex  w-min flex-col justify-between gap-6  pt-14 md:gap-10 xl:gap-6 xl:pt-16">
           <pre>
-            <h1 className="inline-block w-fit font-lato text-2xl font-extrabold leading-[1.1] tracking-[0.24px]  tracking-[0.48px] md:pr-28 md:text-5xl xl:text-[5rem] xl:tracking-[0.8px] ">
-              {`Приветствуем вас,\nдорогие любители\nживотных!`}
+            <h1 className="inline-block w-fit font-lato text-2xl/[1.1] font-extrabold tracking-[0.24px]  tracking-[0.48px] md:pr-28 md:text-5xl/[1.1] xl:text-[5rem]/[1.1] xl:tracking-[0.8px] ">
+              {dictionary.header_title}
             </h1>
           </pre>
-          <p className="font-osans text-xs/[18px]  md:text-xl/[32px]  xl:text-2xl">
-            Вам нужно перевезти своего питомца в ОАЭ или из ОАЭ? Компания Dagin
-            Pets Relocation рада предложить вам свою помощь: услуги по
-            транспортировке животных, а также пет такси на территории ОАЭ.
+          <p className="font-lato text-xs/[1.5]  md:text-xl/[1.6]  xl:text-2xl/[1.33]">
+            {dictionary.header_description}
           </p>
 
           <Link href={"?modal=true&step=1"} scroll={false}>
-            <Button text="Хочу перевезти" modal />
+            <Button text={dictionary.header_button} modal />
           </Link>
         </div>
         <div className="relative flex max-h-full w-full flex-1 flex-col items-center justify-center ">

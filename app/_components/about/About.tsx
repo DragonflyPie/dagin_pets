@@ -1,7 +1,12 @@
 import Image from "next/image";
 import maltipoo from "@/public/images/maltipoooo.png";
 
-const About = () => {
+interface AboutProps {
+  dictionary: {
+    text: string;
+  };
+}
+const About = ({ dictionary }: AboutProps) => {
   return (
     <div
       className="flex w-full scroll-mt-10 items-center overflow-x-hidden px-4 pb-14   lg:px-16 xl:px-24 xl:px-36 xl:pb-24"
@@ -18,12 +23,15 @@ const About = () => {
         <div className=" absolute -bottom-2 left-2 h-10 w-full rounded-[50%] bg-black opacity-30 blur-xl "></div>
       </div>
 
-      <p className="-ml-6 flex-1 text-xs xs:text-sm md:ml-0 md:pl-10 md:text-2xl/[36px] xl:pl-36">
-        Мы — <span className="font-semibold">лицензированная </span> компания с
+      <p
+        className="-ml-6 flex-1 text-xs xs:text-sm md:ml-0 md:pl-10 md:text-2xl/[36px] xl:pl-36"
+        dangerouslySetInnerHTML={{ __html: dictionary.text }}
+      >
+        {/* Мы — <span className="font-semibold">лицензированная </span> компания с
         <span className="font-semibold"> профессиональным опытом</span> в
         области перевозки животных, и наша команда специалистов поможет вам с
         выбором <span className="font-semibold">наилучшего маршрута</span> и
-        способа транспортировки вашего любимца.
+        способа транспортировки вашего любимца. */}
       </p>
     </div>
   );

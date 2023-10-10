@@ -22,7 +22,7 @@ const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
         <h3 className="text-center font-inter text-xl/6 font-semibold md:text-[1.313rem]/7">
           {heading}
         </h3>
-        <p className="px-10 text-center text-xs md:text-base/[1.625rem]">
+        <p className="px-10 text-center font-lato text-xs md:text-base/[1.625rem]">
           {text}
         </p>
       </article>

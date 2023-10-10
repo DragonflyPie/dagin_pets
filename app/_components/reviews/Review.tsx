@@ -26,14 +26,14 @@ const Review = ({ date, rating, message, name, image }: ReviewData) => {
             <StarEmpty key={number} />
           ))}
         </div>
-        <p className="font-osans leading-[120%]">{name}</p>
+        <p className="leading-[120%]">{name}</p>
       </div>
       <hr />
       <div className="">
         <article
           className={` w-full text-ellipsis text-sm/[120%] transition-all duration-1000 ease-out
       ${
-        expand ? "line-clamp-none max-h-[40rem]" : "line-clamp-6 max-h-[6.5rem]"
+        expand ? "line-clamp-none max-h-[40rem]" : "line-clamp-4 max-h-[6.5rem]"
       }
       `}
         >
@@ -46,12 +46,12 @@ const Review = ({ date, rating, message, name, image }: ReviewData) => {
           {expand ? "Свернуть" : "Развернуть"}
         </button>
       </div>
-      <div className="relative h-[342px] w-full">
+      <div className="relative aspect-square w-full">
         <Image
           src={image}
           alt="Pet photo"
           fill
-          className="rounded-md object-cover"
+          className="rounded  object-cover"
           sizes="(max-width: 768px) 90vw,(max-width: 1280px) 33vw, 25vw"
         />
       </div>

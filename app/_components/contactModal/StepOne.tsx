@@ -49,7 +49,7 @@ const StepOne = () => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 font-osans md:gap-5 md:px-14"
+      className="flex h-full w-full flex-col gap-3 font-lato md:gap-5 md:px-14"
     >
       <FormInput
         id={"name"}
