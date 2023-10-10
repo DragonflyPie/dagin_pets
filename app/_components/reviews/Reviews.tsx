@@ -37,7 +37,6 @@ const Reviews = () => {
                   rating={review.rating}
                   message={review.message}
                   name={review.name}
-                  pet={review.pet}
                   image={review.image}
                 />
               </div>

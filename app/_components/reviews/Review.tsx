@@ -2,7 +2,7 @@ import { StarEmpty, StarFilled } from "../commons/icons";
 import { useState } from "react";
 import Image from "next/image";
 
-const Review = ({ date, rating, message, name, pet, image }: ReviewData) => {
+const Review = ({ date, rating, message, name, image }: ReviewData) => {
   const [expand, setExpand] = useState(false);
 
   const filledStarsArray = Array.from({ length: rating }, (_, index) => index);
@@ -27,7 +27,6 @@ const Review = ({ date, rating, message, name, pet, image }: ReviewData) => {
           ))}
         </div>
         <p className="font-osans leading-[120%]">{name}</p>
-        <p className="text-sm/[120%] font-light">Питомец: {pet}</p>
       </div>
       <hr />
       <div className="">
