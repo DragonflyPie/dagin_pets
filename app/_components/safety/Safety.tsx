@@ -7,6 +7,7 @@ interface SafetyProps {
   dictionary: {
     value_title: string;
     value_desciption: string;
+    value_button: string;
   };
 }
 
@@ -25,7 +26,7 @@ const Safety = ({ dictionary }: SafetyProps) => {
           sizes="(max-width: 768px) 90vw, 50vw"
         />
       </div>
-      <div className="flex flex-1 flex-col items-center gap-4 md:gap-10 ">
+      <div className="flex flex-1 flex-col items-center gap-4 pb-6 md:gap-10 ">
         <article className="">
           <h3
             className=" font-lato text-base/[150%] md:text-2xl/[150%] lg:text-[2rem]/[150%] xl:text-4xl/[180%]"
@@ -36,7 +37,7 @@ const Safety = ({ dictionary }: SafetyProps) => {
           </p>
         </article>
         <Link href={"?modal=true&step=1"} scroll={false}>
-          <Button text="Хочу перевезти" modal />
+          <Button text={dictionary.value_button} modal />
         </Link>
       </div>
     </div>

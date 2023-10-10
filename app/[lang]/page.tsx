@@ -30,7 +30,10 @@ export default async function Home({
         <Services dictionary={dictionary.services} />
         <Safety dictionary={dictionary.safety} />
         <Reviews dictionary={dictionary.reviews} />
-        <Questions />
+        <Questions
+          dictionary={dictionary.faq}
+          button_label={dictionary.common.contact_button}
+        />
         {modal === "true" && <ContactModal />}
         {success === "true" ? (
           <Popup success />

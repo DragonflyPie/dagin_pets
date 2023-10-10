@@ -9,7 +9,9 @@
     "services": "Services",
     "reviews": "Reviews",
     "faq": "FAQ.",
-    "contacts": "Contact Us",
+    "contacts": "Contact Us"
+  },
+  "common": {
     "contact_button": "Get in Touch"
   },
   "header": {
@@ -65,7 +67,8 @@
   },
   "safety": {
     "value_title": "We <span class='font-bold'>prioritize the health</span> <br>and <span class='font-bold'>well-being of your pets</span>,",
-    "value_desciption": "and our mission is to ensure the most comfortable and safe transportation for them. don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the uae, or book a pet taxi for your furry friend."
+    "value_desciption": "and our mission is to ensure the most comfortable and safe transportation for them. don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the uae, or book a pet taxi for your furry friend.",
+    "value_button": "Transport My Pet"
   },
   "reviews": {
     "reviews_title": "Reviews",
@@ -130,5 +133,36 @@
         "image": "/images/review8.jpg"
       }
     ]
+  },
+  "faq": {
+    "faq_title": "Frequently Asked Questions",
+    "faq_description": "Everything you wanted to know but couldn't find",
+    "more_question": "Do you need additional consultation?",
+    "more_question_description": "We would be happy to assist you.",
+    "faq_data": [
+      {
+        "question": "What services does your pet relocation company offer?",
+        "answer": "We offer a wide range of services, including route planning, cabin seat reservations, document preparation assistance, logistics organization, pet taxi services, and the option of pet transportation with a dedicated pet courier."
+      },
+      {
+        "question": "How do I prepare my pet for relocation?",
+        "answer": "We provide comprehensive guidance on preparing your pet for relocation. This includes health check-ups, vaccinations, and ensuring your pet is crate-trained for safe travel. Our experts will assist you throughout the process."
+      },
+      {
+        "question": "What are the travel requirements for international pet relocation?",
+        "answer": "International pet relocation often involves specific entry requirements for each destination country. We stay up-to-date with the latest regulations and will guide you through the necessary vaccinations, microchipping, and paperwork for your pet's smooth journey."
+      },
+      {
+        "question": "How far in advance should I book pet relocation services?",
+        "answer": "It's advisable to start planning as early as possible, especially for international relocations. Booking at least 2-3 months in advance allows us to secure the best travel arrangements and ensures compliance with destination country requirements. However, we can accommodate last-minute requests when necessary and possible."
+      },
+      {
+        "question": "How can I track my pet's journey during relocation?",
+        "answer": "We provide regular text, photo, and video updates."
+      }
+    ]
+  },
+  "footer": {
+    "footer_title": "For any questions, \nplease feel free \nto reach out to us"
   }
 }
