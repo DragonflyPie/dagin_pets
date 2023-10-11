@@ -186,6 +186,26 @@ export const Instagram = () => {
   );
 };
 
+export const MailIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="49"
+      height="36"
+      fill="none"
+      viewBox="0 0 49 36"
+    >
+      <rect width="48" height="36" x="0.875" fill="currentColor" rx="18"></rect>
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.875 15l3.75 3a2 2 0 002.5 0l3.75-3m4 8V13a2 2 0 00-2-2h-14a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2z"
+      ></path>
+    </svg>
+  );
+};
+
 export const Telegram = () => {
   return (
     <svg

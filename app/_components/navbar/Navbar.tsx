@@ -8,6 +8,7 @@ import Button from "../commons/Button";
 import LanguageSelector from "./LanguageSelector";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/app/_utilities/getDictionary";
+import { MailIcon } from "../commons/icons";
 
 interface NavbarProps {
   lang: Locale;
@@ -35,7 +36,12 @@ const Navbar = async ({ lang }: NavbarProps) => {
         </nav>
         <MessengersMenu />
         <Link href={"?modal=true&step=1"}>
-          <Button text={common.contact_button} size="medium" />
+          <div className="hidden xs:block">
+            <Button text={common.contact_button} size="medium" />
+          </div>
+          <div className="text-blue-button-default active:text-blue-button-darken xs:hidden">
+            <MailIcon />
+          </div>
         </Link>
         <LanguageSelector />
       </div>
