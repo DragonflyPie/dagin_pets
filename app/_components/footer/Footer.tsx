@@ -8,6 +8,7 @@ import {
 } from "../commons/icons";
 import FooterNavigation from "./FooterNavigation";
 import { getDictionary } from "@/app/_utilities/getDictionary";
+import MessengerItems from "../commons/MessengerItems";
 
 interface FooterProps {
   lang: Locale;
@@ -23,28 +24,8 @@ const Footer = async ({ lang }: FooterProps) => {
           <h4 className="shrink-0 pb-6 font-lato text-xl/[150%] xs:w-[21rem] md:whitespace-pre md:pb-0 md:text-3xl/[160%] xl:text-4xl/[160%]">
             {footer.footer_title}
           </h4>
-          <ul className=" grid grid-cols-1 gap-y-6 md:grid-cols-2 md:justify-between md:gap-x-10 md:gap-y-10 xl:gap-x-36">
-            <Messenger
-              link="https://t.me/AnastasiaBelykh"
-              info="@AnastasiaBelykh"
-              icon={<Telegram />}
-            />
-            <Messenger
-              link="https://wa.me/send?phone=971585441452"
-              info="+971585441452"
-              icon={<WhatsAppWhite />}
-            />
-            <Messenger
-              link="https://www.instagram.com/daginpets/"
-              info="@daginpets"
-              icon={<Instagram />}
-            />
-            <Messenger
-              blank={false}
-              link="tel:+971585441452"
-              info="+971585441452"
-              icon={<PhoneWhite />}
-            />
+          <ul className=" grid grid-cols-1 gap-y-6 text-base font-light  md:grid-cols-2 md:justify-between md:gap-x-10 md:gap-y-10 md:text-xl lg:gap-4 xl:gap-x-36 xl:text-2xl">
+            <MessengerItems />
           </ul>
         </div>
         <div className="flex w-full flex-col justify-between gap-[1.875rem] text-sm font-medium md:flex-row md:items-end">

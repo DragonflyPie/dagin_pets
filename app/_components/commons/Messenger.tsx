@@ -12,7 +12,7 @@ const Messenger = ({ icon, info, link, blank = true }: MessangerProps) => {
       <a
         href={link}
         target={blank ? "_blank" : "_self"}
-        className="flex w-min items-center gap-2 text-base font-light md:text-xl lg:gap-4  xl:text-2xl"
+        className="flex w-min items-center gap-4 "
       >
         <div className="">{icon}</div>
         <p className="">{info}</p>
