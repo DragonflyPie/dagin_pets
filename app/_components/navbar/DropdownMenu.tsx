@@ -46,7 +46,7 @@ const DropdownMenu = ({ items, text }: DropdownMenuProps) => {
 
   useClickOutside(navRef, closeNav);
   return (
-    <div className="z-20 mr-auto flex xs:mr-0" ref={navRef}>
+    <div className="z-20 flex" ref={navRef}>
       <div className="cursor-pointer lg:hidden" onClick={toggleNavOpen}>
         <MenuIcon />
       </div>
