@@ -9,7 +9,16 @@ import { useParams, useRouter } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
 
-const ContactModal = () => {
+interface ContactModalProps {
+  dictionary: {
+    header: string;
+    subheader: string;
+    step_one: StepOne;
+    step_two: StepTwo;
+  };
+}
+
+const ContactModal = ({ dictionary }: ContactModalProps) => {
   const [showModal, setShowModal] = useState(false);
   const params = useParams();
   const locale = params.lang;
@@ -84,8 +93,7 @@ const ContactModal = () => {
             >
               <CloseIcon />
             </button>
-            <FormContainer handleClose={handleClose} />
-
+            <FormContainer handleClose={handleClose} dictionary={dictionary} />
             <div className="ml-auto">
               <Image
                 src={sweet_pets}

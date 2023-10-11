@@ -2,9 +2,10 @@ import { Listbox } from "@headlessui/react";
 import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
-interface DropdownProps extends UseControllerProps<StepOne, "animal"> {
+interface DropdownProps extends UseControllerProps<StepOneData, "animal"> {
   dropDownOptions: Option[];
   placeholder?: string;
+  label: string;
 }
 
 const SelectInput = (props: DropdownProps) => {
@@ -17,7 +18,7 @@ const SelectInput = (props: DropdownProps) => {
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor="#animal">Кого везти</label>
+      <label htmlFor="#animal">{props.label}</label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>

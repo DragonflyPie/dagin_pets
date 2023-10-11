@@ -4,17 +4,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import SelectInput from "./methodSelect";
 import Checkbox from "./CheckBox";
 import Button from "../commons/Button";
 import useStore from "../zustand/store";
-
-const contactOptions: Option[] = [
-  { value: "any", label: "Любой" },
-  { value: "phone", label: "Телефон" },
-  { value: "whatsApp", label: "WhatsApp" },
-  { value: "telegram", label: "Telegram" },
-];
+import MethodSel from "./MethodSelect";
 
 let stepTwoSchema = object({
   phone: string()
@@ -23,18 +16,19 @@ let stepTwoSchema = object({
     .max(18, "Invalid phone number"),
   contactMethod: object()
     .shape({
-      value: string().required("This field is required"),
+      value: string().default(""),
     })
-    .required("This field is required"),
+    .default({ value: "" }),
   message: string(),
   terms: bool().oneOf([true], "Accept is required"),
 });
 
 interface StepTwoProps {
   handleClose: () => void;
+  dictionary: StepTwo;
 }
 
-const StepTwo = ({ handleClose }: StepTwoProps) => {
+const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const data = useStore((state) => state.form.stepTwo);
@@ -47,11 +41,18 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     handleSubmit,
     getValues,
     formState: { errors, isValid },
-  } = useForm<StepTwo>({
+  } = useForm<StepTwoData>({
     defaultValues: data,
     mode: "onBlur",
     resolver: yupResolver(stepTwoSchema),
   });
+
+  const contactOptions: Option[] = [
+    { value: "any", label: dictionary.contact_method.any },
+    { value: "phone", label: dictionary.contact_method.phone },
+    { value: "whatsApp", label: dictionary.contact_method.whatsapp },
+    { value: "telegram", label: dictionary.contact_method.telegram },
+  ];
 
   const onBack = () => {
     const data = getValues();
@@ -59,7 +60,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
     router.push("?modal=true&step=1", { scroll: false });
   };
 
-  const onSubmit = async (stepTwoData: StepTwo) => {
+  const onSubmit = async (stepTwoData: StepTwoData) => {
     const completeData = {
       ...stepOneData,
       ...stepTwoData,
@@ -97,7 +98,7 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
       className="flex h-full w-full flex-col gap-3 pt-4 font-lato md:gap-5 md:px-14 md:pt-6"
     >
       <div className="relative flex flex-col gap-1.5">
-        <label htmlFor="phone">Номер телефона*</label>
+        <label htmlFor="phone">{`${dictionary.phone}*`}</label>
         <PhoneInput
           name="phone"
           control={control}
@@ -105,42 +106,57 @@ const StepTwo = ({ handleClose }: StepTwoProps) => {
         />
         {errors?.phone && (
           <p className="absolute -bottom-5 right-0 text-xs text-red-error">
-            {errors.phone.message}
+            {}
+            {errors.phone.type === "required"
+              ? dictionary.error_required
+              : dictionary.error_invalid}
           </p>
         )}
       </div>
 
-      <SelectInput
+      <MethodSel
         control={control}
         name="contactMethod"
         dropDownOptions={contactOptions}
+        label={dictionary.contact_method.label}
+        placeholder={contactOptions[0].label}
       />
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="phone">Сообщение</label>
+        <label htmlFor="phone">{dictionary.message_label}</label>
         <textarea
           maxLength={250}
           rows={3}
           id="message"
           {...register("message")}
-          placeholder="Введите сообщение"
+          placeholder={dictionary.message_placeholder}
           className="inline-flex items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
         ></textarea>
         <p className="ml-auto font-lato text-[0.6rem]/[12px] font-light">
-          Максимум 250 символов
+          {dictionary.error_limit}
         </p>
       </div>
-      <Checkbox register={{ ...register("terms") }} error={errors?.terms} />
+      <Checkbox
+        register={{ ...register("terms") }}
+        error={errors?.terms}
+        label={dictionary.agree}
+        policy={dictionary.agree_policy}
+      />
       <div className="mt-auto pb-1">
         <div className="mt-auto flex w-full justify-between gap-5">
           <div className="flex-1">
-            <Button size="small" text={"Назад"} width="full" onClick={onBack} />
+            <Button
+              size="small"
+              text={dictionary.back}
+              width="full"
+              onClick={onBack}
+            />
           </div>
           <div className="flex-1">
             <Button
               size="small"
               type="submit"
-              text={"Отправить"}
+              text={dictionary.submit}
               width="full"
               disabled={!isValid || loading}
               loading={loading}

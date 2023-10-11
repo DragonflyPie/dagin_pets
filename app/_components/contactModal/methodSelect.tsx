@@ -1,34 +1,38 @@
 import { Listbox } from "@headlessui/react";
-import { FieldError, useController, UseControllerProps } from "react-hook-form";
+import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
-interface DropdownProps extends UseControllerProps<StepTwo, "contactMethod"> {
+interface DropdownProps
+  extends UseControllerProps<StepTwoData, "contactMethod"> {
   dropDownOptions: Option[];
   placeholder?: string;
-  error?: FieldError | undefined;
+  label: string;
 }
 
 const SelectInput = (props: DropdownProps) => {
   const {
     field: { value, onChange, onBlur },
+    fieldState: { error },
   } = useController(props);
 
-  console.log(props.error);
+  const isPlaceholder = !value.label && props.placeholder;
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor="contactMethod">Способ связи</label>
+      <label htmlFor="#contactMethod">{props.label}</label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>
             <div className="relative">
               <Listbox.Button
                 className={`relative inline-flex h-12 w-full appearance-none items-center justify-start border px-4 py-3 shadow
-       ${props.error ? "border-red-error" : "border-gray-300"} 
+       ${error ? "border-red-error" : "border-gray-300"} 
        ${open ? "rounded-t-lg" : "rounded-lg"}
         `}
               >
-                <span>{value?.label}</span>
+                <span className={`${isPlaceholder ? "text-gray-form" : ""}`}>
+                  {isPlaceholder ? props.placeholder : value.label}
+                </span>
                 <span
                   className={`ml-auto transition-all duration-200 ${
                     open ? "rotate-180" : ""
@@ -51,8 +55,8 @@ const SelectInput = (props: DropdownProps) => {
                   >
                     {({ active }) => (
                       <li
-                        className={`cursor-pointer px-4 py-2 
-                          ${active ? "bg-blue-light" : ""}
+                        className={` cursor-pointer px-4 py-2 
+                          ${active ? "bg-blue-light " : ""}
                           `}
                       >
                         {option.label}
@@ -61,9 +65,9 @@ const SelectInput = (props: DropdownProps) => {
                   </Listbox.Option>
                 ))}
               </Listbox.Options>
-              {props.error && (
+              {error && (
                 <p className="absolute -bottom-5 right-0 text-xs text-red-error">
-                  {props.error.message}
+                  {error.message}
                 </p>
               )}
             </div>

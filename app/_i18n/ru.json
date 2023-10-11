@@ -1,168 +1,186 @@
 {
   "meta": {
     "title": "Dagin Pet Relocation Agency",
-    "description": "Reliable Pet Relocation Services in Dubai - Ensure a Smooth Move for Your Furry Friend. Expert pet travel assistance. Contact us for a stress-free pet move to or from UAE today!"
+    "description": "Агенство Dagin Pet Relocation поможет вам с путешествием вашего питомца в или из ОАЭ"
   },
   "navigation": {
-    "welcome": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "reviews": "Reviews",
-    "faq": "FAQ.",
-    "contacts": "Contact Us"
+    "welcome": "Главная",
+    "about": "О нас",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "faq": "Частые вопросы",
+    "contacts": "Контакты"
   },
   "common": {
-    "contact_button": "Get in Touch"
+    "contact_button": "Написать"
   },
   "header": {
-    "header_title": "A Warm Welcome \nto Pet Lovers \nWorldwide",
-    "header_description": "Do you need to transport your pet to or from the UAE? Dagin Pets Relocation is pleased to offer you our assistance, including pet transportation services and pet taxis within the UAE.",
-    "header_button": "Transport My Pet"
+    "header_title": "Приветствуем вас, \nдорогие любители \nживотных!",
+    "header_description": "Вам нужно перевезти своего питомца в ОАЭ или из ОАЭ? Компания Dagin Pets Relocation рада предложить вам свою помощь: услуги по транспортировке животных, а также петтакси на территории ОАЭ.",
+    "header_button": "Хочу перевезти"
   },
   "about": {
-    "text": "We are a <span class='font-semibold'>licensed</span> company specializing in pet relocation. Our team of experts will assist you in choosing the <span class='font-semibold'>best route</span> and method for transporting your furry friend."
+    "text": "Мы — <span class='font-semibold'>лицензированная</span> компания, специализирующаяся на перевозке питомцев. Наша команда специалистов поможет вам с выбором <span class='font-semibold'>наилучшего маршрута</span> и способа транспортировки вашего любимца."
   },
   "services": {
     "title_start": "Dagin Pets Relocation",
-    "title_ending": "offers a wide range of services, including:",
-    "service1_header": "Full assistance",
-    "service1_description": "Route planning and coordination, including the most complex destinations, assistance with preparing all required documents, logistics and courier organization, and airport pick-up upon arrival",
-    "service2_header": "Different options for pet delivery",
+    "title_ending": "предлагает широкий спектр услуг, включая:",
+    "service1_header": "Полное сопровождение",
+    "service1_description": "в процессе перевозки вашего питомца, включая подготовку всех документов для вылета и прибытия, организация зоокурьеров и логистики, регулярные фото и видео отчеты.",
+    "service2_header": "Различные варианты доставки",
     "service2_description": "«от двери до двери» как салоном, так и карго по доступным ценам.",
-    "service3_header": "Flexible collaboration formats",
-    "service3_description": "Document verification, advisory support, or document processing without full pet transportation assistance.",
-    "service4_header": "Pet taxi with love and care:",
-    "service4_description": "Treats as per the owner's choice, cat diapers if needed, and special bags for dogs that have embraced the palm trees."
-  },
-  "modal": {
-    "modal_header": "Contact Us",
-    "modal_subheader": "Fill Out the Information, and We Will Respond to You.",
-    "modal_name": "Your name",
-    "modal_from": "From",
-    "modal_to": "To",
-    "modal_from_placeholder": "Departure Location",
-    "modal_to_placeholder": "Arrival Location",
-    "modal_whom": "Who is Being Transported?",
-    "modal_dog": "Dog",
-    "modal_cat": "Cat",
-    "modal_horse": "Horse",
-    "modal_bird": "Bird",
-    "modal_other": "Other",
-    "modal_next": "Next",
-    "modal_phone": "Phone number",
-    "modal_contact_method": "Contact Method",
-    "modal_contact_any": "Any",
-    "modal_contact_call": "Phone Call",
-    "modal_contact_whatsapp": "WhatsApp",
-    "modal_contact_telegram": "Telegram",
-    "modal_message_title": "Message",
-    "modal_message_description": "Tell us about your case.",
-    "modal_message_limit": "Maximum 250 characters",
-    "modal_contact_requiered": "This field is required",
-    "modal_contact_agree": "I have read and agree to dagin.ae's Privacy Policy",
-    "modal_contact_back": "Back",
-    "modal_conact_submit": "Submit",
-    "modal_contact_success": "Thank you for reaching out to us, we will get in touch with you soon!",
-    "modal_contact_fail": "Something went wrong. Please try again later."
+    "service3_header": "Гибкие форматы сотрудничества,",
+    "service3_description": "такие как проверка готовых документов, консультационная поддержка или оформление документов без полного сопровождения вылета.",
+    "service4_header": "Петтакси с любовью и заботой:",
+    "service4_description": "вкусняшки на усмотрение владельца, при необходимости пеленочки для кошек и специальные пакеты для собак, облагородивших пальмы."
   },
   "safety": {
-    "value_title": "We <span class='font-bold'>prioritize the health</span> <br>and <span class='font-bold'>well-being of your pets</span>,",
-    "value_desciption": "and our mission is to ensure the most comfortable and safe transportation for them. don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the uae, or book a pet taxi for your furry friend.",
-    "value_button": "Transport My Pet"
+    "value_title": "Мы <span class='font-bold'>ценим здоровье</span> <br>и <span class='font-bold'>благополучие ваших питомцев</span>,",
+    "value_desciption": "и наша миссия - обеспечить максимально комфортную и безопасную перевозку для них. Не стесняйтесь связаться с нами сегодня, чтобы узнать больше о наших услугах, получить бесплатную консультацию по транспортировке животных в ОАЭ или заказать петтакси для вашего питомца.",
+    "value_button": "Хочу перевезти"
   },
   "reviews": {
-    "reviews_title": "Reviews",
-    "reviews_more": "More",
-    "reviews_less": "Less",
-    "reviews_description": "Our story: delighted reviews on pet transportation",
+    "reviews_title": "Отзывы",
+    "reviews_more": "Развернуть",
+    "reviews_less": "Свернуть",
+    "reviews_description": "Наша история: Восторженные отзывы о перевозке питомцев",
     "reviews_data": [
       {
-        "date": "October 5, 2023",
+        "date": "5 октября, 2023",
         "rating": 5,
-        "message": "Many thanks from our entire family and personally from Caspar David, Anastasia @AnastasiaBelykh. In all (not the easiest) situations, Anastasia was there, giving advice and helping in the most critical moments! In the spring, Anastasia and I arranged the departure from Dubai back to Russia, and considering that we had to do it with my 5-year-old son, as he couldn't bear to be separated from Caspi for even a short while 🙈, it was a heroic day! Anastasia even treated the child to delicious homemade cheesecakes ❤️❤️❤️. But the biggest challenge was upon our return to the UAE a few days ago, from which we are still recovering. Endless stress, over 20 calls and emails a day to Etihad Airways for three days (because there was no response regarding the documents)... A day before the flight, when we were traveling on the train from St. Petersburg to Moscow (almost without connection), we found out that titers were required (which were not needed because the vaccination was administered in the UAE), and it was only with Anastasia's help that we managed to figure out that there was an error in the documents, and our chances were extremely slim!",
-        "name": "Elena",
+        "message": "Огромное спасибо от всей нашей семьи и лично Каспара Давида, Анастасии @AnastasiaBelykh Во всех (не самых простых) ситуациях Анастасия была рядом, подсказывала и помогала в самые кризисные моменты! Весной мы с Анастасией оформляли выезд из Дубая назад в Россию, а если учесть, что делать это пришлось с моим 5-летним сыном, тк он не мог расстаться с Каспи даже на какое-то время 🙈, то это был героический день! Анастасия ещё и вкуснейшими домашними сырниками угостила ребёнка ❤️❤️❤️ Но самый большой квест был по возвращению в ОАЭ пару дней назад, от чего до сих пор отходим. Бесконечный стресс, более 20 звонков и писем в день в службу Этихад на протяжении трех дней (тк не было ответа по документам)… За день до вылета, когда мы едем в поезде СПб-Москва (почти без связи), узнаем, что нужны титры (которые не нужны, тк прививку ставили в ОАЭ) и только с помощью Анастасии удается разобраться, что была допущена ошибка в документах, и шансов крайне мало!",
+        "name": "Елена",
         "image": "/images/review1.jpg"
       },
       {
-        "date": "September 29, 2023",
+        "date": "29 сентября, 2023",
         "rating": 5,
-        "message": "Today, thanks to Anastasia @AnastasiaBelykh, our beloved cat safely made it to Sharjah. Anastasia organized everything 'turnkey' and brought our kitty all the way from Khabarovsk.The journey was quite a distance: a flight from Khabarovsk to Moscow (in the cabin) and then Moscow to Dubai (cargo). Anastasia organized everything in the shortest possible time, sent a wonderful pet courier to pick up the cat, arranged an overnight stay in Moscow for her to rest, and then personally went through all the checks in Dubai and brought her straight to our home.The cat handled all these flights calmly, and she is now doing great and getting used to her new home.A huge thank you to Anastasia! Everything was fast, precise, and of high quality. Special thanks for the support, answering my numerous questions, and providing photo updates. In the end, everything went perfectly, and it was not scary at all. Once again, heartfelt thanks and a big recommendation!",
-        "name": "Alexanda",
+        "message": "Сегодня силами  @AnastasiaBelykh наша любимая кошечка благополучно добралась до Шарджи. Анастасия организовала все «под ключ» и привезла нам котейку аж из Хабаровска. Путь был неблизкий: перелет Хабаровск-Москва (в салоне) и потом Москва-Дубай (карго). Анастасия организовала все в кратчайшие сроки, отправила за кошкой чудесного зоокурьера, продумала ночевку в Москве, чтобы малышка отдохнула, потом сама прошла с ней все контроли в Дубае и привезла ее прямо к нам домой. Кошка перенесла все эти перелеты спокойно, сейчас отлично себя чувствует и привыкает к новому дому. Огромное спасибо Анастасии! Все быстро, четко и качественно. Отдельная благодарность за поддержку, ответы на мои многочисленные вопросы и фотоотчеты. В итоге все прошло идеально и совсем не страшно. Еще раз от души благодарю и рекомендую!",
+        "name": "Александра",
         "image": "/images/review2.jpg"
       },
       {
-        "date": "September 15, 2023",
+        "date": "15 сентября, 2023",
         "rating": 5,
-        "message": "I want to thank Anastasia for the fast and high-quality delivery of our Bombay kitten to Dubai! Anastasia, thank you so much! It was very nice to meet you! Everything was so prompt! ❤️❤️❤️❤️❤️ The buyer is very satisfied! 🥰",
-        "name": "Margarita",
+        "message": "Хочу поблагодарить Анастасию за быструю и качественную доставку малышки,породы Бомбей в Дубай! Анастасия! Большое Вам спасибо! Было очень приятно познакомиться с Вами! Всё оперативненько! ❤️❤️❤️❤️❤️Покупатель остался  доволен! 🥰",
+        "name": "Маргарита",
         "image": "/images/review3.jpg"
       },
       {
-        "date": "September 14, 2023",
+        "date": "14 сентября, 2023",
         "rating": 5,
-        "message": "Hello everyone! At 4 in the morning, we welcomed our beloved pet, brought by @AnastasiaBelykh.I express huge thanks from our entire family for reuniting him with us.The cat flew as cargo, is doing well, and is healthy.He's catching up on his naps after the flight.I highly recommend everyone to turn to Anastasia for pet transportation:✅ Pick up and delivery at home✅ Assistance with documents✅ Photo updates✅ She kept me informed at every stage: customs, loading, arrival, etc. ✅",
-        "name": "Evgenya",
+        "message": "Всем привет! В 4 утра встречали нашего любимца которого привезла @AnastasiaBelykh Выражаю огромную благодарность от всей семьи за ее воссоединение Котик летел карго, хорошо себя чувствует, жив здоров! Сушняки ловит после перелета. Всем советую обращаться к Анастасии, забрать и доставить дома ✅Помощь с документами ✅Фотоотчет ✅Писала на каждом этапе таможня / погрузка / прилет и тд ✅",
+        "name": "Евгения",
         "image": "/images/review4.jpg"
       },
       {
-        "date": "September 6, 2023",
+        "date": "6 сентября, 2023",
         "rating": 5,
-        "message": "Good day, everyone! I want to officially declare that this photo was made possible thanks to Anastasia @AnastasiaBelykh))We are among the very anxious owners who fear making mistakes at every turn and having their dog not allowed on the plane. But thanks to Anastasia's patience, attentiveness, and ability to clearly communicate information and plan the timely receipt of all documents, everything went very smoothly 😊. She explained everything, reassured us, and gave us a nudge when needed 😂. As a result, transporting our little one went wonderfully, without nerves or breakdowns (except for the flight delay, which unfortunately is not within her control))) Thousand thanks from us and a bunch of recommendations to all our acquaintances 😍🫶.",
-        "name": "Anita",
+        "message": "Всем добрый день! Хочу официально заявить, что это фото сделано благодаря Анастасии @AnastasiaBelykh )) Мы из разряда очень тревожных хозяев, которые на каждом полушаге боятся совершить ошибку и что собаку не посадят в самолет. Но благодаря терпению, внимательности и способности Анастасии четко доносить информацию и планировать получение всех документов вовремя, всё прошло очень гладко 😊 Всё объясняла, успокаивала, одёргивала когда надо 😂 В итоге транспортировка пирожочка прошла просто прекрасно, без нервов и психов (за исключением задержки рейса, что увы не в её власти))) Тысяча благодарностей от нас и куча рекомендаций всем знакомым обеспечены 😍🫶",
+        "name": "Анита",
         "image": "/images/review5.jpg"
       },
       {
-        "date": "August 26, 2023",
+        "date": "26 августа, 2023",
         "rating": 5,
-        "message": "Today, Dubai welcomed one more Siberian Husky 😃. A huge thanks to Anastasia @AnastasiaBelykh for organizing the transportation and for being in constant communication with us 🥰. Thanks to her, our beloved Ichi made it from Moscow to Dubai in cargo and is doing great. Anastasia is a super professional who organized everything extremely efficiently, taking care of all the transportation details. I still can't believe it's all behind us, and our red one has arrived). And yes, as many in the chat have mentioned, we worried more than it was worth it. Our dog is already settling into the new home and showing no signs of stress :)",
-        "name": "Olga",
+        "message": "Сегодня в Дубае прибавилось на одну сибу 😃 Спасибо огромное Анастасии @AnastasiaBelykh за организацию перевозки и что постоянно была с нами на связи 🥰 Благодаря ей наш любимый Ичи отлично добрался из Москвы в Дубай в карго. Анастасия супер-профи, все максимально четко организовала, взяв на себя абсолютно все моменты по перевозке. Мне до сих пор не верится, что все позади, и рыжий прибыл) И да, как многие в чате пишут, переживали мы больше, чем реально стоило, пес уже вовсю обживается в новом доме и не демонстрирует признаков стресса:)",
+        "name": "Ольга",
         "image": "/images/review6.jpg"
       },
       {
-        "date": "August 17, 2023",
+        "date": "17 августа, 2023",
         "rating": 5,
-        "message": "Hello, everyone! I want to thank @AnastasiaBelykh for helping transport our Yorick from Moscow to Abu Dhabi! Everything was super precise, always available, and she definitely knows her stuff! Plus, Anastasia is very pleasant and positive! Thanks to her once again!",
-        "name": "Tanya",
+        "message": "Всем здравствуйте! Хочу поблагодарить за помощь в перевозке Йорика нашего из Москвы в Абу-Даби  @AnastasiaBelykh! Все супер четко, всегда на связи, человек знает свое дело однозначно! А еще Анастасия очень приятная и позитивная! Спасибо ей еще раз!",
+        "name": "Татьяна",
         "image": "/images/review7.jpg"
       },
       {
-        "date": "June 29, 2023",
+        "date": "29 июня, 2023",
         "rating": 5,
-        "message": "A short review and a big thank you to @AnastasiaBelykh. Anastasia helped us with the paperwork for two cats in the airplane cabin and booked a flight to Barcelona. She assisted in securing the flight and answered all our silly questions! The kitties are happy!",
-        "name": "Dmitriy",
+        "message": "Небольшой отзыв и большое спасибо @AnastasiaBelykh Анастасия помогла оформить документы на 2ух котиков в салон самолета и забронировать рейс до Барселоны. Помогла пробиться на рейс и отвечала на все глупые вопросы! Котики довольны!",
+        "name": "Дмитрий",
         "image": "/images/review8.jpg"
       }
     ]
   },
   "faq": {
-    "faq_title": "Frequently Asked Questions",
-    "faq_description": "Everything you wanted to know but couldn't find",
-    "more_question": "Do you need additional consultation?",
-    "more_question_description": "We would be happy to assist you.",
+    "faq_title": "Часто задаваемые вопросы.",
+    "faq_description": "Все, что вы хотели знать, но не смогли найти",
+    "more_question": "Нужна дополнительная консультация?",
+    "more_question_description": "Мы с удовольствием поможем!",
     "faq_data": [
       {
-        "question": "What services does your pet relocation company offer?",
-        "answer": "We offer a wide range of services, including route planning, cabin seat reservations, document preparation assistance, logistics organization, pet taxi services, and the option of pet transportation with a dedicated pet courier."
+        "question": "Какие услуги предоставляет ваша компания?",
+        "answer": "Мы предоставляем широкий спектр услуг, включая планирование маршрута, бронирование мест в салоне (и другие согласования с авиакомпаниями), помощь в подготовке всех необходимых документов, организацию логистики, услуги петтакси. Также наша компания предоставляет услуги зоокурьрера - мастера по персональной доставке для вашего питомца."
       },
       {
-        "question": "How do I prepare my pet for relocation?",
-        "answer": "We provide comprehensive guidance on preparing your pet for relocation. This includes health check-ups, vaccinations, and ensuring your pet is crate-trained for safe travel. Our experts will assist you throughout the process."
+        "question": "Как я должен подготовить своего пушистого друга к поездке?",
+        "answer": "Мы с радостью расскажем вам о всех шагах по подготовке вашего питомца к поездке. Так же с нашей стороны будет предоставлена вся необходимая информация по сбору ветеринарных и иных документов, необходимых в поездке. Ну и перед самой поездкой, мы подскажем, как сделать так, что бы путешествие если и не доставило питомцу удовольствие, то хотя бы не вызвало стресс."
       },
       {
-        "question": "What are the travel requirements for international pet relocation?",
-        "answer": "International pet relocation often involves specific entry requirements for each destination country. We stay up-to-date with the latest regulations and will guide you through the necessary vaccinations, microchipping, and paperwork for your pet's smooth journey."
+        "question": "Какие существуют требования к международной перевозке животных?",
+        "answer": "Для каждой страны назначения обычно существуют свои собственные требования. Мы регулярно отслеживаем все изменения связанные с политиками международных регуляторов и авиакомпаний."
       },
       {
-        "question": "How far in advance should I book pet relocation services?",
-        "answer": "It's advisable to start planning as early as possible, especially for international relocations. Booking at least 2-3 months in advance allows us to secure the best travel arrangements and ensures compliance with destination country requirements. However, we can accommodate last-minute requests when necessary and possible."
+        "question": "Сколько времени нужно на подготовку перевозки?",
+        "answer": "Зависит от того, какие документы, справки, прививки у вас уже имеются. Так же на сроки подготовки могут повлиять другие факторы, такие как наличие мест в салоне, необходимость согласования с авиакомпаниями и т.д. В целом, первичную подготовку и первую консультацию лучше провести за 3 месяца до поездки."
       },
       {
-        "question": "How can I track my pet's journey during relocation?",
-        "answer": "We provide regular text, photo, and video updates."
+        "question": "Как я могу отслеживать состояние своего питомца во время поездки?",
+        "answer": "Во время поездки, в том случае, если вы путешествуете не вместе в солоне ;), мы отсылаем регулярные текстовые, фото и видео обновления."
       }
     ]
   },
   "footer": {
-    "footer_title": "For any questions, \nplease feel free \nto reach out to us"
+    "footer_title": "По всем вопросам \nобращайтесь"
+  },
+  "modal": {
+    "header": "Связаться с нами",
+    "subheader": "Заполните данные и мы Вам ответим",
+    "step_one": {
+      "name": "Ваше имя",
+      "name_placeholder": "Имя",
+      "from": "Место отправления",
+      "to": "Место прибытия",
+      "from_placeholder": "Место отправления",
+      "to_placeholder": "Место прибытия",
+      "next": "Далее",
+      "error_required": "Обязательное поле",
+      "animal_select": {
+        "label": "Кого перевозим?",
+        "placeholder": "Кого перевозим?",
+        "dog": "Собаку",
+        "cat": "Кошку",
+        "bird": "Птицу",
+        "horse": "Лошадь",
+        "other": "Другое"
+      }
+    },
+    "step_two": {
+      "phone": "Номер телефона",
+      "message_label": "Сообщение",
+      "message_placeholder": "Дополнительная информация",
+      "error_limit": "Максимум - 250 символов",
+      "error_required": "Обязательное поле",
+      "error_invalid": "Некорректный номер телефона",
+      "agree": "Вы соглашаетесь с нашей дружественной",
+      "agree_policy": "политикой конфиденциальности",
+      "back": "Назад",
+      "submit": "Отправить",
+      "contact_method": {
+        "label": "Способ связи",
+        "any": "Любой",
+        "phone": "Телефонный звонок",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram"
+      }
+    }
+  },
+  "popup": {
+    "success_title": "Ваша заявка успешно отправлена!",
+    "success_description": "Мы свяжемся с вами в ближайшее время.",
+    "fail_title": "Что-то пошло не так.",
+    "fail_description": "Пожалуйста, попробуйте снова позже.",
+    "fail_button": "Закрыть"
   }
 }

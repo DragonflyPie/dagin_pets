@@ -28,42 +28,11 @@
     "service1_header": "Full assistance",
     "service1_description": "Route planning and coordination, including the most complex destinations, assistance with preparing all required documents, logistics and courier organization, and airport pick-up upon arrival",
     "service2_header": "Different options for pet delivery",
-    "service2_description": "«от двери до двери» как салоном, так и карго по доступным ценам.",
+    "service2_description": "'Door-to-door' delivery options, both by passenger cabin and cargo, at affordable prices. We also offer delivery with a pet courier, providing regular photo and video updates.",
     "service3_header": "Flexible collaboration formats",
     "service3_description": "Document verification, advisory support, or document processing without full pet transportation assistance.",
     "service4_header": "Pet taxi with love and care:",
     "service4_description": "Treats as per the owner's choice, cat diapers if needed, and special bags for dogs that have embraced the palm trees."
-  },
-  "modal": {
-    "modal_header": "Contact Us",
-    "modal_subheader": "Fill Out the Information, and We Will Respond to You.",
-    "modal_name": "Your name",
-    "modal_from": "From",
-    "modal_to": "To",
-    "modal_from_placeholder": "Departure Location",
-    "modal_to_placeholder": "Arrival Location",
-    "modal_whom": "Who is Being Transported?",
-    "modal_dog": "Dog",
-    "modal_cat": "Cat",
-    "modal_horse": "Horse",
-    "modal_bird": "Bird",
-    "modal_other": "Other",
-    "modal_next": "Next",
-    "modal_phone": "Phone number",
-    "modal_contact_method": "Contact Method",
-    "modal_contact_any": "Any",
-    "modal_contact_call": "Phone Call",
-    "modal_contact_whatsapp": "WhatsApp",
-    "modal_contact_telegram": "Telegram",
-    "modal_message_title": "Message",
-    "modal_message_description": "Tell us about your case.",
-    "modal_message_limit": "Maximum 250 characters",
-    "modal_contact_requiered": "This field is required",
-    "modal_contact_agree": "I have read and agree to dagin.ae's Privacy Policy",
-    "modal_contact_back": "Back",
-    "modal_conact_submit": "Submit",
-    "modal_contact_success": "Thank you for reaching out to us, we will get in touch with you soon!",
-    "modal_contact_fail": "Something went wrong. Please try again later."
   },
   "safety": {
     "value_title": "We <span class='font-bold'>prioritize the health</span> <br>and <span class='font-bold'>well-being of your pets</span>,",
@@ -164,5 +133,54 @@
   },
   "footer": {
     "footer_title": "For any questions, \nplease feel free \nto reach out to us"
+  },
+  "modal": {
+    "header": "Contact Us",
+    "subheader": "Fill Out the Information, and We Will Respond to You.",
+    "step_one": {
+      "name": "Your name",
+      "name_placeholder": "Name",
+      "from": "From",
+      "to": "To",
+      "from_placeholder": "Departure Location",
+      "to_placeholder": "Arrival Location",
+      "next": "Next",
+      "error_required": "This field is required",
+      "animal_select": {
+        "label": "Who is Being Transported",
+        "placeholder": "Who is Being Transported",
+        "dog": "Dog",
+        "cat": "Cat",
+        "bird": "Bird",
+        "horse": "Horse",
+        "other": "Other"
+      }
+    },
+    "step_two": {
+      "phone": "Phone number",
+      "message_label": "Message",
+      "message_placeholder": "Tell us about your case.",
+      "error_limit": "Maximum 250 characters",
+      "error_required": "This field is required",
+      "error_invalid": "Invalid phone number",
+      "agree": "I have read and agree to dagin.ae's",
+      "agree_policy": "Privacy Policy",
+      "back": "Back",
+      "submit": "Submit",
+      "contact_method": {
+        "label": "Contact Method",
+        "any": "Any",
+        "phone": "Phone Call",
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram"
+      }
+    }
+  },
+  "popup": {
+    "success_title": "We have received your message!",
+    "success_description": "Thank you for reaching out to us, we will get in touch with you soon!",
+    "fail_title": "Sorry!",
+    "fail_description": "Something went wrong. Please try again later.",
+    "fail_button": "Close"
   }
 }

@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 interface ModalState {
-  updateStepOne: (data: StepOne) => void;
-  updateStepTwo: (data: StepTwo) => void;
+  updateStepOne: (data: StepOneData) => void;
+  updateStepTwo: (data: StepTwoData) => void;
   form: Form;
 }
 
@@ -25,18 +25,13 @@ const useStore = create<ModalState>()((set) => ({
   form: {
     stepOne: {
       name: "",
-      from: "",
-      to: "",
       animal: { value: "" },
     },
     stepTwo: {
       phone: "",
       contactMethod: {
-        value: "any",
-        label: "Любой",
-        labelEn: "Any",
+        value: "",
       },
-      message: "",
     },
   },
 }));

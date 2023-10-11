@@ -14,7 +14,7 @@ interface NavbarProps {
 }
 
 const Navbar = async ({ lang }: NavbarProps) => {
-  const { navigation } = await getDictionary(lang);
+  const { navigation, common } = await getDictionary(lang);
 
   return (
     <div className="z-30 flex min-h-[62px] w-full items-center  justify-center  bg-white shadow-[0px_3px_34px_0px_#10101010] md:min-h-[87px]">
@@ -35,7 +35,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
         </nav>
         <MessengersMenu />
         <Link href={"?modal=true&step=1"}>
-          <Button text="Написать" size="medium" />
+          <Button text={common.contact_button} size="medium" />
         </Link>
         <LanguageSelector />
       </div>

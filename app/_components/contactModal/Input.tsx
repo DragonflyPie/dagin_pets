@@ -8,6 +8,7 @@ interface FormInputProps {
   register: UseFormRegisterReturn;
   type?: string;
   maxLength?: number;
+  error_message?: string;
 }
 
 const FormInput = ({
@@ -16,6 +17,7 @@ const FormInput = ({
   label,
   maxLength,
   error,
+  error_message,
   register,
   type = "text",
 }: FormInputProps) => {
@@ -35,7 +37,7 @@ const FormInput = ({
       ></input>
       {error && (
         <p className="absolute -bottom-5 right-0 text-xs text-red-error">
-          {error.message}
+          {error_message}
         </p>
       )}
     </div>

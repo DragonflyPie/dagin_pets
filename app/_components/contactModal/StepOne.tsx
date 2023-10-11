@@ -7,14 +7,8 @@ import useStore from "../zustand/store";
 import { useRouter } from "next/navigation";
 import SelectInput from "./AnimalSelect";
 
-const animalOptions: Option[] = [
-  { value: "cat", label: "Кошка", labelEn: "Cat" },
-  { value: "dog", label: "Собака" },
-  { value: "other", label: "Другое животное" },
-];
-
 let stepOneSchema = object({
-  name: string().required("This field is required"),
+  name: string().required(),
   from: string(),
   to: string(),
   animal: object()
@@ -24,23 +18,35 @@ let stepOneSchema = object({
     .default({ value: "" }),
 });
 
-const StepOne = () => {
+interface StepOneProps {
+  dictionary: StepOne;
+}
+
+const StepOne = ({ dictionary }: StepOneProps) => {
   const data = useStore((state) => state.form.stepOne);
   const router = useRouter();
   const updateStepOne = useStore((state) => state.updateStepOne);
+
+  const animalOptions: Option[] = [
+    { value: "cat", label: dictionary.animal_select.cat },
+    { value: "dog", label: dictionary.animal_select.dog },
+    { value: "bird", label: dictionary.animal_select.bird },
+    { value: "horse", label: dictionary.animal_select.horse },
+    { value: "other", label: dictionary.animal_select.other },
+  ];
 
   const {
     register,
     control,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<StepOne>({
+  } = useForm<StepOneData>({
     defaultValues: data,
     mode: "onTouched",
     resolver: yupResolver(stepOneSchema),
   });
 
-  const onSubmit = (data: StepOne) => {
+  const onSubmit = (data: StepOneData) => {
     updateStepOne(data);
     router.push(`?modal=true&step=2`, { scroll: false });
   };
@@ -53,28 +59,31 @@ const StepOne = () => {
     >
       <FormInput
         id={"name"}
-        label={"Ваше имя*"}
-        placeholder={"Введите Имя"}
+        label={`${dictionary.name}*`}
+        placeholder={dictionary.name_placeholder}
         error={errors?.name}
+        error_message={dictionary.error_required}
         register={{ ...register("name") }}
       />
       <div className="flex w-full gap-3 md:gap-5">
         <div className="flex-1">
           <FormInput
             id={"from"}
-            label={"Откуда"}
-            placeholder={"Выберите"}
+            label={dictionary.from}
+            placeholder={dictionary.from_placeholder}
             error={errors?.from}
+            error_message={errors.from?.message}
             register={{ ...register("from") }}
           />
         </div>
         <div className="flex-1">
           <FormInput
             id={"to"}
-            label={"Куда"}
-            placeholder={"Выберите"}
+            label={dictionary.to}
+            placeholder={dictionary.to_placeholder}
             error={errors?.to}
             register={{ ...register("to") }}
+            error_message={errors.to?.message}
           />
         </div>
       </div>
@@ -82,15 +91,16 @@ const StepOne = () => {
       <SelectInput
         dropDownOptions={animalOptions}
         name={"animal"}
-        placeholder={"Кого везти"}
+        placeholder={dictionary.animal_select.placeholder}
         control={control}
+        label={dictionary.animal_select.label}
       />
 
       <div className="mt-auto pb-1">
         <Button
           size="small"
           type="submit"
-          text={"Далее"}
+          text={dictionary.next}
           width="full"
           disabled={!isValid}
         />

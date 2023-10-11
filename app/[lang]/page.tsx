@@ -34,11 +34,11 @@ export default async function Home({
           dictionary={dictionary.faq}
           button_label={dictionary.common.contact_button}
         />
-        {modal === "true" && <ContactModal />}
+        {modal === "true" && <ContactModal dictionary={dictionary.modal} />}
         {success === "true" ? (
-          <Popup success />
+          <Popup success dictionary={dictionary.popup} />
         ) : success === "false" ? (
-          <Popup success={false} />
+          <Popup success={false} dictionary={dictionary.popup} />
         ) : null}
       </div>
     </main>

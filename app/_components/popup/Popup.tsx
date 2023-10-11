@@ -8,9 +8,15 @@ import { useParams, useRouter } from "next/navigation";
 
 interface PopupProps {
   success: boolean;
+  dictionary: {
+    success_title: string;
+    success_description: string;
+    fail_title: string;
+    fail_description: string;
+  };
 }
 
-const Popup = ({ success }: PopupProps) => {
+const Popup = ({ success, dictionary }: PopupProps) => {
   const router = useRouter();
   const path = useParams();
   const locale = path.lang;
@@ -30,12 +36,12 @@ const Popup = ({ success }: PopupProps) => {
           {success ? <SuccessIcon /> : <FailureIcon />}
         </div>
         <h5 className="pb-2 text-center font-medium">
-          {success ? "Ваша заявка успешно отправлена!" : "Что-то пошло не так."}
+          {success ? dictionary.success_title : dictionary.fail_title}
         </h5>
         <p className="pb-8 text-center text-gray-form">
           {success
-            ? "Администратор свяжется с вами в ближайшее время."
-            : "Пожалуйста, свяжитесь с нами другим способом."}
+            ? dictionary.success_description
+            : dictionary.fail_description}
         </p>
         <Link href={`/${locale}`} className="flex w-full" scroll={false}>
           <Button

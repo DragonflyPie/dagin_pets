@@ -4,9 +4,11 @@ import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 interface CheckBoxProps {
   error: FieldError | undefined;
   register: UseFormRegisterReturn;
+  label: string;
+  policy: string;
 }
 
-const Checkbox = ({ register, error }: CheckBoxProps) => {
+const Checkbox = ({ policy, label, register, error }: CheckBoxProps) => {
   return (
     <div className="relative flex w-full items-center justify-between gap-3 px-1 font-medium">
       <input
@@ -20,13 +22,13 @@ const Checkbox = ({ register, error }: CheckBoxProps) => {
         <CheckIcon />
       </div>
       <label className="text-xs md:text-base ">
-        Вы соглашаетесь с нашей дружественной{" "}
+        {label}{" "}
         <a
           href={"/files/pdfTest.pdf"}
           target="_blank"
           className="text-blue-button-default underline hover:text-blue-button-darken"
         >
-          политикой конфиденциальности.
+          {`${policy}.`}
         </a>
       </label>
     </div>
