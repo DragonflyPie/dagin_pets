@@ -21,7 +21,7 @@ interface QuestionsProps {
 const Questions = ({ dictionary, button_label }: QuestionsProps) => {
   return (
     <div
-      className="flex w-full scroll-m-10 flex-col items-center px-4 pb-24 lg:px-16 xl:px-20"
+      className="flex w-full scroll-m-[70px] flex-col items-center px-4 pb-24 md:scroll-m-[100px] lg:px-16 xl:scroll-m-[150px] xl:px-20"
       id="faq"
     >
       <div className="flex flex-col items-center gap-5 pb-6 md:pb-10">

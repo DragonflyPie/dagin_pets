@@ -23,7 +23,7 @@ const LanguageSelector = () => {
 
   const chooseLanguage = (locale: Locale) => {
     setIsOpen(false);
-    router.push(`/${locale}`);
+    router.push(`/${locale}`, { scroll: false });
   };
 
   const languageRef = useRef<HTMLDivElement>(null);

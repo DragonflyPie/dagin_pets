@@ -30,7 +30,7 @@ const Button = ({
           ? "px-[1.125rem] py-2.5 text-base"
           : size === "medium"
           ? "px-6 py-1.5 text-xs/[1.125rem] md:px-12 md:py-3 md:text-base/[1.125rem]"
-          : "px-6 py-3 text-base/[1.125rem] md:px-16 md:py-6 md:text-xl/[1.125rem] xl:text-2xl/[1.125rem]"
+          : "px-6 py-3 text-base/[1.125rem] md:px-8 md:py-4 md:text-lg/[1.125rem] lg:px-12 lg:py-6 lg:text-xl/[1.125rem] xl:text-2xl/[1.125rem]"
       }
       ${width === "full" ? "w-full" : "w-fit"}
       ${

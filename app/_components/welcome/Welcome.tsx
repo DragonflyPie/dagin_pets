@@ -17,7 +17,7 @@ interface WelcomeProps {
 const Welcome = ({ dictionary }: WelcomeProps) => {
   return (
     <div
-      className="relative flex w-full scroll-mt-20 overflow-x-hidden px-4  pb-16 pt-[62px] md:pt-[87px] lg:px-16 lg:pb-24  xl:min-h-[100vh] xl:overflow-x-visible xl:px-20 xl:pt-[113px]"
+      className="relative flex w-full scroll-mt-[113px] overflow-x-hidden px-4  pb-16 pt-[62px] md:pt-[87px] lg:px-16 lg:pb-24  xl:min-h-[100vh] xl:overflow-x-visible xl:px-20 xl:pt-[113px]"
       id="welcome"
     >
       <div className="relative flex  w-full ">
@@ -37,7 +37,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
             {dictionary.header_description}
           </p>
 
-          <Link href={"?modal=true&step=1"} scroll={false}>
+          <Link href={"?modal=true&step=1"} className="w-fit" scroll={false}>
             <Button text={dictionary.header_button} modal />
           </Link>
         </div>

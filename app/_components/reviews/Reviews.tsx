@@ -27,7 +27,10 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
     variableWidth: true,
   };
   return (
-    <div id="reviews" className="w-full scroll-m-10 pb-16 md:pb-24">
+    <div
+      id="reviews"
+      className="w-full scroll-m-10 scroll-m-[70px] pb-16 md:scroll-m-[100px] md:pb-24 xl:scroll-m-[150px]"
+    >
       <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6">
         <h2 className="font-lato text-xl font-bold tracking-tight md:text-4xl/[2.75rem] md:font-semibold">
           {dictionary.reviews_title}

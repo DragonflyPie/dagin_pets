@@ -2,7 +2,6 @@ import Link from "next/link";
 import { PawSmallIcon } from "../commons/icons";
 
 interface NavItemsProps {
-  top?: boolean;
   handleClick?: () => void;
   items: {
     welcome: string;
@@ -14,12 +13,11 @@ interface NavItemsProps {
   };
 }
 
-const NavItems = ({ handleClick, top, items }: NavItemsProps) => {
+const NavItems = ({ handleClick, items }: NavItemsProps) => {
   const typedItems = Object.keys(items) as Array<keyof typeof items>;
   return (
     <>
       {typedItems.map((option, index) => {
-        if (top && option === "welcome") return;
         return (
           <li
             onClick={handleClick}

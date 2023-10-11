@@ -9,7 +9,7 @@ interface AboutProps {
 const About = ({ dictionary }: AboutProps) => {
   return (
     <div
-      className="flex w-full scroll-mt-10 items-center overflow-x-hidden px-4 pb-14   lg:px-16 xl:px-24 xl:px-36 xl:pb-24"
+      className=" flex w-full scroll-mt-[70px] items-center px-4  pb-14 md:scroll-mt-[87px] lg:px-16   xl:scroll-mt-[150px] xl:px-24 xl:px-36 xl:pb-24"
       id="about"
     >
       <div className="relative aspect-[3/4] max-h-full w-[40vw] xs:w-1/3 md:w-1/4">

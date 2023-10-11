@@ -30,7 +30,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
         </div>
         <nav className="hidden lg:block">
           <ul className=" flex flex-col justify-end gap-6 font-inter text-sm font-medium lg:flex-row lg:text-xs xl:gap-12 xl:text-sm">
-            <NavItems top items={navigation} />
+            <NavItems items={navigation} />
           </ul>
         </nav>
         <MessengersMenu />
