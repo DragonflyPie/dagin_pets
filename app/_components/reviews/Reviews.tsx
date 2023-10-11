@@ -36,17 +36,19 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
           {dictionary.reviews_description}
         </p>
       </hgroup>
-      <div className="max-w-[100vw] px-4 lg:px-16 xl:px-20">
+      <div className="max-w-[100vw] px-4 md:px-10 lg:px-16 xl:px-20">
         <Slider {...settings}>
           {dictionary.reviews_data.map((review) => {
             return (
-              <div className="pr-5" key={review.date}>
+              <div className="px-2" key={review.date}>
                 <Review
                   date={review.date}
                   rating={review.rating}
                   message={review.message}
                   name={review.name}
                   image={review.image}
+                  less={dictionary.reviews_less}
+                  more={dictionary.reviews_more}
                 />
               </div>
             );

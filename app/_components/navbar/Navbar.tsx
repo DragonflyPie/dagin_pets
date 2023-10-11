@@ -17,7 +17,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
   const { navigation, common } = await getDictionary(lang);
 
   return (
-    <div className="z-30 flex min-h-[62px] w-full items-center  justify-center  bg-white shadow-[0px_3px_34px_0px_#10101010] md:min-h-[87px]">
+    <div className="fixed z-30 flex min-h-[62px] w-full items-center  justify-center  bg-white shadow-[0px_3px_34px_0px_#10101010] md:min-h-[87px]">
       <div className="flex w-full max-w-[1440px] items-center justify-end gap-3 pl-4 pr-2 font-inter font-medium xs:px-4 md:px-6 lg:gap-6 xl:px-16  2xl:gap-12">
         <DropdownMenu items={navigation} />
         <div className="relative mr-auto hidden aspect-square h-[41px] shrink-0 xs:block md:h-[65px] xl:h-[113px]">

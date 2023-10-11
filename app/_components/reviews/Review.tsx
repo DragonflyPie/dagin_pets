@@ -2,7 +2,20 @@ import { StarEmpty, StarFilled } from "../commons/icons";
 import { useState } from "react";
 import Image from "next/image";
 
-const Review = ({ date, rating, message, name, image }: ReviewData) => {
+interface ReviewProps extends ReviewData {
+  less: string;
+  more: string;
+}
+
+const Review = ({
+  date,
+  rating,
+  message,
+  name,
+  image,
+  less,
+  more,
+}: ReviewProps) => {
   const [expand, setExpand] = useState(false);
 
   const filledStarsArray = Array.from({ length: rating }, (_, index) => index);
@@ -17,7 +30,7 @@ const Review = ({ date, rating, message, name, image }: ReviewData) => {
         className="
         flex flex-col gap-6"
       >
-        <p className="text-[0.375rem]">{date}</p>
+        <p className="text-xs">{date}</p>
         <div className="flex">
           {filledStarsArray.map((number) => (
             <StarFilled key={number} />
@@ -43,7 +56,7 @@ const Review = ({ date, rating, message, name, image }: ReviewData) => {
           onClick={() => setExpand(!expand)}
           className="text-xs font-bold text-blue-button-default"
         >
-          {expand ? "Свернуть" : "Развернуть"}
+          {expand ? less : more}
         </button>
       </div>
       <div className="relative aspect-square w-full">

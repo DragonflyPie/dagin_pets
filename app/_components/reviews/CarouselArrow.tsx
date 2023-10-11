@@ -9,11 +9,11 @@ function CarouselArrow({ onClick, direction }: ArrowProps) {
   return (
     <div
       onClick={onClick}
-      className={`absolute top-[15rem] z-10 hidden h-8 w-8 items-center justify-center rounded-full bg-white  bg-opacity-40 hover:scale-110 hover:bg-black hover:bg-opacity-20 md:flex lg:bg-transparent
+      className={`absolute top-[15rem] z-10 hidden h-7 w-7  items-center justify-center rounded-full bg-opacity-40 transition-colors duration-300 hover:scale-110 hover:bg-black hover:bg-opacity-20 md:flex
       ${
         direction === "left"
-          ? " left-3 rotate-90 lg:-left-10"
-          : "right-3  -rotate-90 lg:-right-10 "
+          ? "-left-8 rotate-90 lg:-left-10"
+          : "-right-8 -rotate-90 lg:-right-10 "
       }
       
       `}
