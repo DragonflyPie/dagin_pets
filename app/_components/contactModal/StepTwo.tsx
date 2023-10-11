@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Checkbox from "./CheckBox";
 import Button from "../commons/Button";
 import useStore from "../zustand/store";
-import MethodSel from "./MethodSelect";
+import MethodSelect from "./SelectMethod";
 
 let stepTwoSchema = object({
   phone: string()
@@ -114,14 +114,13 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
         )}
       </div>
 
-      <MethodSel
+      <MethodSelect
         control={control}
         name="contactMethod"
         dropDownOptions={contactOptions}
         label={dictionary.contact_method.label}
         placeholder={contactOptions[0].label}
       />
-
       <div className="flex flex-col gap-1.5">
         <label htmlFor="phone">{dictionary.message_label}</label>
         <textarea

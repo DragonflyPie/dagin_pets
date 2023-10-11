@@ -9,7 +9,7 @@ interface DropdownProps
   label: string;
 }
 
-const SelectInput = (props: DropdownProps) => {
+const MethodSelect = (props: DropdownProps) => {
   const {
     field: { value, onChange, onBlur },
     fieldState: { error },
@@ -78,4 +78,4 @@ const SelectInput = (props: DropdownProps) => {
   );
 };
 
-export default SelectInput;
+export default MethodSelect;
