@@ -1,23 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
-import {
-  CloseIcon,
-  Down,
-  Instagram,
-  MenuIcon,
-  PhoneWhite,
-  Telegram,
-  WhatsAppWhite,
-} from "../commons/icons";
+import { CloseIcon, MenuIcon } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
-import cat_purr from "@/public/images/cat_purr.png";
 import logo from "@/public/images/logo_with_text.png";
 import Image from "next/image";
 import NavItems from "./NavItems";
-import MessengersMenu from "./MessengersMenu";
 import MessengerItems from "../commons/MessengerItems";
-import Messenger from "../commons/Messenger";
 import { Paw } from "../commons/vectors";
 
 interface DropdownMenuProps {

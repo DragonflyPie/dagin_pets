@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       );
     };
 
-    if (!data.phone || !data.contactMethod) {
+    if (!data.phone || !data.name) {
       throw new Error("Missing data");
     }
 
@@ -55,10 +55,10 @@ export async function POST(request: Request) {
       text: generateString(data),
       html: `<h1>Отправитель: ${data.name}</h1>
       <h2>Телефон: ${data.phone}</h2>
-      <h3>Способ связи: ${data.contactMethod.label}</h3>
-      <h3>Животное: ${data.animal?.label}</h3>
+      <h3>Способ связи: ${data.contactMethod?.label || "-"}</h3>
+      <h3>Животное: ${data.animal?.label || "-"}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
-      <p>${data.message}</p>`,
+      <p>${data?.message || "-"}</p>`,
     };
 
     await new Promise((resolve, reject) => {
