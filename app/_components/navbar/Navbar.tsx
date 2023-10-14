@@ -35,7 +35,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
           </ul>
         </nav>
         <MessengersMenu />
-        <Link href={"?modal=true&step=1"}>
+        <Link href={"?modal=true&step=1"} scroll={false}>
           <div className="hidden xs:block">
             <Button text={common.contact_button} size="medium" />
           </div>
