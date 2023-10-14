@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 
     const mailData = {
       from: email,
-      to: "canuczerealme@gmail.com",
+      to: email,
       subject: `Dagin Pets: Message from ${data.name}`,
       text: generateString(data),
       html: `<h1>Отправитель: ${data.name}</h1>
