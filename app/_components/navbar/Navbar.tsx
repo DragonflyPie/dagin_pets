@@ -26,7 +26,7 @@ const Navbar = async ({ lang }: NavbarProps) => {
             src={logo}
             fill
             alt="DaginPets Logo"
-            sizes="(min-width: 768px) 20vw, 5vw"
+            sizes="(min-width: 768px) 10vw, 12vw"
           />
         </div>
         <nav className="hidden lg:block">

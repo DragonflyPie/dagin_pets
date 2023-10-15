@@ -58,7 +58,7 @@ export async function POST(request: Request) {
       <h3>Способ связи: ${data.contactMethod?.label || "-"}</h3>
       <h3>Животное: ${data.animal?.label || "-"}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
-      <p>${data?.message || "-"}</p>`,
+      <h3>Сообщение:<p>${data?.message || "-"}</p></h3>`,
     };
 
     await new Promise((resolve, reject) => {
