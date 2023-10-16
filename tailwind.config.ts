@@ -30,10 +30,9 @@ const config: Config = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
-        jakarta: ["var(--font-jakarta)"],
         lato: ["var(--font-lato)"],
-        osans: ["var(--font-osans)"],
-        roboto: ["var(--font-roboto)"],
+        // osans: ["var(--font-osans)"],
+        // roboto: ["var(--font-roboto)"],
       },
     },
   },

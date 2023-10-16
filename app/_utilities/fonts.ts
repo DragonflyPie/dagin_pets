@@ -1,4 +1,4 @@
-import { Inter, Open_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 export const lato = localFont({
@@ -38,10 +38,4 @@ export const inter = Inter({
   subsets: ["latin", "cyrillic"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-inter",
-});
-
-export const osans = Open_Sans({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-osans",
 });

@@ -24,7 +24,7 @@ const Checkbox = ({ policy, label, register, error }: CheckBoxProps) => {
       <label className="text-xs md:text-base ">
         {label}{" "}
         <a
-          href={"/files/pdfTest.pdf"}
+          href={"/files/policy.pdf"}
           target="_blank"
           className="text-blue-button-default underline hover:text-blue-button-darken"
         >
