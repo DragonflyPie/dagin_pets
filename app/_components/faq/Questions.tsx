@@ -46,11 +46,11 @@ const Questions = ({ dictionary, button_label }: QuestionsProps) => {
             className="h-auto"
           />
         </div>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 text-center">
           <p className="font-inter text-xl/[1.875] font-medium md:font-lato">
             {dictionary.more_question}
           </p>
-          <p className="text-center text-base md:text-lg">
+          <p className="text-base md:text-lg">
             {dictionary.more_question_description}
           </p>
         </div>

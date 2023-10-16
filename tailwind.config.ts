@@ -31,7 +31,7 @@ const config: Config = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         lato: ["var(--font-lato)"],
-        // osans: ["var(--font-osans)"],
+        osans: ["var(--font-osans)"],
         // roboto: ["var(--font-roboto)"],
       },
     },
