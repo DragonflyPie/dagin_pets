@@ -24,9 +24,9 @@ export async function POST(request: Request) {
     }
 
     let transporter = nodemailer.createTransport({
-      name: "timeweb.SMTP",
-      port: 2525,
-      host: "smtp.timeweb.ru",
+      name: "yandex.SMTP",
+      port: 465,
+      host: "smtp.yandex.ru",
       auth: {
         user: email,
         pass: password,
