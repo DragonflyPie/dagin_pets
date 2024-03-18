@@ -5,8 +5,8 @@ const MessengerItems = () => {
   return (
     <>
       <Messenger
-        link="https://t.me/AnastasiaBelykh"
-        info="@AnastasiaBelykh"
+        link="https://t.me/daginpets"
+        info="@daginpets"
         icon={<Telegram />}
       />
       <Messenger

@@ -14,7 +14,7 @@ const MessengersMenu = () => {
         </a>
       </li>
       <li className="cursor-pointer duration-300 hover:scale-110">
-        <a href="https://t.me/AnastasiaBelykh" target="_blank">
+        <a href="https://t.me/daginpets" target="_blank">
           <Telegram />
         </a>
       </li>
