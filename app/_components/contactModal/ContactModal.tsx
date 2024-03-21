@@ -88,14 +88,12 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
       >
         <FocusTrap>
           <div className="flex h-full flex-col items-center overflow-auto rounded-3xl bg-white scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-form ">
-            <Link href={"/en"}>
-              <button
-                className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
-                // onClick={closeModal}
-              >
-                <CloseIcon />
-              </button>
-            </Link>
+            <button
+              className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
+              onClick={closeModal}
+            >
+              <CloseIcon />
+            </button>
             <FormContainer handleClose={handleClose} dictionary={dictionary} />
             <div className="ml-auto">
               <Image
