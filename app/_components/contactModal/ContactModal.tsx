@@ -28,9 +28,8 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
 
   const closeModal = async () => {
     handleClose();
-    setTimeout(() => {
-      router.push(`/${locale}`, { scroll: false });
-    }, 500);
+
+    router.push(`/${locale}`, { scroll: false });
   };
 
   const handleClose = () => {
