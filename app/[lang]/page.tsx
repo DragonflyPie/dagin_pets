@@ -36,7 +36,9 @@ export default async function Home({
           dictionary={dictionary.faq}
           button_label={dictionary.common.contact_button}
         />
-        {modal === "true" && <ContactModal dictionary={dictionary.modal} />}
+        {modal && modal === "true" && (
+          <ContactModal dictionary={dictionary.modal} />
+        )}
         {success === "true" ? (
           <Popup success dictionary={dictionary.popup} />
         ) : success === "false" ? (
