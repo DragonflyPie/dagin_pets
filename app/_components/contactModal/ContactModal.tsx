@@ -19,7 +19,7 @@ interface ContactModalProps {
 }
 
 const ContactModal = ({ dictionary }: ContactModalProps) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const params = useParams();
   const locale = params.lang;
 
@@ -37,35 +37,31 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
     setShowModal(false);
   };
 
-  useEffect(() => {
-    setShowModal(true);
-  }, []);
+  // useEffect(() => {
+  //   const handleEscapeKeyPress = (event: KeyboardEvent) => {
+  //     if (event.key === "Escape") {
+  //       setShowModal(false);
+  //     }
+  //   };
 
-  useEffect(() => {
-    const handleEscapeKeyPress = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setShowModal(false);
-      }
-    };
+  //   window.addEventListener("keydown", handleEscapeKeyPress);
 
-    window.addEventListener("keydown", handleEscapeKeyPress);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleEscapeKeyPress);
+  //   };
+  // }, [router]);
 
-    return () => {
-      window.removeEventListener("keydown", handleEscapeKeyPress);
-    };
-  }, [router]);
+  // useEffect(() => {
+  //   const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
 
-  useEffect(() => {
-    const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
+  //   document.body.style.overflowY = "hidden";
+  //   document.body.style.paddingRight = `${scrollBarCompensation}px`;
 
-    document.body.style.overflowY = "hidden";
-    document.body.style.paddingRight = `${scrollBarCompensation}px`;
-
-    return () => {
-      document.body.style.overflowY = "auto";
-      document.body.style.paddingRight = "0px";
-    };
-  }, []);
+  //   return () => {
+  //     document.body.style.overflowY = "auto";
+  //     document.body.style.paddingRight = "0px";
+  //   };
+  // }, []);
 
   useClickOutside(contactRef, closeModal);
 
@@ -85,7 +81,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
           ${!showModal ? "-translate-y-[200%]" : ""}
           `}
       >
-        <FocusTrap>
+        {/* <FocusTrap>
           <div className="flex h-full flex-col items-center overflow-auto rounded-3xl bg-white scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-form ">
             <button
               className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
@@ -103,7 +99,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
               />
             </div>
           </div>
-        </FocusTrap>
+        </FocusTrap> */}
       </div>
     </div>
   );
