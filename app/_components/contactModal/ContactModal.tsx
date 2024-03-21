@@ -8,6 +8,7 @@ import FocusTrap from "focus-trap-react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
+import Link from "next/link";
 
 interface ContactModalProps {
   dictionary: {
@@ -19,7 +20,7 @@ interface ContactModalProps {
 }
 
 const ContactModal = ({ dictionary }: ContactModalProps) => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const params = useParams();
   const locale = params.lang;
 
@@ -37,31 +38,35 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
     setShowModal(false);
   };
 
-  // useEffect(() => {
-  //   const handleEscapeKeyPress = (event: KeyboardEvent) => {
-  //     if (event.key === "Escape") {
-  //       setShowModal(false);
-  //     }
-  //   };
+  useEffect(() => {
+    setShowModal(true);
+  }, []);
 
-  //   window.addEventListener("keydown", handleEscapeKeyPress);
+  useEffect(() => {
+    const handleEscapeKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setShowModal(false);
+      }
+    };
 
-  //   return () => {
-  //     window.removeEventListener("keydown", handleEscapeKeyPress);
-  //   };
-  // }, [router]);
+    window.addEventListener("keydown", handleEscapeKeyPress);
 
-  // useEffect(() => {
-  //   const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKeyPress);
+    };
+  }, [router]);
 
-  //   document.body.style.overflowY = "hidden";
-  //   document.body.style.paddingRight = `${scrollBarCompensation}px`;
+  useEffect(() => {
+    const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
 
-  //   return () => {
-  //     document.body.style.overflowY = "auto";
-  //     document.body.style.paddingRight = "0px";
-  //   };
-  // }, []);
+    document.body.style.overflowY = "hidden";
+    document.body.style.paddingRight = `${scrollBarCompensation}px`;
+
+    return () => {
+      document.body.style.overflowY = "auto";
+      document.body.style.paddingRight = "0px";
+    };
+  }, []);
 
   useClickOutside(contactRef, closeModal);
 
@@ -81,14 +86,16 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
           ${!showModal ? "-translate-y-[200%]" : ""}
           `}
       >
-        {/* <FocusTrap>
+        <FocusTrap>
           <div className="flex h-full flex-col items-center overflow-auto rounded-3xl bg-white scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-form ">
-            <button
-              className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
-              onClick={closeModal}
-            >
-              <CloseIcon />
-            </button>
+            <Link href={"/en"}>
+              <button
+                className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
+                // onClick={closeModal}
+              >
+                <CloseIcon />
+              </button>
+            </Link>
             <FormContainer handleClose={handleClose} dictionary={dictionary} />
             <div className="ml-auto">
               <Image
@@ -99,7 +106,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
               />
             </div>
           </div>
-        </FocusTrap> */}
+        </FocusTrap>
       </div>
     </div>
   );
