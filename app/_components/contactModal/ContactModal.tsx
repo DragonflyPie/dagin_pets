@@ -22,14 +22,16 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
   const [showModal, setShowModal] = useState(false);
   const params = useParams();
   const locale = params.lang;
+  const searchParams = useSearchParams();
 
   const contactRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const closeModal = async () => {
     handleClose();
-
-    router.push(`/${locale}`, { scroll: false });
+    setTimeout(() => {
+      router.push(`/${locale}`, { scroll: false });
+    }, 500);
   };
 
   const handleClose = () => {
@@ -38,7 +40,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
 
   useEffect(() => {
     setShowModal(true);
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     const handleEscapeKeyPress = (event: KeyboardEvent) => {
