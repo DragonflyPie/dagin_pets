@@ -28,6 +28,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
   const router = useRouter();
 
   const closeModal = async () => {
+    console.log(123);
     handleClose();
     setTimeout(() => {
       router.push(`/${locale}`, { scroll: false });
