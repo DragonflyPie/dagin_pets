@@ -14,6 +14,11 @@ export const geometria = localFont({
       weight: "500",
       style: "normal",
     },
+    {
+      path: "../../public/fonts/geometria-light.ttf",
+      weight: "300",
+      style: "normal",
+    },
   ],
   display: "swap",
   variable: "--font-geometria",
