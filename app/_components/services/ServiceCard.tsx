@@ -8,7 +8,7 @@ interface ServiceCardProps {
 }
 const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
   return (
-    <li className="flex basis-[45%] flex-col items-center gap-4 text-lg md:gap-6 md:py-0 lg:basis-[31%] lg:text-xl ">
+    <li className="flex grow-0 basis-[45%] flex-col items-center gap-4 text-lg md:gap-6 md:py-0 lg:basis-[31%] lg:text-xl ">
       <div className="shrink-0">
         <Image
           width={76}

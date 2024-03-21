@@ -28,7 +28,7 @@ const Services = ({ dictionary }: ServicesProps) => {
       className="flex scroll-m-[70px] flex-col items-center px-4 pb-14 md:scroll-m-[100px] md:pb-12 lg:px-16 xl:scroll-m-[150px] xl:px-20 xl:pb-24"
       id="services"
     >
-      <h2 className="flex flex-col gap-4 whitespace-pre-wrap text-center  md:gap-6 md:pb-10">
+      <h2 className="flex flex-col gap-4 whitespace-pre-wrap pb-6 text-center md:gap-6 md:pb-10">
         <span className="font-geometria text-2xl font-medium md:text-[2.625rem]/[1.75rem]">
           {dictionary.title_start}
         </span>

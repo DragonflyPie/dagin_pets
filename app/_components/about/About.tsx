@@ -24,7 +24,7 @@ const About = ({ dictionary }: AboutProps) => {
       </div>
 
       <p
-        className="-ml-6 flex-1 text-pretty text-xs xs:text-sm md:ml-0  md:pl-10 md:text-2xl/[36px] xl:pl-24 xl:leading-[3rem]"
+        className="-ml-6 flex-1 text-pretty text-xs/[1.5rem] xs:text-sm/[1.5rem] md:ml-0  md:pl-10 md:text-xl/[2rem] xl:pl-24 xl:text-2xl/[3rem]"
         dangerouslySetInnerHTML={{ __html: dictionary.text }}
       ></p>
     </div>

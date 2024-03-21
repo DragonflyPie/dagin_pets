@@ -33,7 +33,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
               {dictionary.header_title}
             </h1>
           </pre>
-          <p className="text-balance pr-6 font-raleway text-xs/[1.5] md:text-xl/[1.6] xl:text-2xl/[1.33]">
+          <p className="text-balance pr-6 font-raleway text-xs/[1.5rem] xs:text-sm/[1.5rem] md:text-xl/[2rem] xl:text-2xl/[3rem]">
             {dictionary.header_description}
           </p>
 

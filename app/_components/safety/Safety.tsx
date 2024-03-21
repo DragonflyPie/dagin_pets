@@ -32,7 +32,7 @@ const Safety = ({ dictionary }: SafetyProps) => {
           <h3 className="whitespace-pre font-geometria text-base/[150%] font-medium md:text-2xl/[150%] lg:text-[2rem]/[150%] xl:text-4xl/[180%]">
             {dictionary.value_title}
           </h3>
-          <p className=" text-xs/[180%] md:text-base/[180%] xl:text-2xl/[180%]">
+          <p className="text-xs/[1.5rem] xs:text-sm/[1.5rem] md:text-xl/[2rem] xl:text-2xl/[3rem]">
             {dictionary.value_desciption}
           </p>
         </article>
