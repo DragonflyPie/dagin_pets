@@ -5,13 +5,22 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useStore from "../zustand/store";
 import { useRouter } from "next/navigation";
-import SelectInput from "./AnimalSelect";
+import SelectInput from "./StepOneSelect";
 
 let stepOneSchema = object({
-  name: string().required(),
   from: string(),
   to: string(),
   animal: object()
+    .shape({
+      value: string().default(""),
+    })
+    .default({ value: "" }),
+  time: object()
+    .shape({
+      value: string().default(""),
+    })
+    .default({ value: "" }),
+  transfer: object()
     .shape({
       value: string().default(""),
     })
@@ -35,6 +44,19 @@ const StepOne = ({ dictionary }: StepOneProps) => {
     { value: "other", label: dictionary.animal_select.other },
   ];
 
+  const timeOptions: Option[] = [
+    { value: "yesterday", label: dictionary.time_select.yesterday },
+    { value: "week", label: dictionary.time_select.week },
+    { value: "weeks", label: dictionary.time_select.weeks },
+    { value: "month", label: dictionary.time_select.month },
+  ];
+
+  const transferOptions: Option[] = [
+    { value: "cargo", label: dictionary.transfer_select.cargo },
+    { value: "cabin", label: dictionary.transfer_select.cabin },
+    { value: "consultation", label: dictionary.transfer_select.consultation },
+  ];
+
   const {
     register,
     control,
@@ -55,16 +77,8 @@ const StepOne = ({ dictionary }: StepOneProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 font-lato md:gap-5 md:px-14"
+      className="flex h-full w-full flex-col gap-3 font-geometria md:gap-5 md:px-14"
     >
-      <FormInput
-        id={"name"}
-        label={`${dictionary.name}*`}
-        placeholder={dictionary.name_placeholder}
-        error={errors?.name}
-        error_message={dictionary.error_required}
-        register={{ ...register("name") }}
-      />
       <div className="flex w-full gap-3 md:gap-5">
         <div className="flex-1">
           <FormInput
@@ -94,6 +108,22 @@ const StepOne = ({ dictionary }: StepOneProps) => {
         placeholder={dictionary.animal_select.placeholder}
         control={control}
         label={dictionary.animal_select.label}
+      />
+
+      <SelectInput
+        dropDownOptions={timeOptions}
+        name={"time"}
+        placeholder={dictionary.time_select.placeholder}
+        control={control}
+        label={dictionary.time_select.label}
+      />
+
+      <SelectInput
+        dropDownOptions={transferOptions}
+        name={"transfer"}
+        placeholder={dictionary.transfer_select.placeholder}
+        control={control}
+        label={dictionary.transfer_select.label}
       />
 
       <div className="mt-auto pb-1">

@@ -1,5 +1,5 @@
 import { object, string, bool } from "yup";
-import { useForm } from "react-hook-form";
+import { FieldValue, FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import { useState } from "react";
@@ -8,8 +8,10 @@ import Checkbox from "./CheckBox";
 import Button from "../commons/Button";
 import useStore from "../zustand/store";
 import MethodSelect from "./SelectMethod";
+import FormInput from "./Input";
 
 let stepTwoSchema = object({
+  name: string().required(),
   phone: string()
     .required("This field is required")
     .min(10, "Invalid phone number")
@@ -95,10 +97,21 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 pt-4 font-lato md:gap-5 md:px-14 md:pt-6"
+      className="flex h-full w-full flex-col gap-3 pt-4 font-raleway md:gap-5 md:px-14 md:pt-6"
     >
+      <FormInput
+        id={"name"}
+        label={`${dictionary.name}*`}
+        placeholder={dictionary.name_placeholder}
+        error={errors?.name}
+        error_message={dictionary.error_required}
+        register={{ ...register("name") }}
+      />
       <div className="relative flex flex-col gap-1.5">
-        <label htmlFor="phone">{`${dictionary.phone}*`}</label>
+        <label
+          className="font-geometria font-medium"
+          htmlFor="phone"
+        >{`${dictionary.phone}*`}</label>
         <PhoneInput
           name="phone"
           control={control}
@@ -122,7 +135,9 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
         placeholder={contactOptions[0].label}
       />
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="phone">{dictionary.message_label}</label>
+        <label htmlFor="phone" className="font-geometria font-medium">
+          {dictionary.message_label}
+        </label>
         <textarea
           maxLength={250}
           rows={3}
@@ -131,7 +146,7 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
           placeholder={dictionary.message_placeholder}
           className="inline-flex items-center justify-start  rounded-lg border border-gray-300  px-4 py-3 shadow"
         ></textarea>
-        <p className="ml-auto font-lato text-[0.6rem]/[12px] font-light">
+        <p className="ml-auto text-[0.6rem]/[12px] font-light">
           {dictionary.error_limit}
         </p>
       </div>

@@ -14,7 +14,7 @@ const Checkbox = ({ policy, label, register, error }: CheckBoxProps) => {
       <input
         type="checkbox"
         {...register}
-        className={`peer h-5 w-5 shrink-0 appearance-none rounded-md border  checked:bg-blue-button-default  focus:ring-gray-form 
+        className={`peer h-5 w-5 shrink-0 appearance-none rounded-md border  checked:bg-honeycomb-default  focus:ring-gray-form 
        ${error ? "border-red-error" : "border-[#d0d5dd]"} 
         `}
       />
@@ -26,7 +26,7 @@ const Checkbox = ({ policy, label, register, error }: CheckBoxProps) => {
         <a
           href={"/files/policy.pdf"}
           target="_blank"
-          className="text-blue-button-default underline hover:text-blue-button-darken"
+          className="text-honeycomb-default underline hover:text-honeycomb-dark"
         >
           {`${policy}.`}
         </a>

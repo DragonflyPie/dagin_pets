@@ -15,7 +15,7 @@ const FooterNavigation = async ({ lang }: FooterNavigationProps) => {
         return (
           <li
             key={option}
-            className="group  flex cursor-pointer   transition-all duration-300 hover:text-gray-200"
+            className="group cursor-pointer font-geometria transition-all duration-300 hover:text-gray-200"
           >
             <Link
               href={`#${option}`}

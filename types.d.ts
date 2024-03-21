@@ -13,13 +13,15 @@ interface Form {
 interface CompleteData extends StepOneData, StepTwoData {}
 
 interface StepOneData {
-  name: string;
   from?: string;
   to?: string;
   animal: Option;
+  time: Option;
+  transfer: Option;
 }
 
 interface StepTwoData {
+  name: string;
   phone: string;
   contactMethod: Option;
   message?: string;
@@ -35,8 +37,6 @@ interface ReviewData {
 }
 
 interface StepOne {
-  name: string;
-  name_placeholder: string;
   from: string;
   to: string;
   from_placeholder: string;
@@ -44,6 +44,24 @@ interface StepOne {
   next: string;
   error_required: string;
   animal_select: AnimalSelect;
+  time_select: TimeSelect;
+  transfer_select: TransferSelect;
+}
+
+interface StepTwo {
+  name: string;
+  name_placeholder: string;
+  phone: string;
+  message_label: string;
+  message_placeholder: string;
+  error_limit: string;
+  error_required: string;
+  error_invalid: string;
+  agree: string;
+  agree_policy: string;
+  back: string;
+  submit: string;
+  contact_method: ContactMethod;
 }
 
 interface AnimalSelect {
@@ -56,18 +74,21 @@ interface AnimalSelect {
   other: string;
 }
 
-interface StepTwo {
-  phone: string;
-  message_label: string;
-  message_placeholder: string;
-  error_limit: string;
-  error_required: string;
-  error_invalid: string;
-  agree: string;
-  agree_policy: string;
-  back: string;
-  submit: string;
-  contact_method: ContactMethod;
+interface TimeSelect {
+  label: string;
+  placeholder: string;
+  yesterday: string;
+  week: string;
+  weeks: string;
+  month: string;
+}
+
+interface TransferSelect {
+  label: string;
+  placeholder: string;
+  cargo: string;
+  cabin: string;
+  consultation: string;
 }
 
 interface ContactMethod {

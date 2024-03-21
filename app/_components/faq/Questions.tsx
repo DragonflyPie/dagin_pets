@@ -21,11 +21,11 @@ interface QuestionsProps {
 const Questions = ({ dictionary, button_label }: QuestionsProps) => {
   return (
     <div
-      className="flex w-full scroll-m-[70px] flex-col items-center px-4 pb-24 md:scroll-m-[100px] lg:px-16 xl:scroll-m-[150px] xl:px-20"
+      className="flex w-full scroll-m-[70px] flex-col items-center px-4 pb-14 md:scroll-m-[100px] lg:px-16 xl:scroll-m-[150px] xl:px-20 xl:pb-24"
       id="faq"
     >
       <div className="flex flex-col items-center gap-5 pb-6 md:pb-10">
-        <h2 className=" text-center font-lato text-3xl font-semibold tracking-tight md:text-4xl/[2.375rem] md:text-4xl/[2.75rem]">
+        <h2 className=" text-center font-geometria text-3xl font-medium md:text-4xl/[2.375rem] md:text-4xl/[2.75rem]">
           {dictionary.faq_title}
         </h2>
         <p className=" text-center text-lg/[1.75rem] md:text-xl/[150%]">
@@ -37,7 +37,7 @@ const Questions = ({ dictionary, button_label }: QuestionsProps) => {
           return <AccordeonItem content={item} key={item.question} />;
         })}
       </ul>
-      <div className="flex w-full flex-col items-center gap-6 rounded-2xl bg-white-dirty p-8 md:gap-8">
+      <div className="flex w-full flex-col items-center gap-6 p-8 md:gap-8">
         <div className="">
           <Image
             src={avatar_group}
@@ -47,7 +47,7 @@ const Questions = ({ dictionary, button_label }: QuestionsProps) => {
           />
         </div>
         <div className="flex flex-col items-center gap-2 text-center">
-          <p className="font-inter text-xl/[1.875] font-medium md:font-lato">
+          <p className="text-xl/[1.875] font-medium">
             {dictionary.more_question}
           </p>
           <p className="text-base md:text-lg">

@@ -8,6 +8,7 @@ import Safety from "../_components/safety/Safety";
 import Services from "../_components/services/Services";
 import Welcome from "../_components/welcome/Welcome";
 import { getDictionary } from "../_utilities/getDictionary";
+import Qualifications from "../_components/qualification/Qualification";
 
 interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -30,6 +31,7 @@ export default async function Home({
         <Services dictionary={dictionary.services} />
         <Safety dictionary={dictionary.safety} />
         <Reviews dictionary={dictionary.reviews} />
+        <Qualifications dictionary={dictionary.qualifications} />
         <Questions
           dictionary={dictionary.faq}
           button_label={dictionary.common.contact_button}

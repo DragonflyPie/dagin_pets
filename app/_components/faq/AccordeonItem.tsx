@@ -23,7 +23,9 @@ const AccordeonItem = ({ content }: AccordeonItemProps) => {
         onClick={toggleOpenAnswer}
       >
         <p className="text-lg font-medium md:text-xl">{content.question}</p>
-        <div className="">{isOpen ? <Menus /> : <Plus />}</div>
+        <div className="text-honeycomb-default">
+          {isOpen ? <Menus /> : <Plus />}
+        </div>
       </div>
       <p
         ref={answerRef}

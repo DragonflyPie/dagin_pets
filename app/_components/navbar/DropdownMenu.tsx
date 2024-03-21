@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { CloseIcon, MenuIcon } from "../commons/icons";
 import useClickOutside from "../../_utilities/hooks/useClickOutside";
-import logo from "@/public/images/logo_with_text.png";
+import logo from "@/public/images/logo_new.png";
 import Image from "next/image";
 import NavItems from "./NavItems";
 import MessengerItems from "../commons/MessengerItems";
@@ -45,7 +45,7 @@ const DropdownMenu = ({ items, text }: DropdownMenuProps) => {
         }`}
       ></div>
       <div
-        className={` fixed bottom-0 left-0 top-0 flex w-full min-w-[16rem] flex-col bg-white  transition-all duration-500 xs:w-auto
+        className={` fixed bottom-0 left-0 top-0 flex w-full min-w-[16rem] flex-col bg-gray-bg text-white transition-all duration-500 xs:w-auto
         ${navOpen ? "" : "-translate-x-full"}
         `}
       >
@@ -55,18 +55,25 @@ const DropdownMenu = ({ items, text }: DropdownMenuProps) => {
         >
           <CloseIcon />
         </div>
-        <div className="relative flex h-full  flex-col p-4">
-          <div className="absolute bottom-4 right-4 w-[170px]">
+        <div className="relative flex h-full flex-col p-4">
+          <div className="absolute bottom-8 right-8 w-[170px]">
             <Paw />
           </div>
-          <Image src={logo} alt="logo" width={70} height={70} />
-          <nav className=" flex h-full w-full flex-col gap-12 pt-12 font-inter text-base font-medium tracking-widest">
+          <Image
+            src={logo}
+            alt="logo"
+            width={87}
+            height={87}
+            className="-translate-x-2"
+          />
+          <nav className=" flex h-full w-full flex-col gap-[6%] pt-4 text-base font-medium tracking-widest">
             <NavItems handleClick={closeNav} items={items} />
           </nav>
         </div>
-        <div className="mt-auto flex w-full flex-col gap-4 bg-gray-dark p-4 text-xs  text-white">
-          <h4 className="font-lato text-sm font-light">{text}</h4>
-          <ul className="flex flex-col gap-4 font-inter font-light ">
+        <hr className="border-gray-form" />
+        <div className="mt-auto flex w-full flex-col gap-4 bg-gray-bg p-4 text-xs  text-white">
+          <h4 className="text-sm font-light">{text}</h4>
+          <ul className="flex flex-col gap-4 font-light ">
             <MessengerItems />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">

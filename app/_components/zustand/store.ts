@@ -24,10 +24,12 @@ const useStore = create<ModalState>()((set) => ({
 
   form: {
     stepOne: {
-      name: "",
       animal: { value: "" },
+      time: { value: "" },
+      transfer: { value: "" },
     },
     stepTwo: {
+      name: "",
       phone: "",
       contactMethod: {
         value: "",

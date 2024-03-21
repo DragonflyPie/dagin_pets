@@ -81,14 +81,14 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
         role="dialog"
         aria-modal="true"
         ref={contactRef}
-        className={`relative flex h-full flex-col bg-white p-2 transition-all duration-500 md:h-[calc(100vh-2rem)] md:max-w-[36rem] md:rounded-3xl md:pt-6 2xl:h-[calc(100vh-6rem)] 2xl:pt-12
+        className={`relative flex h-full flex-col bg-white p-2 transition-all duration-500 md:h-[calc(100vh-2rem)] md:w-[36rem] md:rounded-3xl md:pt-6  2xl:pt-12
           ${!showModal ? "-translate-y-[200%]" : ""}
           `}
       >
         <FocusTrap>
-          <div className="flex h-full flex-col items-center overflow-auto rounded-3xl bg-white font-jakarta scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-form ">
+          <div className="flex h-full flex-col items-center overflow-auto rounded-3xl bg-white scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-form ">
             <button
-              className="absolute right-4 top-4 z-50 flex cursor-pointer text-black transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
+              className="absolute right-4 top-4 z-50 flex cursor-pointer text-gray-dark transition-transform duration-300 hover:scale-110 md:right-6 md:top-6"
               onClick={closeModal}
             >
               <CloseIcon />

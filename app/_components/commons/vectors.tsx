@@ -8,7 +8,7 @@ export const BlueShape = () => {
       viewBox="0 0 124 1039"
     >
       <path
-        fill="#00BEFC"
+        fill="#DBA810"
         d="M-17 0c261.421 0 97.452 304.777 0 1039V0z"
         opacity="0.1"
       ></path>

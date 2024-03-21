@@ -2,7 +2,7 @@ import { Listbox } from "@headlessui/react";
 import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
-interface DropdownProps extends UseControllerProps<StepOneData, "animal"> {
+interface DropdownProps extends UseControllerProps<StepOneData, any> {
   dropDownOptions: Option[];
   placeholder?: string;
   label: string;
@@ -17,14 +17,14 @@ const SelectInput = (props: DropdownProps) => {
   const isPlaceholder = !value.label && props.placeholder;
 
   return (
-    <div className="flex flex-col gap-1.5">
-      <label htmlFor="#animal">{props.label}</label>
+    <div className="flex flex-col gap-1.5 font-geometria font-medium">
+      <label htmlFor={`#${props.name}`}>{props.label}</label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>
             <div className="relative">
               <Listbox.Button
-                className={`relative inline-flex h-12 w-full appearance-none items-center justify-start border px-4 py-3 shadow
+                className={`relative inline-flex h-12 w-full appearance-none items-center justify-start border px-4 py-3 font-raleway shadow
        ${error ? "border-red-error" : "border-gray-300"} 
        ${open ? "rounded-t-lg" : "rounded-lg"}
         `}
@@ -40,10 +40,11 @@ const SelectInput = (props: DropdownProps) => {
                   <Down />
                 </span>
               </Listbox.Button>
+
               <Listbox.Options
                 onBlur={onBlur}
                 className={
-                  "absolute z-10 w-full rounded-b-lg border border-gray-300 bg-white  shadow"
+                  "absolute z-10 w-full rounded-b-lg border border-gray-300 bg-white font-raleway shadow"
                 }
               >
                 {props.dropDownOptions.map((option) => (
@@ -55,7 +56,7 @@ const SelectInput = (props: DropdownProps) => {
                     {({ active }) => (
                       <li
                         className={` cursor-pointer px-4 py-2 
-                          ${active ? "bg-blue-light " : ""}
+                          ${active ? "bg-honeycomb-light" : ""}
                           `}
                       >
                         {option.label}
@@ -64,6 +65,7 @@ const SelectInput = (props: DropdownProps) => {
                   </Listbox.Option>
                 ))}
               </Listbox.Options>
+
               {error && (
                 <p className="absolute -bottom-5 right-0 text-xs text-red-error">
                   {error.message}

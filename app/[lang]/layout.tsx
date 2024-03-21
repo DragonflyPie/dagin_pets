@@ -3,22 +3,13 @@ import type { Metadata } from "next";
 import { BlueShape } from "../_components/commons/vectors";
 import Footer from "../_components/footer/Footer";
 import Navbar from "../_components/navbar/Navbar";
-import { inter, lato, osans } from "../_utilities/fonts";
+import { futura, raleway, geometria } from "../_utilities/fonts";
 import { Locale, i18n } from "@/i18n.config";
 import { getDictionary } from "../_utilities/getDictionary";
 
 type Props = {
   params: { lang: Locale };
 };
-
-// export const metadata: Metadata = {
-//   title: "Dagin Pets",
-//   description: "Перевозка питомцев в ОАЭ",
-//   manifest: "@/app/manifest.webmanifest",
-//   robots: "@/app/robots.txt",
-//   themeColor: "#fff",
-//   colorScheme: "light",
-// };
 
 export async function generateMetadata({
   params: { lang },
@@ -49,9 +40,9 @@ export default function RootLayout({
   return (
     <html
       lang={params.lang}
-      className={`scroll-smooth ${inter.variable} ${lato.variable} ${osans.variable}`}
+      className={`scroll-smooth ${futura.variable} ${geometria.variable} ${raleway.variable}`}
     >
-      <body className="flex w-full flex-col items-center overflow-x-hidden  bg-white font-osans text-blackish">
+      <body className="flex w-full flex-col items-center overflow-x-hidden  bg-white bg-dog-pattern bg-repeat font-raleway text-gray-dark">
         <Navbar lang={params.lang} />
         {children}
         <Footer lang={params.lang} />

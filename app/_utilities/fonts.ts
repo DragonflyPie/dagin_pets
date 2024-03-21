@@ -1,47 +1,38 @@
-import { Inter, Open_Sans } from "next/font/google";
+import { Raleway } from "next/font/google";
 import localFont from "next/font/local";
 
-export const lato = localFont({
+export const geometria = localFont({
   preload: false,
   src: [
     {
-      path: "../../public/fonts/Lato-Regular.woff2",
+      path: "../../public/fonts/geometria-regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Lato-Heavy.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Lato-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Lato-Medium.woff2",
+      path: "../../public/fonts/geometria-medium.ttf",
       weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Lato-Semibold.woff2",
-      weight: "600",
       style: "normal",
     },
   ],
   display: "swap",
-  variable: "--font-lato",
+  variable: "--font-geometria",
 });
 
-export const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
+export const futura = localFont({
+  preload: false,
+  src: [
+    {
+      path: "../../public/fonts/FuturaMediumC.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-futura",
 });
 
-export const osans = Open_Sans({
+export const raleway = Raleway({
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-osans",
+  variable: "--font-raleway",
 });

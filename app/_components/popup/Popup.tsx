@@ -31,11 +31,11 @@ const Popup = ({ success, dictionary }: PopupProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex h-full w-full items-center justify-center ">
-      <div className=" flex w-[95vw] flex-col items-center rounded-xl bg-white p-6 font-lato shadow-2xl md:mb-[20vh] md:w-[400px]">
+      <div className=" flex w-[95vw] flex-col items-center rounded-xl bg-white p-6 shadow-2xl md:mb-[20vh] md:w-[400px]">
         <div className="mb-5 h-12 w-12">
           {success ? <SuccessIcon /> : <FailureIcon />}
         </div>
-        <h5 className="pb-2 text-center font-medium">
+        <h5 className="pb-2 text-center font-geometria font-medium">
           {success ? dictionary.success_title : dictionary.fail_title}
         </h5>
         <p className="pb-8 text-center text-gray-form">

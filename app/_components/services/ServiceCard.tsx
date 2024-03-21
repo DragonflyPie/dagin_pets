@@ -8,7 +8,7 @@ interface ServiceCardProps {
 }
 const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
   return (
-    <li className="flex flex-col items-center gap-8 py-6 text-lg md:py-0 lg:text-xl ">
+    <li className="flex basis-[45%] flex-col items-center gap-4 text-lg md:gap-6 md:py-0 lg:basis-[31%] lg:text-xl ">
       <div className="shrink-0">
         <Image
           width={76}
@@ -16,13 +16,14 @@ const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
           sizes="100vw"
           src={icon}
           alt="Service Icon"
+          className="rounded-[16px]"
         />
       </div>
-      <article className="flex flex-col items-center gap-[22px]">
-        <h3 className="text-center font-inter text-xl/6 font-semibold md:text-[1.313rem]/7">
+      <article className="flex flex-col items-center gap-3 md:gap-4">
+        <h3 className=" whitespace-pre text-center font-geometria text-lg/6 font-medium md:text-[1.313rem]/7">
           {heading}
         </h3>
-        <p className="px-10 text-center font-lato text-xs md:text-base/[1.625rem]">
+        <p className="text-pretty text-center text-xs xs:px-12 md:px-0 md:text-base/[1.625rem]">
           {text}
         </p>
       </article>

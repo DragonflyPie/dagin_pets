@@ -23,7 +23,9 @@ const FormInput = ({
 }: FormInputProps) => {
   return (
     <div className="relative flex w-full flex-col gap-1.5">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className="font-geometria font-medium">
+        {label}
+      </label>
       <input
         placeholder={placeholder}
         id={id}
@@ -34,7 +36,7 @@ const FormInput = ({
         
        ${error ? "border-red-error outline-none" : "border-gray-300"} 
         `}
-      ></input>
+      />
       {error && (
         <p className="absolute -bottom-5 right-0 text-xs text-red-error">
           {error_message}

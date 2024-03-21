@@ -17,22 +17,16 @@ const About = ({ dictionary }: AboutProps) => {
           src={maltipoo}
           alt={"Maltipoo image"}
           fill
-          className="absolute -ml-[20%] object-contain md:ml-0"
+          className="absolute -translate-x-[20%] object-contain md:translate-x-0"
           sizes="(max-width: 768px) 45vw, 25vw"
         />
-        <div className=" absolute -bottom-2 left-2 h-10 w-full rounded-[50%] bg-black opacity-30 blur-xl "></div>
+        <div className=" absolute -bottom-2 left-2 h-10 w-full -translate-x-[20%] rounded-[50%] bg-black opacity-30 blur-xl md:translate-x-0 "></div>
       </div>
 
       <p
-        className="-ml-6 flex-1 text-xs xs:text-sm md:ml-0 md:pl-10 md:text-2xl/[36px] xl:pl-36"
+        className="-ml-6 flex-1 text-pretty text-xs xs:text-sm md:ml-0  md:pl-10 md:text-2xl/[36px] xl:pl-24 xl:leading-[3rem]"
         dangerouslySetInnerHTML={{ __html: dictionary.text }}
-      >
-        {/* Мы — <span className="font-semibold">лицензированная </span> компания с
-        <span className="font-semibold"> профессиональным опытом</span> в
-        области перевозки животных, и наша команда специалистов поможет вам с
-        выбором <span className="font-semibold">наилучшего маршрута</span> и
-        способа транспортировки вашего любимца. */}
-      </p>
+      ></p>
     </div>
   );
 };

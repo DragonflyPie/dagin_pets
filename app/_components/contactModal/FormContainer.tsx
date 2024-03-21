@@ -20,8 +20,8 @@ const FormContainer = ({ handleClose, dictionary }: FormContainerProps) => {
 
   return step === "1" ? (
     <>
-      <hgroup className="flex w-full flex-col items-center pb-6 font-lato md:pb-8 2xl:pb-16">
-        <h5 className="pb-3 text-2xl/[2.75rem]  font-semibold tracking-tight md:text-4xl/[44px] 2xl:pb-5">
+      <hgroup className="flex w-full flex-col items-center pb-6 md:pb-8">
+        <h5 className="pb-3 font-geometria text-2xl/[2.75rem] font-medium tracking-tight md:text-4xl/[44px] 2xl:pb-5">
           {dictionary.header}
         </h5>
         <p className="text-[0.815rem] text-gray-form-heading md:text-xl/[30px]">

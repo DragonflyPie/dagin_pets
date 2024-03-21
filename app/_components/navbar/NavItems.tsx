@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { PawSmallIcon } from "../commons/icons";
 
 interface NavItemsProps {
   handleClick?: () => void;
@@ -22,7 +21,7 @@ const NavItems = ({ handleClick, items }: NavItemsProps) => {
           <li
             onClick={handleClick}
             key={option}
-            className="group relative flex w-full cursor-pointer justify-center transition-all  duration-300 hover:bg-blue-light lg:gap-0 lg:p-0 lg:hover:bg-inherit"
+            className="group relative flex w-full cursor-pointer justify-center bg-none font-geometria font-normal transition-all duration-300 lg:gap-0 lg:p-0 lg:hover:bg-inherit"
           >
             <Link
               href={`#${option}`}
@@ -30,7 +29,7 @@ const NavItems = ({ handleClick, items }: NavItemsProps) => {
             >
               <span className="relative">
                 {items[option]}
-                <span className="absolute -bottom-0.5 hidden h-px  w-full scale-0 bg-black transition-all duration-300  group-hover:scale-100 lg:block"></span>
+                <span className="absolute -bottom-0.5 hidden h-px  w-full scale-0 transition-all duration-300 group-hover:scale-100  group-hover:bg-honeycomb-default lg:block"></span>
               </span>
             </Link>
           </li>

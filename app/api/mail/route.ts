@@ -42,7 +42,6 @@ export async function POST(request: Request) {
           console.log(error);
           reject(error);
         } else {
-          console.log("Server is ready to take our messages");
           resolve(success);
         }
       });
@@ -58,6 +57,8 @@ export async function POST(request: Request) {
       <h3>Способ связи: ${data.contactMethod?.label || "-"}</h3>
       <h3>Животное: ${data.animal?.label || "-"}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
+      <h3>Способ перевозки: ${data.transfer?.label || "-"}</h3>
+      <h3>Сроки: ${data.time?.label || "-"}</h3>
       <h3>Сообщение:<p>${data?.message || "-"}</p></h3>`,
     };
 
@@ -68,8 +69,6 @@ export async function POST(request: Request) {
           console.error(err);
           reject(err);
         } else {
-          console.log(response);
-          console.log("success");
           resolve(response);
         }
       });

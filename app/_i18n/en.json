@@ -8,6 +8,7 @@
     "about": "About Us",
     "services": "Services",
     "reviews": "Reviews",
+    "qualifications": "Qualifications",
     "faq": "FAQ.",
     "contacts": "Contact Us"
   },
@@ -15,27 +16,29 @@
     "contact_button": "Get in Touch"
   },
   "header": {
-    "header_title": "A Warm Welcome \nto Pet Lovers \nWorldwide",
+    "header_title": "Перевозка\nживотных быстро\nи легко",
     "header_description": "Do you need to transport your pet to or from the UAE? Dagin Pets Relocation is pleased to offer you our assistance, including pet transportation services and pet taxis within the UAE.",
     "header_button": "Transport My Pet"
   },
   "about": {
-    "text": "We are a <span class='font-semibold'>licensed</span> company specializing in pet relocation. Our team of experts will assist you in choosing the <span class='font-semibold'>best route</span> and method for transporting your furry friend."
+    "text": "Команда Dagin обеспечивает <semibold class='font-semibold'>полный спектр услуг</semibold>, связанных с перевозкой животных, чтобы обеспечить безопасность и комфорт вашим питомцам во время перелета. Мы лицензированы министерством изменения климата и окружающей среды <semibold class='font-semibold'>(МОССАЕ)</semibold> и сертифицированы в области международных требований по перевозке животных <semibold class='font-semibold whitespace-nowrap'>(IATA LAR*)</semibold> и обеспечиваем все необходимые процедуры и бумажную работу."
   },
   "services": {
     "title_start": "Dagin Pets Relocation",
     "title_ending": "offers a wide range of services, including:",
-    "service1_header": "Full assistance",
-    "service1_description": "Route planning and coordination, including the most complex destinations, assistance with preparing all required documents, logistics and courier organization, and airport pick-up upon arrival",
-    "service2_header": "Different options for pet delivery",
-    "service2_description": "'Door-to-door' delivery options, both by passenger cabin and cargo, at affordable prices. We also offer delivery with a pet courier, providing regular photo and video updates.",
-    "service3_header": "Flexible collaboration formats",
-    "service3_description": "Document verification, advisory support, or document processing without full pet transportation assistance.",
-    "service4_header": "Pet taxi with love and care:",
-    "service4_description": "Treats as per the owner's choice, cat diapers if needed, and special bags for dogs that have embraced the palm trees."
+    "service1_header": "Базовую подготовку\nк перелету:",
+    "service1_description": "мы проконсультируем касательно необходимых процедур для вашего питомца (чипирование, вакцинации, анализы) и при необходимости организуем выезд врача на дом.",
+    "service2_header": "Бронирование\nбилетов:",
+    "service2_description": "мы забронируем наиболее подходящий рейс для вашего домашнего любимца, учитывая его размер, вес и другие особенности.",
+    "service3_header": "Оформление\nдокументов:",
+    "service3_description": "мы предоставим всю необходимую поддержку и помощь в получении экспортных и импортных документов, таких как разрешение на ввоз / вывоз вашего питомца, ветеринарные сертификаты в соответствии с требованиями страны назначения.",
+    "service4_header": "Транспортировку\nпитомца:",
+    "service4_description": "мы обеспечим переезд от двери до двери, включая отправку питомца, прохождение необходимых процедур по прилету и доставку до нового дома.",
+    "service5_header": "Помощь в адаптации\nи снижении уровня стресса питомца:",
+    "service5_description": "подбор мягких средств для снижения уровня стресса, организация консультации зоопсихолога и зоодиетолога при необходимости."
   },
   "safety": {
-    "value_title": "We <span class='font-bold'>prioritize the health</span> <br>and <span class='font-bold'>well-being of your pets</span>,",
+    "value_title": "We prioritize the health\nand well-being of your pets",
     "value_desciption": "and our mission is to ensure the most comfortable and safe transportation for them. don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the uae, or book a pet taxi for your furry friend.",
     "value_button": "Transport My Pet"
   },
@@ -56,7 +59,7 @@
         "date": "September 29, 2023",
         "rating": 5,
         "message": "Today, thanks to Anastasia @AnastasiaBelykh, our beloved cat safely made it to Sharjah. Anastasia organized everything 'turnkey' and brought our kitty all the way from Khabarovsk.The journey was quite a distance: a flight from Khabarovsk to Moscow (in the cabin) and then Moscow to Dubai (cargo). Anastasia organized everything in the shortest possible time, sent a wonderful pet courier to pick up the cat, arranged an overnight stay in Moscow for her to rest, and then personally went through all the checks in Dubai and brought her straight to our home.The cat handled all these flights calmly, and she is now doing great and getting used to her new home.A huge thank you to Anastasia! Everything was fast, precise, and of high quality. Special thanks for the support, answering my numerous questions, and providing photo updates. In the end, everything went perfectly, and it was not scary at all. Once again, heartfelt thanks and a big recommendation!",
-        "name": "Alexanda",
+        "name": "Alexandra",
         "image": "/images/review2.jpg"
       },
       {
@@ -103,6 +106,9 @@
       }
     ]
   },
+  "qualifications": {
+    "title": "Our qualifications"
+  },
   "faq": {
     "faq_title": "Frequently Asked Questions",
     "faq_description": "Everything you wanted to know but couldn't find",
@@ -138,8 +144,6 @@
     "header": "Contact Us",
     "subheader": "Fill Out the Information, and We Will Respond to You.",
     "step_one": {
-      "name": "Your name",
-      "name_placeholder": "Name",
       "from": "From",
       "to": "To",
       "from_placeholder": "Departure Location",
@@ -154,9 +158,26 @@
         "bird": "Bird",
         "horse": "Horse",
         "other": "Other"
+      },
+      "time_select": {
+        "label": "Планируемы сроки",
+        "placeholder": "Когда перевозим?",
+        "yesterday": "Вчера",
+        "week": "В течение недели",
+        "weeks": "В течение 2-3 недель",
+        "month": "В течение месяца и более"
+      },
+      "transfer_select": {
+        "label": "Способ перевозки",
+        "placeholder": "Как перевозим?",
+        "cargo": "Карго",
+        "cabin": "Салон",
+        "consultation": "Нужна консультация"
       }
     },
     "step_two": {
+      "name": "Your name",
+      "name_placeholder": "Name",
       "phone": "Phone number",
       "message_label": "Message",
       "message_placeholder": "Tell us about your case.",

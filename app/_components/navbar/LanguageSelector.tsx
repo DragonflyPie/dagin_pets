@@ -31,13 +31,13 @@ const LanguageSelector = () => {
   useClickOutside(languageRef, closeMenu);
   return (
     <div
-      className="relative flex h-8 w-16 shrink-0 cursor-pointer items-center justify-center p-2  "
+      className="relative flex h-8 w-16 shrink-0 cursor-pointer items-center justify-center p-2 font-geometria font-normal  "
       ref={languageRef}
     >
       <div
         onClick={toggleMenu}
         className={`absolute -top-1 flex gap-1.5  rounded-[6px] p-2 transition-colors duration-500  ${
-          isOpen ? "bg-blue-light" : "bg-inherit"
+          isOpen ? "bg-honeycomb-default" : "bg-inherit"
         }`}
       >
         {isOpen ? (
@@ -58,7 +58,7 @@ const LanguageSelector = () => {
         <div
           className={`mb-auto ${
             isOpen ? "rotate-180" : ""
-          } cursor-pointer transition-all duration-200`}
+          } cursor-pointer text-white transition-all duration-200`}
         >
           <Down />
         </div>

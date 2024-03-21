@@ -19,7 +19,9 @@ const MethodSelect = (props: DropdownProps) => {
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor="#contactMethod">{props.label}</label>
+      <label htmlFor="#contactMethod" className="font-geometria font-medium">
+        {props.label}
+      </label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>
@@ -56,7 +58,7 @@ const MethodSelect = (props: DropdownProps) => {
                     {({ active }) => (
                       <li
                         className={` cursor-pointer px-4 py-2 
-                          ${active ? "bg-blue-light " : ""}
+                          ${active ? "bg-honeycomb-light " : ""}
                           `}
                       >
                         {option.label}

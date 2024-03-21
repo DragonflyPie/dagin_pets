@@ -19,6 +19,12 @@ const config: Config = {
           darken: "#00abe2",
         },
         "blue-light": "#D4F4FF",
+        "gray-bg": "#696073",
+        honeycomb: {
+          default: "#DBA810",
+          light: "#FFF6DC",
+          dark: "#c5970e",
+        },
 
         blackish: "#393939",
         "gray-dark": "#18171C",
@@ -29,10 +35,12 @@ const config: Config = {
         "red-error": "#ff3333",
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        lato: ["var(--font-lato)"],
-        osans: ["var(--font-osans)"],
-        // roboto: ["var(--font-roboto)"],
+        geometria: ["var(--font-geometria)"],
+        futura: ["var(--font-futura)"],
+        raleway: ["var(--font-raleway)"],
+      },
+      backgroundImage: {
+        "dog-pattern": "url('/images/dog-pattern.png')",
       },
     },
   },
