@@ -5,7 +5,7 @@ import FormContainer from "./FormContainer";
 import sweet_pets from "@/public/images/sweet_pets.png";
 import { useEffect, useRef, useState } from "react";
 import FocusTrap from "focus-trap-react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
 
@@ -33,7 +33,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
     }, 500);
   };
 
-  const handleClose = async () => {
+  const handleClose = () => {
     setShowModal(false);
   };
 
