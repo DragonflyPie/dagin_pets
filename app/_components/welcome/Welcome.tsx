@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cat_shining from "@/public/images/cat_shining_no_bg_crop.png";
+import cat_shining from "@/public/images/cat_shining.png";
 import Button from "../commons/Button";
 import plane from "@/public/images/plane_rotated_2.png";
 import line from "@/public/images/line.png";
