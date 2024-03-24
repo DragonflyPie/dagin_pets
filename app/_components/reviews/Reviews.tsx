@@ -31,13 +31,13 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
       id="reviews"
       className="w-full scroll-m-10 scroll-m-[70px] pb-14 md:scroll-m-[100px] xl:scroll-m-[150px] xl:pb-24"
     >
-      <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6">
+      <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6 md:pb-9">
         <h2 className="font-geometria text-xl font-medium tracking-tight md:text-4xl/[2.75rem]">
           {dictionary.reviews_title}
         </h2>
-        <p className="w-min min-w-[12rem] text-center text-xs/[150%] font-medium md:w-full md:text-xl">
+        {/* <p className="w-min min-w-[12rem] text-center text-xs/[150%] font-medium md:w-full md:text-xl">
           {dictionary.reviews_description}
-        </p>
+        </p> */}
       </hgroup>
       <div className="max-w-[100vw] px-4 md:px-10 lg:px-16 xl:px-20">
         <Slider {...settings}>

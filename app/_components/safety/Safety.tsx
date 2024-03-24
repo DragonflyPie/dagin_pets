@@ -29,7 +29,7 @@ const Safety = ({ dictionary }: SafetyProps) => {
       </div>
       <div className="flex flex-1 flex-col items-center gap-4 md:items-start md:gap-10 md:pb-6 ">
         <article className="text-center md:text-left">
-          <h3 className="whitespace-pre font-geometria text-base/[150%] font-medium md:text-2xl/[150%] lg:text-[2rem]/[150%] xl:text-4xl/[180%]">
+          <h3 className="whitespace-pre pb-3 font-geometria text-xl font-medium md:text-2xl/[2.5rem] lg:text-[2rem]/[3rem] xl:text-4xl/[3rem]">
             {dictionary.value_title}
           </h3>
           <p className="text-xs/[1.5rem] xs:text-sm/[1.5rem] md:text-xl/[2rem] xl:text-2xl/[3rem]">

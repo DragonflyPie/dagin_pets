@@ -20,7 +20,7 @@ const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
         />
       </div>
       <article className="flex flex-col items-center gap-3 md:gap-4">
-        <h3 className=" whitespace-pre text-center font-geometria text-lg/6 font-medium md:text-[1.313rem]/7">
+        <h3 className=" whitespace-pre text-center font-geometria text-base/6 font-medium md:text-xl/7 lg:text-[1.375rem]/7">
           {heading}
         </h3>
         <p className="text-pretty text-center text-xs xs:px-12 md:px-0 md:text-base/[1.625rem]">
