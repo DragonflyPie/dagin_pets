@@ -1,14 +1,8 @@
 import { Locale } from "@/i18n.config";
-import Messenger from "../commons/Messenger";
-import {
-  Telegram,
-  Instagram,
-  PhoneWhite,
-  WhatsAppWhite,
-} from "../commons/icons";
 import FooterNavigation from "./FooterNavigation";
 import { getDictionary } from "@/app/_utilities/getDictionary";
 import MessengerItems from "../commons/MessengerItems";
+import { getCurrentYear } from "@/app/_utilities/getYear";
 
 interface FooterProps {
   lang: Locale;
@@ -16,6 +10,8 @@ interface FooterProps {
 
 const Footer = async ({ lang }: FooterProps) => {
   const { footer } = await getDictionary(lang);
+
+  const currentYear = getCurrentYear();
 
   return (
     <footer id="contacts" className="flex w-full justify-center bg-gray-bg">
@@ -34,7 +30,8 @@ const Footer = async ({ lang }: FooterProps) => {
             <FooterNavigation lang={lang} />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
-            Dagin Pets Relocation © Copyright 2024. All Rights Reserved
+            Dagin Pets Relocation © Copyright {currentYear}. All Rights
+            Reserved
           </p>
         </div>
       </div>
