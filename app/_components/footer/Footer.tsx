@@ -34,7 +34,7 @@ const Footer = async ({ lang }: FooterProps) => {
             <FooterNavigation lang={lang} />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
-            Dagin Pets Relocation © Copyright 2023. All Rights Reserved
+            Dagin Pets Relocation © Copyright 2024. All Rights Reserved
           </p>
         </div>
       </div>
