@@ -21,7 +21,7 @@ const Review = ({
   const filledStarsArray = Array.from({ length: rating }, (_, index) => index);
 
   return (
-    <div className="flex w-[280px] flex-col gap-4 rounded-md bg-white-dirty p-6 md:w-[320px] xl:w-[360px]">
+    <div className="flex w-[280px] flex-col gap-4 rounded-md border bg-white-dirty p-6 md:w-[320px] xl:w-[360px]">
       <div className="flex flex-col gap-6">
         <p className="text-xs">{date}</p>
         <div className="flex">

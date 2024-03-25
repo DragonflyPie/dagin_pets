@@ -23,6 +23,13 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/_utilities/metrics/FacebookPixel.js",
+    "app/_utilities/metrics/YandexMetrika.js"
+  ],
   "exclude": ["node_modules"]
 }

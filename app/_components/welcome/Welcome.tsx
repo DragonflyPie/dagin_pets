@@ -77,6 +77,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
       /> */}
       <Image
         src={line}
+        priority
         alt=""
         className="absolute left-0 top-0 hidden h-full w-auto object-contain object-left opacity-25 md:block"
       />

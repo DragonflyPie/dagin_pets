@@ -59,7 +59,7 @@ const DropdownMenu = ({ items, text }: DropdownMenuProps) => {
           <div className="absolute bottom-8 right-8 w-[170px]">
             <Paw />
           </div>
-          <Image src={logo} alt="logo" width={87} height={87} className="" />
+          <Image src={logo} alt="logo" width={87} className="" />
           <nav className=" flex h-full w-full flex-col gap-[6%] pt-8 text-base font-medium tracking-widest">
             <NavItems handleClick={closeNav} items={items} />
           </nav>

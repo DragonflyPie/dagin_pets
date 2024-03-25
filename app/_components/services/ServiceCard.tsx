@@ -16,7 +16,6 @@ const ServiceCard = ({ icon, text, heading }: ServiceCardProps) => {
           sizes="100vw"
           src={icon}
           alt="Service Icon"
-          className="rounded-[16px]"
         />
       </div>
       <article className="flex flex-col items-center gap-3 md:gap-4">
