@@ -25,7 +25,6 @@ const config: Config = {
           light: "#FFF6DC",
           dark: "#c5970e",
         },
-
         blackish: "#393939",
         "gray-dark": "#18171C",
         "gray-light": "#E4E4E7",
@@ -33,6 +32,9 @@ const config: Config = {
         "gray-form-heading": "#667085",
         "white-dirty": "#F9FAFB",
         "red-error": "#ff3333",
+      },
+      boxShadow: {
+        service: "5px 6px 14px 1px rgba(0,0,0,0.15);",
       },
       fontFamily: {
         geometria: ["var(--font-geometria)"],

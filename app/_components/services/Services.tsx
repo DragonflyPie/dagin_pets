@@ -1,9 +1,9 @@
 import ServiceCard from "./ServiceCard";
-import puppy_img from "@/public/images/puppy_icon.png";
-import mops_img from "@/public/images/mops_icon.png";
-import cat_img from "@/public/images/cat_hand_icon.png";
-import maltipoo_img from "@/public/images/maltipoo_icon.png";
-import fluffy from "@/public/images/services_fluffy.png";
+import puppy_img from "@/public/images/puppy_service.png";
+import mops_img from "@/public/images/mops_service.png";
+import cat_img from "@/public/images/cat_service.png";
+import maltipoo_img from "@/public/images/maltipoo_service.png";
+import fluffy from "@/public/images/fluffy_service.png";
 
 interface ServicesProps {
   dictionary: {

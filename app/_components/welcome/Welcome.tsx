@@ -41,7 +41,6 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
             <Button text={dictionary.header_button} modal />
           </Link>
         </div>
-        {/* <div className="relative -z-10 flex aspect-[0.8] h-[80%] flex-col self-center xl:w-full"> */}
         <div className="relative -z-10 flex aspect-[0.8] h-[90%] flex-col self-center xs:h-full md:h-full xl:w-full">
           <Image
             priority
@@ -57,24 +56,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
             className="absolute bottom-0 right-[20%] hidden w-40 rotate-[-11deg] object-contain md:block lg:right-[15%] xl:right-[30%] xl:w-56 2xl:right-[20%]"
           />
         </div>
-        {/* <div className="relative flex max-h-full w-full flex-1 flex-col items-center justify-center ">
-          <div className="xl:translate-x-25 absolute -z-10 aspect-[0.8] h-4/5 xs:h-full md:translate-x-10">
-            <Image
-              priority
-              src={cat_shining}
-              alt="Cat tearing through the page"
-              className="-z-10 object-contain drop-shadow-lg"
-              fill
-              sizes="(max-width: 768px) 80vw, 60vw"
-            />
-          </div>
-        </div> */}
       </div>
-      {/* <Image
-        src={plane}
-        alt="Plane"
-        className="absolute bottom-16 right-[3%] hidden w-40 rotate-[-11deg] object-contain md:block lg:rotate-[-3deg] xl:bottom-36 xl:right-5  xl:w-56 xl:rotate-[-11deg]"
-      /> */}
       <Image
         src={line}
         priority

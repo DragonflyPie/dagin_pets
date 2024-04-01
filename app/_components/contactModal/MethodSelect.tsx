@@ -2,14 +2,14 @@ import { Listbox } from "@headlessui/react";
 import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
-interface DropdownProps
+interface MethodSelectProps
   extends UseControllerProps<StepTwoData, "contactMethod"> {
   dropDownOptions: Option[];
   placeholder?: string;
   label: string;
 }
 
-const MethodSelect = (props: DropdownProps) => {
+const MethodSelect = (props: MethodSelectProps) => {
   const {
     field: { value, onChange, onBlur },
     fieldState: { error },

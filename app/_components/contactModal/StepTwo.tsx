@@ -1,5 +1,5 @@
 import { object, string, bool } from "yup";
-import { FieldValue, FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import PhoneInput from "react-phone-number-input/react-hook-form-input";
 import { useState } from "react";
@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Checkbox from "./CheckBox";
 import Button from "../commons/Button";
 import useStore from "../zustand/store";
-import MethodSelect from "./SelectMethod";
+import MethodSelect from "./MethodSelect";
 import FormInput from "./Input";
 
 let stepTwoSchema = object({

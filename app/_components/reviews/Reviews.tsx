@@ -35,9 +35,6 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
         <h2 className="font-geometria text-xl font-medium tracking-tight md:text-4xl/[2.75rem]">
           {dictionary.reviews_title}
         </h2>
-        {/* <p className="w-min min-w-[12rem] text-center text-xs/[150%] font-medium md:w-full md:text-xl">
-          {dictionary.reviews_description}
-        </p> */}
       </hgroup>
       <div className="max-w-[100vw] px-4 md:px-10 lg:px-16 xl:px-20">
         <Slider {...settings}>

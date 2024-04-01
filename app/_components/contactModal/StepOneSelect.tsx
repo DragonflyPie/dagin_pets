@@ -2,13 +2,13 @@ import { Listbox } from "@headlessui/react";
 import { useController, UseControllerProps } from "react-hook-form";
 import { Down } from "../commons/icons";
 
-interface DropdownProps extends UseControllerProps<StepOneData, any> {
+interface SelectInputProps extends UseControllerProps<StepOneData, any> {
   dropDownOptions: Option[];
   placeholder?: string;
   label: string;
 }
 
-const SelectInput = (props: DropdownProps) => {
+const SelectInput = (props: SelectInputProps) => {
   const {
     field: { value, onChange, onBlur },
     fieldState: { error },
