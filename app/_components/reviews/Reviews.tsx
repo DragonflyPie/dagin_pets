@@ -32,7 +32,7 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
       className="w-full scroll-m-10 scroll-m-[70px] pb-14 md:scroll-m-[100px] xl:scroll-m-[150px] xl:pb-24"
     >
       <hgroup className="flex w-full flex-col items-center gap-5 px-4 pb-6 md:pb-9">
-        <h2 className="font-geometria text-xl font-medium tracking-tight md:text-4xl/[2.75rem]">
+        <h2 className="font-geometria text-2xl font-medium md:text-[2.625rem]/[2.5rem]">
           {dictionary.reviews_title}
         </h2>
       </hgroup>

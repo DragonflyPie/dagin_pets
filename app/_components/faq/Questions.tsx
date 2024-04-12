@@ -25,7 +25,7 @@ const Questions = ({ dictionary, button_label }: QuestionsProps) => {
       id="faq"
     >
       <div className="flex flex-col items-center gap-5 pb-6 md:pb-10">
-        <h2 className=" text-center font-geometria text-3xl font-medium md:text-4xl/[2.375rem] md:text-4xl/[2.75rem]">
+        <h2 className="font-geometria text-2xl font-medium md:text-[2.625rem]/[1.75rem]">
           {dictionary.faq_title}
         </h2>
         <p className="text-pretty text-center text-lg/[1.75rem] md:text-xl/[150%]">
