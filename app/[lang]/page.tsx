@@ -8,7 +8,6 @@ import Safety from "../_components/safety/Safety";
 import Services from "../_components/services/Services";
 import Welcome from "../_components/welcome/Welcome";
 import { getDictionary } from "../_utilities/getDictionary";
-import Qualifications from "../_components/qualification/Qualification";
 import Quals from "../_components/qualification/Quals";
 
 interface PageProps {
