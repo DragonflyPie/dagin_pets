@@ -25,8 +25,8 @@ const Footer = async ({ lang }: FooterProps) => {
           </ul>
         </div>
         <hr className="border-gray-form md:hidden xl:block" />
-        <div className="flex w-full flex-col justify-between gap-[1.875rem] text-sm md:flex-row md:items-end">
-          <ul className="grid grid-flow-row grid-cols-3 gap-6 md:gap-x-8 xl:flex xl:gap-6 2xl:gap-12">
+        <div className="flex w-full flex-col justify-between gap-[1.875rem] text-xs xs:text-sm md:flex-row md:items-end">
+          <ul className="grid grid-flow-row grid-cols-3 gap-x-0 gap-y-6 md:gap-x-8 xl:flex xl:gap-6 2xl:gap-12">
             <FooterNavigation lang={lang} />
           </ul>
           <p className=" text-[0.625rem] font-extralight md:text-right md:text-sm">
