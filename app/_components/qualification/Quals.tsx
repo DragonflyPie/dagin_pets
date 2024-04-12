@@ -14,7 +14,7 @@ const Qualifications = ({ dictionary }: QualificationsProps) => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  const minSwipeDistance = 50;
+  const minSwipeDistance = 35;
 
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchEnd(null);
