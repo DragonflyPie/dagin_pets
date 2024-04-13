@@ -52,7 +52,8 @@ const Qualifications = ({ dictionary }: QualificationsProps) => {
         onTouchEnd={onTouchEnd}
       >
         <div
-          className={`absolute h-full w-full  transition-all duration-500
+          onClick={() => setLeft(true)}
+          className={`absolute h-full w-full cursor-pointer transition-all duration-500
        ${left ? "translate-x-0" : "-translate-x-[100%] scale-90"} 
         `}
         >
@@ -66,7 +67,8 @@ const Qualifications = ({ dictionary }: QualificationsProps) => {
         </div>
 
         <div
-          className={`absolute h-full w-full  transition-all duration-500
+          onClick={() => setLeft(false)}
+          className={`absolute h-full w-full cursor-pointer transition-all duration-500
        ${left ? "translate-x-[100%] scale-90 " : "translate-x-0"} 
         `}
         >
