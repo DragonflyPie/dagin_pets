@@ -50,7 +50,7 @@ export default function RootLayout({
       className={`scroll-smooth ${futura.variable} ${geometria.variable} ${raleway.variable}`}
     >
       <body
-        className="flex w-full flex-col items-center overflow-x-hidden  bg-white bg-dog-pattern bg-repeat font-raleway text-gray-dark"
+        className="flex w-full flex-col items-center overflow-x-hidden  bg-white font-raleway text-gray-dark"
         suppressHydrationWarning
       >
         <Navbar lang={params.lang} />
