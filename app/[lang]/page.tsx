@@ -9,6 +9,7 @@ import Services from "../_components/services/Services";
 import Welcome from "../_components/welcome/Welcome";
 import { getDictionary } from "../_utilities/getDictionary";
 import Quals from "../_components/qualification/Quals";
+import Stories from "../_components/stories/Stories";
 
 interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -30,8 +31,8 @@ export default async function Home({
         <About dictionary={dictionary.about} />
         <Services dictionary={dictionary.services} />
         <Safety dictionary={dictionary.safety} />
+        <Stories dictionary={dictionary.stories} />
         <Reviews dictionary={dictionary.reviews} />
-        {/* <Qualifications dictionary={dictionary.qualifications} /> */}
         <Quals dictionary={dictionary.qualifications} />
         <Questions
           dictionary={dictionary.faq}

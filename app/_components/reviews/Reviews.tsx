@@ -1,10 +1,8 @@
 "use client";
 
-import "@/app/_utilities/slick.css";
-import "../../_utilities/slick-theme.css";
 import Slider from "react-slick";
 import Review from "./Review";
-import CarouselArrow from "./CarouselArrow";
+import ArrowSlider from "../commons/ArrowSlider";
 
 interface ReviewsProps {
   dictionary: {
@@ -20,8 +18,8 @@ const Reviews = ({ dictionary }: ReviewsProps) => {
   const settings = {
     className: "slider variable-width",
     infinite: true,
-    nextArrow: <CarouselArrow direction="right" />,
-    prevArrow: <CarouselArrow direction="left" />,
+    nextArrow: <ArrowSlider direction="right" />,
+    prevArrow: <ArrowSlider direction="left" />,
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,

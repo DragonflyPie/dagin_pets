@@ -17,6 +17,14 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.storySlider .slick-list {
+  margin: 0 -25px;
+}
+
+.storySlider .slick-slide {
+  padding: 0 25px;
+}
+
 .slick-list {
   position: relative;
 

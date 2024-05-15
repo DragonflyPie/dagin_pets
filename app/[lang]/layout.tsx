@@ -11,6 +11,7 @@ import Script from "next/script";
 import { Suspense } from "react";
 import YandexMetrika from "../_utilities/metrics/YandexMetrika";
 import Image from "next/image";
+import "@/app/_utilities/slick.css";
 
 const YandexID = process.env.YANDEX_ID;
 

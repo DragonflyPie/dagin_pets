@@ -269,6 +269,26 @@ export const Down = () => {
   );
 };
 
+export const Arrow = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="28"
+      fill="none"
+      viewBox="0 0 16 28"
+    >
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+        d="M2 2l12 12L2 26"
+      ></path>
+    </svg>
+  );
+};
+
 export const Plus = () => {
   return (
     <svg

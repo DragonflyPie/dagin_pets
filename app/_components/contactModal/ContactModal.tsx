@@ -5,10 +5,10 @@ import FormContainer from "./FormContainer";
 import sweet_pets from "@/public/images/sweet_pets.png";
 import { useEffect, useRef, useState } from "react";
 import FocusTrap from "focus-trap-react";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
-import Link from "next/link";
+import useScrollLock from "@/app/_utilities/hooks/useScrollLock";
 
 interface ContactModalProps {
   dictionary: {
@@ -56,17 +56,7 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
     };
   }, [router]);
 
-  useEffect(() => {
-    const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
-
-    document.body.style.overflowY = "hidden";
-    document.body.style.paddingRight = `${scrollBarCompensation}px`;
-
-    return () => {
-      document.body.style.overflowY = "auto";
-      document.body.style.paddingRight = "0px";
-    };
-  }, []);
+  useScrollLock();
 
   useClickOutside(contactRef, closeModal);
 

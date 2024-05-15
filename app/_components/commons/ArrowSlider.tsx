@@ -1,11 +1,11 @@
 import { CustomArrowProps } from "react-slick";
-import { Down } from "../commons/icons";
+import { Down } from "./icons";
 
 interface ArrowProps extends CustomArrowProps {
   direction: "left" | "right";
 }
 
-function CarouselArrow({ onClick, direction }: ArrowProps) {
+const ArrowSlider = ({ onClick, direction }: ArrowProps) => {
   return (
     <div
       onClick={onClick}
@@ -15,12 +15,11 @@ function CarouselArrow({ onClick, direction }: ArrowProps) {
           ? "-left-8 rotate-90 lg:-left-10"
           : "-right-8 -rotate-90 lg:-right-10 "
       }
-      
       `}
     >
       <Down />
     </div>
   );
-}
+};
 
-export default CarouselArrow;
+export default ArrowSlider;

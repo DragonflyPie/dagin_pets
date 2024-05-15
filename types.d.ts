@@ -36,6 +36,14 @@ interface ReviewData {
   image: string;
 }
 
+interface StoryData {
+  date: string;
+  name: string;
+  image: string;
+  text: string;
+  adopted: boolean;
+}
+
 interface StepOne {
   from: string;
   to: string;
