@@ -116,24 +116,32 @@
     "more_question_description": "We would be happy to assist you.",
     "faq_data": [
       {
-        "question": "What services does your pet relocation company offer?",
-        "answer": "We offer a wide range of services, including route planning, cabin seat reservations, document preparation assistance, logistics organization, pet taxi services, and the option of pet transportation with a dedicated pet courier."
+        "question": "How will my pet be transported?",
+        "answer": "There are two most common ways to transport a pet:\n1) In cabin (so that your pet is all the time accompanied by you or our employee). This is the way to go for small pets, and in general the weight limit is up to 8 kg with carrier. As an exception, service dogs are sometimes allowed to travel in cabin regardless of their size, when they accompany a passenger with disability.\n2) In hold (most often when the pet is too large to fit in cabin or needs to travel unaccompanied). Typically, pets are transported on the same aircrafts, as humans, in a specialized and safe cargo compartment. Here are the two options of transporting pets in hold:\n- Manifest cargo. For flights to the UAE it is typically required that  pets are transported as manifest cargo (which requires additional paperwork and clearance procedures). You may travel on the same flight, but you don't have to.\n- Checked-in baggage. When you travel from the UAE, you may take your pet as baggage, which allows significant time saving on clearance procedures. It is also way cheaper, as the rates are way lower. Don't worry, that is not the same as carrying a suitcase, and your pet will not be surrounded by bags during it's journey. In any airport there are specific rules on live animals handling which ensure safety."
+      },
+      {
+        "question": "How is it better to transport a pet?",
+        "answer": "Briefly - there is no right or wrong answer here. For some pets presence of mom and dad around is absolutely critical, and for some its actually easier to fly alone. In general, if you are under high stress, it might be beneficial to send pet as cargo - they do feel our anxiety during relocations. From some destination a direct flight in cargo is available, and compared to multiple stopovers of in-cabin transportation this may be easier. We are happy to support you in decision-making depending on your individual case."
+      },
+      {
+        "question": "Is it safe to transport pets in cargo hold?",
+        "answer": "In terms of safety, transportation in hold is performed by airlines in accordance with IATA regulations, and is safe for animals. The specific temperature regime in hold may depend upon the specific aircraft that you will be using, however, it is always an acceptable temperature for your beloved ones. As for the airline, everything is also individual and depends on your destination."
       },
       {
         "question": "How do I prepare my pet for relocation?",
-        "answer": "We provide comprehensive guidance on preparing your pet for relocation. This includes health check-ups, vaccinations, and ensuring your pet is crate-trained for safe travel. Our experts will assist you throughout the process."
+        "answer": "Basically, for nearly all destinations you will need to microchip your pet and do the annual vaccines. In terms of other requirements - they will depend on the destination of your journey, and may include various tests and health check ups. It is very useful to get an advice from a relocation agent before getting any extra tests done. This will allow to prevent excessive costs (and tests which you don't need), and at the same time be fully ready for the journey. Typically, after the microchip and vaccines, right before your journey (a few days in advance) you will need to obtain additional health certificates, but this part usually does not require long term planning.  We will assist you throughout the process so that everything is clear and under control."
       },
       {
-        "question": "What are the travel requirements for international pet relocation?",
-        "answer": "International pet relocation often involves specific entry requirements for each destination country. We stay up-to-date with the latest regulations and will guide you through the necessary vaccinations, microchipping, and paperwork for your pet's smooth journey."
+        "question": "Which medications should I give to my pet before the flight?",
+        "answer": "In general, it is advised not to give any extra medications. However, it always makes sense to get an advice from your veterinarian, if there are any heart or stress-related conditions that may require additional attention."
       },
       {
-        "question": "How far in advance should I book pet relocation services?",
-        "answer": "It's advisable to start planning as early as possible, especially for international relocations. Booking at least 2-3 months in advance allows us to secure the best travel arrangements and ensures compliance with destination country requirements. However, we can accommodate last-minute requests when necessary and possible."
+        "question": "How far in advance should I plan the relocation of my pet?",
+        "answer": "It's advisable to start planning as early as possible, especially for certain destinations. The preparation period may be above 6 months, but we will be happy to accommodate last-minute requests when necessary and possible."
       },
       {
-        "question": "How can I track my pet's journey during relocation?",
-        "answer": "We provide regular text, photo, and video updates."
+        "question": "What services does your pet relocation company offer?",
+        "answer": "We offer a wide range of services, which allow you to travel together with your pet or order door-to-door relocation service depending on your destination and personal preferences."
       }
     ]
   },

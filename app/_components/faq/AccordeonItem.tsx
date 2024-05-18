@@ -29,7 +29,7 @@ const AccordeonItem = ({ content }: AccordeonItemProps) => {
       </div>
       <p
         ref={answerRef}
-        className="overflow-hidden pt-1 text-base transition-all duration-500 ease-out"
+        className="overflow-hidden whitespace-pre-wrap pt-1 text-base transition-all duration-500 ease-out"
         style={{
           height: isOpen ? `${answerRef.current?.scrollHeight}px` : "0px",
         }}
