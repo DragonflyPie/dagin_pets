@@ -10,7 +10,7 @@ interface CheckBoxProps {
 
 const Checkbox = ({ policy, label, register, error }: CheckBoxProps) => {
   return (
-    <div className="relative flex w-full items-center justify-between gap-3 px-1 font-medium">
+    <div className="relative flex w-full items-center justify-start gap-3 px-1 font-medium">
       <input
         type="checkbox"
         {...register}

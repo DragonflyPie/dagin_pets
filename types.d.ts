@@ -22,6 +22,7 @@ interface StepOneData {
 
 interface StepTwoData {
   name: string;
+  email?: string;
   phone: string;
   contactMethod: Option;
   message?: string;
@@ -51,6 +52,8 @@ interface StepOne {
 interface StepTwo {
   name: string;
   name_placeholder: string;
+  email: string;
+  email_placeholder: string;
   phone: string;
   message_label: string;
   message_placeholder: string;

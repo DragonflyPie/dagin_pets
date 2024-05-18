@@ -17,8 +17,10 @@ const SelectInput = (props: SelectInputProps) => {
   const isPlaceholder = !value.label && props.placeholder;
 
   return (
-    <div className="flex flex-col gap-1.5 font-geometria font-medium">
-      <label htmlFor={`#${props.name}`}>{props.label}</label>
+    <div className="flex flex-col gap-1.5 font-geometria">
+      <label htmlFor={`#${props.name}`} className="font-medium">
+        {props.label}
+      </label>
       <Listbox value={value} onChange={onChange}>
         {({ open }) => (
           <>
@@ -29,7 +31,7 @@ const SelectInput = (props: SelectInputProps) => {
        ${open ? "rounded-t-lg" : "rounded-lg"}
         `}
               >
-                <span className={`${isPlaceholder ? "text-gray-form" : ""}`}>
+                <span className={`${isPlaceholder ? "text-gray-form " : ""}`}>
                   {isPlaceholder ? props.placeholder : value.label}
                 </span>
                 <span
@@ -55,7 +57,7 @@ const SelectInput = (props: SelectInputProps) => {
                   >
                     {({ active }) => (
                       <li
-                        className={` cursor-pointer px-4 py-2 
+                        className={` cursor-pointer px-4 py-2
                           ${active ? "bg-honeycomb-light" : ""}
                           `}
                       >

@@ -27,7 +27,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
         <div className="absolute left-[35%] top-[45%] -z-0 w-[16vw] rotate-45">
           <Paw />
         </div>
-        <div className="z-10 flex  w-min basis-1/2 flex-col justify-between  gap-6 pt-14  xl:pt-16">
+        <div className="z-10 flex w-min basis-1/2 flex-col justify-between  gap-6 pt-14  xl:pt-16">
           <pre>
             <h1 className="inline-block w-fit font-geometria text-2xl/[1.1] font-medium tracking-[0.24px] tracking-[0.48px] md:text-5xl/[1.1] xl:text-[5rem]/[1.1] xl:tracking-[0.8px] ">
               {dictionary.header_title}
@@ -41,7 +41,7 @@ const Welcome = ({ dictionary }: WelcomeProps) => {
             <Button text={dictionary.header_button} modal />
           </Link>
         </div>
-        <div className="relative -z-10 flex aspect-[0.8] h-[90%] flex-col self-center xs:h-full md:h-full xl:w-full">
+        <div className="relative -z-10 flex aspect-[0.8] h-[90%] flex-col self-center xs:h-full md:h-full">
           <Image
             priority
             src={cat_shining}

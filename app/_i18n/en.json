@@ -16,30 +16,30 @@
     "contact_button": "Get in Touch"
   },
   "header": {
-    "header_title": "Перевозка\nживотных быстро\nи легко",
-    "header_description": "Do you need to transport your pet to or from the UAE? Dagin Pets Relocation is pleased to offer you our assistance, including pet transportation services and pet taxis within the UAE.",
+    "header_title": "Pet relocation\nquickly\nand easily",
+    "header_description": "Do you need to transport your pet to or from the UAE? Dagin Pets Relocation is happy to offer you all kinds of assistance, from pet full-cycle pet relocation to pet taxi services within the UAE.",
     "header_button": "Transport My Pet"
   },
   "about": {
-    "text": "Команда Dagin обеспечивает <strong>полный спектр услуг</strong>, связанных с перевозкой животных, чтобы обеспечить безопасность и комфорт вашим питомцам во время перелета. Мы лицензированы министерством изменения климата и окружающей среды <strong>(МОССАЕ)</strong> и сертифицированы в области международных требований по перевозке животных <strong class='whitespace-nowrap'>(IATA LAR*)</strong>, обеспечиваем все необходимые процедуры и бумажную работу."
+    "text": "The Dagin team aims to ensure the safety and comfort of your pets during the flight. We are licensed by the Ministry of Climate Change and Environment <strong>(МОССАЕ)</strong> and certified in the area of international requirements for the transport of animals <strong class='whitespace-nowrap'>(IATA LAR*)</strong> to arrange all the necessary procedures and paperwork. "
   },
   "services": {
     "title_start": "Dagin Pets Relocation",
     "title_ending": "offers a wide range of services, including:",
-    "service1_header": "Базовую подготовку\nк перелету:",
-    "service1_description": "мы проконсультируем касательно необходимых процедур для вашего питомца (чипирование, вакцинации, анализы) и при необходимости организуем выезд врача на дом.",
-    "service2_header": "Бронирование\nбилетов:",
-    "service2_description": "мы забронируем наиболее подходящий рейс для вашего домашнего любимца, учитывая его размер, вес и другие особенности.",
-    "service3_header": "Оформление\nдокументов:",
-    "service3_description": "мы предоставим всю необходимую поддержку и помощь в получении экспортных и импортных документов, таких как разрешение на ввоз / вывоз вашего питомца, ветеринарные сертификаты в соответствии с требованиями страны назначения.",
-    "service4_header": "Транспортировку\nпитомца:",
-    "service4_description": "мы обеспечим переезд от двери до двери, включая отправку питомца, прохождение необходимых процедур по прилету и доставку до нового дома.",
-    "service5_header": "Помощь в адаптации\nи снижении уровня стресса питомца:",
-    "service5_description": "подбор мягких средств для снижения уровня стресса, организация консультации зоопсихолога и зоодиетолога при необходимости."
+    "service1_header": "Basic pre-flight\npreparation:",
+    "service1_description": "We will advise you on the necessary procedures needed for your pet to travel (microchipping, vaccinations, testing) and, if necessary, arrange for a doctor appointment for you.",
+    "service2_header": "Airline\nbooking:",
+    "service2_description": "We will book the most suitable flight for your pet, taking into account its size, weight, breed and other criteria.",
+    "service3_header": "Arrangement\nof documents:",
+    "service3_description": "We will provide all the necessary support and assistance in obtaining export and import documents, such as permission to import / export your pet, veterinary health certificates in accordance with the requirements of the destination / departure country.",
+    "service4_header": "Pet\nrelocation:",
+    "service4_description": "We can provide door-to-door relocation services, e.g. by arranging our partners to send the pet from the departure country, and completing all the necessary procedures upon arrival in the UAE and delivery to the new home ourselves.",
+    "service5_header": "Help with adaptation and\nreducing your pet's stress level:",
+    "service5_description": "Assistance in selecting mild and natural ways to reduce stress levels of a pet during relocation process, and if required - arranging a relevant specialist for a consultation."
   },
   "safety": {
     "value_title": "We prioritize the health\nand well-being of your pets",
-    "value_desciption": "and our mission is to ensure the most comfortable and safe transportation for them. don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the uae, or book a pet taxi for your furry friend.",
+    "value_desciption": "Our mission is to ensure the most comfortable and safe transportation for them. Don't hesitate to reach out to us today to learn more about our services, receive a free consultation on pet transportation in the UAE, or book a pet taxi for your furry friend.",
     "value_button": "Transport My Pet"
   },
   "reviews": {
@@ -178,6 +178,8 @@
     "step_two": {
       "name": "Your name",
       "name_placeholder": "Name",
+      "email": "Your email",
+      "email_placeholder": "Email",
       "phone": "Phone number",
       "message_label": "Message",
       "message_placeholder": "Tell us about your case.",

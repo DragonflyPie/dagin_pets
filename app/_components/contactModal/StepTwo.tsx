@@ -12,6 +12,7 @@ import FormInput from "./Input";
 
 let stepTwoSchema = object({
   name: string().required(),
+  email: string(),
   phone: string()
     .required("This field is required")
     .min(10, "Invalid phone number")
@@ -97,7 +98,7 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 pt-4 font-raleway md:gap-5 md:px-14 md:pt-6"
+      className="flex h-full w-full flex-col gap-3 pt-4 font-raleway md:gap-4 md:px-14 md:pt-0"
     >
       <FormInput
         id={"name"}
@@ -106,6 +107,15 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
         error={errors?.name}
         error_message={dictionary.error_required}
         register={{ ...register("name") }}
+      />
+      <FormInput
+        id={"email"}
+        label={`${dictionary.email}`}
+        placeholder={dictionary.email_placeholder}
+        error={errors?.email}
+        error_message={dictionary.error_required}
+        register={{ ...register("email") }}
+        type="email"
       />
       <div className="relative flex flex-col gap-1.5">
         <label
