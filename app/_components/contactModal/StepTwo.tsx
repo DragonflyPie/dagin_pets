@@ -98,7 +98,7 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="flex h-full w-full flex-col gap-3 pt-4 font-raleway md:gap-4 md:px-14 md:pt-0"
+      className="flex w-full flex-col gap-3 pt-4 font-raleway md:gap-4 md:px-14 md:pt-0"
     >
       <FormInput
         id={"name"}

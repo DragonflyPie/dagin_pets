@@ -178,7 +178,7 @@
     "step_two": {
       "name": "Ваше имя",
       "name_placeholder": "Имя",
-      "email": "Ваша почта",
+      "email": "Ваш email",
       "email_placeholder": "Почтовый адрес",
       "phone": "Номер телефона",
       "message_label": "Сообщение",

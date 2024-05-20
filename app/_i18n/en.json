@@ -168,19 +168,19 @@
         "other": "Other"
       },
       "time_select": {
-        "label": "Планируемы сроки",
-        "placeholder": "Когда перевозим?",
-        "yesterday": "Вчера",
-        "week": "В течение недели",
-        "weeks": "В течение 2-3 недель",
-        "month": "В течение месяца и более"
+        "label": "Expected Timeline",
+        "placeholder": "Expected Timeline",
+        "yesterday": "Yesterday",
+        "week": "Within a week",
+        "weeks": "Within 2-3 weeks",
+        "month": "Within a month or more"
       },
       "transfer_select": {
-        "label": "Способ перевозки",
-        "placeholder": "Как перевозим?",
-        "cargo": "Карго",
-        "cabin": "Салон",
-        "consultation": "Нужна консультация"
+        "label": "Shipping Method",
+        "placeholder": "Shipping Method",
+        "cargo": "Cargo",
+        "cabin": "In-Cabin",
+        "consultation": "Need Consultation"
       }
     },
     "step_two": {
