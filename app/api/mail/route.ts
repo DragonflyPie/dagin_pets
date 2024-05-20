@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       text: generateString(data),
       html: `<h1>Отправитель: ${data.name}</h1>
       <h2>Телефон: ${data.phone}</h2>
-      <h2>Телефон: ${data.email}</h2>
+      <h2>Почта: ${data.email}</h2>
       <h3>Способ связи: ${data.contactMethod?.label || "-"}</h3>
       <h3>Животное: ${data.animal?.label || "-"}</h3>
       <h3>Маршрут: ${data.from} - ${data.to}</h3>
