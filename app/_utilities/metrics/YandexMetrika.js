@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
-const YandexID = process.env.YANDEX_ID;
+const YandexID = process.env.NEXT_PUBLIC_YANDEX_ID;
 
 export default function YandexMetrika() {
   const pathname = usePathname();

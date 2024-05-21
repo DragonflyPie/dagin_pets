@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const FB_PIXEL_ID = process.env.FB_PIXEL_ID;
+const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 
 const pageview = () => {
   window.fbq("track", "PageView");

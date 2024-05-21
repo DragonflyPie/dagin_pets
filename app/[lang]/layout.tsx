@@ -12,7 +12,7 @@ import { Suspense } from "react";
 import YandexMetrika from "../_utilities/metrics/YandexMetrika";
 import Image from "next/image";
 
-const YandexID = process.env.YANDEX_ID;
+const YandexID = process.env.NEXT_PUBLIC_YANDEX_ID;
 
 type Props = {
   params: { lang: Locale };
