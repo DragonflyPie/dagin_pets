@@ -16,11 +16,11 @@ const Footer = async ({ lang }: FooterProps) => {
   return (
     <footer id="contacts" className="flex w-full justify-center bg-gray-bg">
       <div className="flex w-full max-w-[1440px] flex-col justify-between gap-4 p-4 px-4 pb-6 pt-12 text-white md:gap-10 md:pb-12 xl:gap-14 xl:px-20 xl:py-16">
-        <div className="flex flex-col justify-between md:flex-row md:items-center">
-          <h4 className="shrink-0 pb-6 font-geometria text-xl/[1.875rem] xs:w-[21rem] md:whitespace-pre md:pb-0 md:text-3xl/[3.5rem] xl:text-4xl/[3.5rem]">
+        <div className="flex  flex-col justify-between md:flex-row md:items-center">
+          <h4 className="shrink-0  pb-6 font-geometria text-xl/[1.875rem] xs:w-[21rem] md:whitespace-pre md:pb-0 md:text-3xl/[3.5rem] xl:text-4xl/[3.5rem]">
             {footer.footer_title}
           </h4>
-          <ul className=" grid grid-cols-1 gap-y-6 text-base font-light  md:grid-cols-2 md:justify-between md:gap-x-10 md:gap-y-10 md:text-xl lg:gap-4 xl:gap-x-36 xl:text-2xl">
+          <ul className="flex flex-col justify-center gap-y-6 text-base font-light md:h-44 md:flex-wrap md:gap-x-8 md:pr-16 md:text-xl lg:gap-x-16 xl:text-2xl">
             <MessengerItems />
           </ul>
         </div>

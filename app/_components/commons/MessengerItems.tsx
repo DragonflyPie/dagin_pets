@@ -1,5 +1,11 @@
 import Messenger from "./Messenger";
-import { Instagram, PhoneWhite, Telegram, WhatsAppWhite } from "./icons";
+import {
+  Instagram,
+  PhoneWhite,
+  Telegram,
+  TikTok,
+  WhatsAppWhite,
+} from "./icons";
 
 const MessengerItems = () => {
   return (
@@ -24,6 +30,11 @@ const MessengerItems = () => {
         link="tel:+971585441452"
         info="+971585441452"
         icon={<PhoneWhite />}
+      />
+      <Messenger
+        link="https://www.tiktok.com/@daginpets"
+        info="@daginpets"
+        icon={<TikTok />}
       />
     </>
   );

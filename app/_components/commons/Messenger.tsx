@@ -8,11 +8,11 @@ interface MessangerProps {
 }
 const Messenger = ({ icon, info, link, blank = true }: MessangerProps) => {
   return (
-    <li className="w-min">
+    <li className="min-w-0">
       <a
         href={link}
         target={blank ? "_blank" : "_self"}
-        className="flex w-min items-center gap-4 font-futura "
+        className="flex items-center gap-4 font-futura"
       >
         <div className="">{icon}</div>
         <p className="">{info}</p>
