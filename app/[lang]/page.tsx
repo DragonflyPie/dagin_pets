@@ -31,7 +31,6 @@ export default async function Home({
         <Services dictionary={dictionary.services} />
         <Safety dictionary={dictionary.safety} />
         <Reviews dictionary={dictionary.reviews} />
-        {/* <Qualifications dictionary={dictionary.qualifications} /> */}
         <Quals dictionary={dictionary.qualifications} />
         <Questions
           dictionary={dictionary.faq}
