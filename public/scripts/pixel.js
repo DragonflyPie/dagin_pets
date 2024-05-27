@@ -25,3 +25,4 @@ initializeFacebookPixel(
 );
 
 window.fbq("init", PIXEL_ID);
+fbq("track", "PageView");

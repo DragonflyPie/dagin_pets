@@ -86,7 +86,6 @@ export default function RootLayout({
             />
           </div>
         </noscript>
-
         <Suspense fallback={<></>}>
           <YandexMetrika />
         </Suspense>
