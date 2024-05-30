@@ -40,7 +40,7 @@ const FacebookPixel = () => {
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '${FB_PIXEL_ID}');
       fbq('track', 'PageView');
-      fbq("track", "ViewContent")
+      fbq("track", "ViewContent");
     `}
       </Script>
       <noscript>
