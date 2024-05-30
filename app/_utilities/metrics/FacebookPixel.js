@@ -9,6 +9,7 @@ const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 
 const pageview = () => {
   window.fbq("track", "PageView");
+  window.fbq("track", "ViewContent");
 };
 
 const FacebookPixel = () => {

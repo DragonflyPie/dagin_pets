@@ -29,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/_utilities/metrics/FacebookPixel.js",
-    "app/_utilities/metrics/YandexMetrika.js"
+    "app/_utilities/metrics/YandexMetrika.js",
+    "app/_utilities/metrics/pixelFuncs.js"
   ],
   "exclude": ["node_modules"]
 }

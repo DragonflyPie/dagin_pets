@@ -8,6 +8,7 @@ import FocusTrap from "focus-trap-react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import useClickOutside from "@/app/_utilities/hooks/useClickOutside";
 import { CloseIcon } from "../commons/icons";
+import { FbContactEvent } from "@/app/_utilities/metrics/pixelFuncs";
 
 interface ContactModalProps {
   dictionary: {
@@ -39,6 +40,10 @@ const ContactModal = ({ dictionary }: ContactModalProps) => {
 
   useEffect(() => {
     setShowModal(true);
+  }, []);
+
+  useEffect(() => {
+    FbContactEvent();
   }, []);
 
   useEffect(() => {
