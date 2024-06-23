@@ -9,7 +9,6 @@ import LanguageSelector from "./LanguageSelector";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/app/_utilities/getDictionary";
 import { MailIcon } from "../commons/icons";
-import { FbContactEvent } from "@/app/_utilities/metrics/pixelFuncs";
 
 interface NavbarProps {
   lang: Locale;

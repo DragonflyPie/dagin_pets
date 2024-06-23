@@ -30,6 +30,7 @@ const config: Config = {
         "gray-light": "#E4E4E7",
         "gray-form": "#828282",
         "gray-form-heading": "#667085",
+        "gray-line": "#909090",
         "white-dirty": "#F9FAFB",
         "red-error": "#ff3333",
       },

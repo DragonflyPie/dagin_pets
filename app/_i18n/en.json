@@ -146,7 +146,8 @@
     ]
   },
   "footer": {
-    "footer_title": "For any questions, \nplease feel free \nto reach out to us"
+    "footer_title": "For any questions, \nplease feel free \nto reach out to us",
+    "policy": "Privacy policy"
   },
   "modal": {
     "header": "Contact Us",
