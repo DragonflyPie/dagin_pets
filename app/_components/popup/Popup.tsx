@@ -14,6 +14,8 @@ interface PopupProps {
     success_description: string;
     fail_title: string;
     fail_description: string;
+    success_button: string;
+    fail_button: string;
   };
 }
 
@@ -54,7 +56,7 @@ const Popup = ({ success, dictionary }: PopupProps) => {
           <Button
             width="full"
             size="small"
-            text={success ? "Спасибо!" : "Закрыть"}
+            text={success ? dictionary.success_button : dictionary.fail_button}
           />
         </Link>
       </div>

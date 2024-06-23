@@ -213,6 +213,7 @@
     "success_description": "Thank you for reaching out to us, we will get in touch with you soon!",
     "fail_title": "Sorry!",
     "fail_description": "Something went wrong. Please try again later.",
-    "fail_button": "Close"
+    "fail_button": "Close",
+    "success_button": "Thank you!"
   }
 }
