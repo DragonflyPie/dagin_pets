@@ -6,13 +6,13 @@ import Navbar from "../_components/navbar/Navbar";
 import { futura, raleway, geometria } from "../_utilities/fonts";
 import { Locale, i18n } from "@/i18n.config";
 import { getDictionary } from "../_utilities/getDictionary";
-import FacebookPixel from "../_utilities/metrics/FacebookPixel";
-import Script from "next/script";
-import { Suspense } from "react";
-import YandexMetrika from "../_utilities/metrics/YandexMetrika";
-import Image from "next/image";
+// import FacebookPixel from "../_utilities/metrics/FacebookPixel";
+// import Script from "next/script";
+// import { Suspense } from "react";
+// import YandexMetrika from "../_utilities/metrics/YandexMetrika";
+// import Image from "next/image";
 
-const YandexID = process.env.NEXT_PUBLIC_YANDEX_ID;
+// const YandexID = process.env.NEXT_PUBLIC_YANDEX_ID;
 
 type Props = {
   params: { lang: Locale };
@@ -59,7 +59,7 @@ export default function RootLayout({
         <div className="absolute -left-[20px] top-[9rem] -z-10 origin-left scale-[40%] md:-left-[34px] md:top-[40rem]  md:scale-100  lg:top-[95vh]">
           <BlueShape />
         </div>
-        <FacebookPixel />
+        {/*  <FacebookPixel />
         <Script id="metrika-counter" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
               m[i].l=1*new Date();
@@ -88,7 +88,7 @@ export default function RootLayout({
         </noscript>
         <Suspense fallback={<></>}>
           <YandexMetrika />
-        </Suspense>
+        </Suspense> */}
       </body>
     </html>
   );
