@@ -9,7 +9,7 @@ import Button from "../commons/Button";
 import useStore from "../zustand/store";
 import MethodSelect from "./MethodSelect";
 import FormInput from "./Input";
-// import { FbSendFormEvent } from "@/app/_utilities/metrics/pixelFuncs";
+import { FbSendFormEvent } from "@/app/_utilities/metrics/pixelFuncs";
 
 let stepTwoSchema = object({
   name: string().required(),
@@ -71,7 +71,7 @@ const StepTwo = ({ handleClose, dictionary }: StepTwoProps) => {
     };
     try {
       setLoading(true);
-      // FbSendFormEvent();
+      FbSendFormEvent();
       const res = await fetch("/api/mail", {
         method: "POST",
         headers: {

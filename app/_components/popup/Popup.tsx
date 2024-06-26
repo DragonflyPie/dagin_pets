@@ -5,7 +5,7 @@ import { FailureIcon, SuccessIcon } from "../commons/icons";
 import Button from "../commons/Button";
 import { useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-// import { FbThanksEvent } from "@/app/_utilities/metrics/pixelFuncs";
+import { FbThanksEvent } from "@/app/_utilities/metrics/pixelFuncs";
 
 interface PopupProps {
   success: boolean;
@@ -24,11 +24,11 @@ const Popup = ({ success, dictionary }: PopupProps) => {
   const path = useParams();
   const locale = path.lang;
 
-  // useEffect(() => {
-  //   if (success) {
-  //     FbThanksEvent();
-  //   }
-  // }, [success]);
+  useEffect(() => {
+    if (success) {
+      FbThanksEvent();
+    }
+  }, [success]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
