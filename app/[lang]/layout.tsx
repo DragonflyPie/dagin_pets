@@ -75,6 +75,9 @@ export default function RootLayout({
                     webvisor:true
               });`}
         </Script>
+        <Script id="botfaqtor" strategy="afterInteractive">
+          {`(function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/134751", false); request.send(); if(request.status == 200) eval(request.responseText); })();`}
+        </Script>
         <noscript>
           <div>
             <Image
