@@ -76,7 +76,7 @@ export default function RootLayout({
               });`}
         </Script>
         <Script id="botfaqtor" strategy="afterInteractive">
-          {`(function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/134751", false); request.send(); if(request.status == 200) eval(request.responseText); })();`}
+          {`(function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/134925", false); request.send(); if(request.status == 200) eval(request.responseText); })();`}
         </Script>
         <noscript>
           <div>
